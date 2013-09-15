@@ -20,7 +20,6 @@ import com.google.gson.Gson;
 import config.Config;
 import controllers.FroshController;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Frosh.
  */
@@ -36,7 +35,7 @@ public class Frosh {
      * The main method.
      * 
      * @param args
-     *            the arguments
+     *            not used
      */
     public static void main( final String[ ] args ) {
         new Frosh( );

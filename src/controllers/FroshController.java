@@ -41,6 +41,8 @@ public class FroshController {
         this.gridModel = new GridModel( );
         this.grid = new Grid( );
 
+        FroshController.LOGGER.info( "finish" );
+
     }
 
     /**

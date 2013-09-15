@@ -319,7 +319,7 @@ public class GridModel {
     }
 
     /**
-     * Populate.
+     * Populate the grid.
      */
     private void populate( ) {
         for( int i = 0; i < GridModel.grid.length; i++ ) {
@@ -341,8 +341,7 @@ public class GridModel {
                         lifeform = new DuckModel( i, j );
                         break;
                     }
-                    // TODO utiliser les chance d'infection du fichier de config
-                    // en boucle jusqu'a ce que l'animal tombe malade
+
                     final int sick = Rand.randInt( 0, 100 );
                     if( sick <= GridModel.chanceOfInfectedAnimal ) {
                         if( lifeform instanceof PigModel ) {
