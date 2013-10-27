@@ -1,5 +1,5 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package demonstrateur;
@@ -13,7 +13,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import lib.Lib;
+import lib.CopyFile;
 
 import com.google.gson.Gson;
 
@@ -25,10 +25,10 @@ import controllers.FroshController;
  */
 public class Frosh {
 
-    /** The Constant FOLDER. */
+    /** The Constant FOLDER. Config folder of the game */
     public static final String FOLDER = "Frosh" + File.separator;
 
-    /** The Constant CONFIG. */
+    /** The Constant CONFIG. Config file of the game */
     public static final String CONFIG = "config.json";
 
     /**
@@ -37,33 +37,36 @@ public class Frosh {
      * @param args
      *            not used
      */
-    public static void main( final String[ ] args ) {
-        new Frosh( );
+    public static void main(final String[] args) {
+
+        new Frosh();
     }
 
     /**
      * Instantiates a new frosh.
      */
-    public Frosh( ) {
+    public Frosh() {
+
         // Create the config folder
-        if( !new File( Frosh.FOLDER ).isDirectory( ) ) {
-            this.createConfigFolder( );
+        if (!new File(Frosh.FOLDER).isDirectory()) {
+            this.createConfigFolder();
         }
         // Copy the default config file into the folder if no config file was
         // found
-        if( !new File( Frosh.FOLDER + Frosh.CONFIG ).exists( ) ) {
-            final Lib lib = new Lib( );
-            lib.copyfile( Frosh.FOLDER + Frosh.CONFIG );
+        if (!new File(Frosh.FOLDER + Frosh.CONFIG).exists()) {
+            final CopyFile lib = new CopyFile();
+            lib.copyfile(Frosh.FOLDER + Frosh.CONFIG);
         }
-        this.loadConfigFile( Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
-        new FroshController( ).run( );
+        this.loadConfigFile(Paths.get(Frosh.FOLDER, Frosh.CONFIG));
+        new FroshController().run();
     }
 
     /**
      * Creates the config folder.
      */
-    private void createConfigFolder( ) {
-        new File( Frosh.FOLDER ).mkdirs( );
+    private void createConfigFolder() {
+
+        new File(Frosh.FOLDER).mkdirs();
     }
 
     /**
@@ -72,22 +75,23 @@ public class Frosh {
      * @param configFile
      *            the config file
      */
-    private void loadConfigFile( final Path configFile ) {
+    private void loadConfigFile(final Path configFile) {
+
         // Read the file
-        final Charset charset = Charset.forName( "UTF-8" );
-        try( BufferedReader reader = Files.newBufferedReader( configFile,
-                charset ) ) {
+        final Charset charset = Charset.forName("UTF-8");
+        try (BufferedReader reader = Files.newBufferedReader(configFile,
+                charset)) {
             String line = null;
             String text = "";
-            while( ( line = reader.readLine( ) ) != null ) {
+            while ((line = reader.readLine()) != null) {
                 text += line;
             }
             // Convert the JSON file to an java object
-            final Gson gson = new Gson( );
-            Config.setConfiguration( gson.fromJson( text, Map.class ) );
-        } catch( final IOException x ) {
+            final Gson gson = new Gson();
+            Config.setConfiguration(gson.fromJson(text, Map.class));
+        } catch (final IOException x) {
 
-            System.err.format( "IOException: %s%n", x );
+            System.err.format("IOException: %s%n", x);
         }
     }
 }

@@ -1,12 +1,11 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.states;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class StateModel.
  */
@@ -21,8 +20,9 @@ public abstract class StateModel implements IState {
      * @param lifeform
      *            the lifeform
      */
-    public StateModel( final LifeformModel lifeform ) {
-        this.setLifeform( lifeform );
+    public StateModel(final LifeformModel lifeform) {
+
+        this.lifeform = lifeform;
     }
 
     /**
@@ -30,7 +30,8 @@ public abstract class StateModel implements IState {
      * 
      * @return the lifeform
      */
-    public LifeformModel getLifeform( ) {
+    public LifeformModel getLifeform() {
+
         return this.lifeform;
     }
 
@@ -40,7 +41,8 @@ public abstract class StateModel implements IState {
      * @param lifeform
      *            the new lifeform
      */
-    public void setLifeform( final LifeformModel lifeform ) {
+    public void setLifeform(final LifeformModel lifeform) {
+
         this.lifeform = lifeform;
     }
 

@@ -1,12 +1,11 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.disease;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class H1N1Model.
  */
@@ -18,8 +17,9 @@ public class H1N1Model extends DiseaseModel {
      * @param carrier
      *            the carrier
      */
-    public H1N1Model( final LifeformModel carrier ) {
-        super( carrier );
+    public H1N1Model(final LifeformModel carrier) {
+
+        super(carrier);
     }
 
     /*
@@ -28,7 +28,8 @@ public class H1N1Model extends DiseaseModel {
      * @see models.disease.IDiseaseType#getDiseaseType()
      */
     @Override
-    public String getDiseaseType( ) {
+    public String getDiseaseType() {
+
         return "H1N1";
     }
 

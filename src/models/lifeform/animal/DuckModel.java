@@ -6,7 +6,6 @@ package models.lifeform.animal;
 
 import models.lifeform.AnimalModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class DuckModel.
  */
@@ -20,8 +19,9 @@ public class DuckModel extends AnimalModel {
      * @param line
      *            the line
      */
-    public DuckModel( final int column, final int line ) {
-        super( column, line );
+    public DuckModel(final int column, final int line) {
+
+        super(column, line);
     }
 
     /*
@@ -30,7 +30,8 @@ public class DuckModel extends AnimalModel {
      * @see models.ILifeformType#getLifeformType()
      */
     @Override
-    public String getLifeformType( ) {
+    public String getLifeformType() {
+
         return "Duck";
     }
 }

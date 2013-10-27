@@ -6,7 +6,6 @@ package models.lifeform;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AnimalModel.
  */
@@ -20,7 +19,8 @@ public abstract class AnimalModel extends LifeformModel {
      * @param line
      *            the line
      */
-    public AnimalModel( final int column, final int line ) {
-        super( column, line );
+    public AnimalModel(final int column, final int line) {
+
+        super(column, line);
     }
 }

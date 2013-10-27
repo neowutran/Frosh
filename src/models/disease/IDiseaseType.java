@@ -1,10 +1,9 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.disease;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Interface IDiseaseType.
  */
@@ -15,5 +14,5 @@ public interface IDiseaseType {
      * 
      * @return the disease type
      */
-    String getDiseaseType( );
+    String getDiseaseType();
 }

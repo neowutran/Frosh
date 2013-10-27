@@ -1,5 +1,36 @@
 {
-
+	"moveRate":{
+		"Human":50,
+		"Duck":50,
+		"Pig":50,
+		"Chicken":50
+	},
+	"contactRate":{
+		"Human":{
+			"Human":50,
+			"Duck": 50,
+			"Pig": 50,
+			"Chicken": 50
+		},
+		"Duck":{
+			"Human":50,
+			"Duck": 50,
+			"Pig": 10,
+			"Chicken": 10
+		},
+		"Pig":{
+			"Human":50,
+			"Duck": 10,
+			"Pig": 50,
+			"Chicken": 10
+		},
+		"Chicken":{
+			"Human":50,
+			"Duck": 10,
+			"Pig": 10,
+			"Chicken": 50
+		}
+	},
 	"disease":{
 		"H1N1":{
 			"Human":{
@@ -105,16 +136,28 @@
 		}
 	},
 	"grid":{
+		"gridUse":0,
 		"width":10,
 		"height": 20,
 		"chanceOfHumanPopulate": 50,
 		"chanceOfAnimalPopulate": 30,
 		"chanceOfInfectedAnimal": 100
-		 
 	},
 	"controller":{
 		"msBeforeNextDay": 100
-	
-	} 
-
+	},
+	"view":{
+		"lifeform":{
+			"Pig": "P",
+			"Chicken": "C",
+			"Human": "H",
+			"Duck": "D"
+		},
+		"diseaseState":{
+			"Healty":0,
+			"Sick":1,
+			"Contagious":2,
+			"Recovering":3
+		}
+	}
 }

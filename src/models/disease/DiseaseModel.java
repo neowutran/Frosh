@@ -1,5 +1,5 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.disease;
@@ -15,7 +15,6 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class DiseaseModel.
  */
@@ -51,27 +50,32 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param carrier
      *            the carrier
      */
-    public DiseaseModel( final LifeformModel carrier ) {
+    public DiseaseModel(final LifeformModel carrier) {
+
         this.carrier = carrier;
-        final LinkedTreeMap<?, ?> config = ( LinkedTreeMap<?, ?> ) Config
-                .getConfiguration( ).get( "disease" );
-        this.incubationTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "incubationTime" ) ).intValue( );
-        this.mortality = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "mortality" ) ).intValue( );
-        this.infectionRate = ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "infectionRate" );
-        this.recoveryTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "recoveryTime" ) ).intValue( );
-        this.contagiousTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "contagiousTime" ) ).intValue( );
+        final LinkedTreeMap<?, ?> config = (LinkedTreeMap<?, ?>) Config
+                .getConfiguration().get("disease");
+        this.incubationTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("incubationTime"))
+                .intValue();
+        this.mortality = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("mortality"))
+                .intValue();
+        this.infectionRate = (LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("infectionRate");
+        this.recoveryTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("recoveryTime"))
+                .intValue();
+        this.contagiousTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("contagiousTime"))
+                .intValue();
         this.dayBeforeNextState = 0;
-        this.nextState = new SickModel( this.carrier );
+        this.nextState = new SickModel(this.carrier);
     }
 
     /**
@@ -79,7 +83,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the contagious time
      */
-    public int getContagiousTime( ) {
+    public int getContagiousTime() {
+
         return this.contagiousTime;
     }
 
@@ -88,7 +93,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the day before next state
      */
-    public Integer getDayBeforeNextState( ) {
+    public Integer getDayBeforeNextState() {
+
         return this.dayBeforeNextState;
     }
 
@@ -97,7 +103,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the incubation time
      */
-    public int getIncubationTime( ) {
+    public int getIncubationTime() {
+
         return this.incubationTime;
     }
 
@@ -106,7 +113,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the infection rate
      */
-    public LinkedTreeMap<?, ?> getInfectionRate( ) {
+    public LinkedTreeMap<?, ?> getInfectionRate() {
+
         return this.infectionRate;
     }
 
@@ -115,7 +123,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the mortality
      */
-    public int getMortality( ) {
+    public int getMortality() {
+
         return this.mortality;
     }
 
@@ -124,7 +133,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the next state
      */
-    public StateModel getNextState( ) {
+    public StateModel getNextState() {
+
         return this.nextState;
     }
 
@@ -133,30 +143,32 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the recovery time
      */
-    public int getRecoveryTime( ) {
+    public int getRecoveryTime() {
+
         return this.recoveryTime;
     }
 
     /**
      * Next day.
      */
-    public void nextDay( ) {
-        if( this.carrier.getStates( ) instanceof DeadModel
-                || this.nextState == null ) {
+    public void nextDay() {
+
+        if ((this.carrier.getStates() instanceof DeadModel)
+                || (this.nextState == null)) {
             return;
         }
-        if( this.dayBeforeNextState == 0 ) {
-            if( this.carrier.getStates( ) instanceof SickModel
-                    || this.carrier.getStates( ) instanceof ContagiousModel ) {
-                final int result = Rand.randInt( 0, 100 );
-                if( result <= this.mortality ) {
-                    this.carrier.setStates( new DeadModel( this.carrier ) );
-                    this.carrier.getStates( ).apply( );
+        if (this.dayBeforeNextState == 0) {
+            if ((this.carrier.getStates() instanceof SickModel)
+                    || (this.carrier.getStates() instanceof ContagiousModel)) {
+                final int result = Rand.randInt(0, 100);
+                if (result <= this.mortality) {
+                    this.carrier.setStates(new DeadModel(this.carrier));
+                    this.carrier.getStates().apply();
                     return;
                 }
             }
-            this.carrier.setStates( this.nextState );
-            this.carrier.getStates( ).apply( );
+            this.carrier.setStates(this.nextState);
+            this.carrier.getStates().apply();
             return;
         }
         this.dayBeforeNextState--;
@@ -168,7 +180,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param contagiousTime
      *            the new contagious time
      */
-    public void setContagiousTime( final int contagiousTime ) {
+    public void setContagiousTime(final int contagiousTime) {
+
         this.contagiousTime = contagiousTime;
     }
 
@@ -178,7 +191,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param dayBeforeNextState
      *            the new day before next state
      */
-    public void setDayBeforeNextState( final Integer dayBeforeNextState ) {
+    public void setDayBeforeNextState(final Integer dayBeforeNextState) {
+
         this.dayBeforeNextState = dayBeforeNextState;
     }
 
@@ -188,7 +202,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param incubationTime
      *            the new incubation time
      */
-    public void setIncubationTime( final int incubationTime ) {
+    public void setIncubationTime(final int incubationTime) {
+
         this.incubationTime = incubationTime;
     }
 
@@ -198,7 +213,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param infectionRate
      *            the infection rate
      */
-    public void setInfectionRate( final LinkedTreeMap<?, ?> infectionRate ) {
+    public void setInfectionRate(final LinkedTreeMap<?, ?> infectionRate) {
+
         this.infectionRate = infectionRate;
     }
 
@@ -208,7 +224,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param mortality
      *            the new mortality
      */
-    public void setMortality( final int mortality ) {
+    public void setMortality(final int mortality) {
+
         this.mortality = mortality;
     }
 
@@ -218,7 +235,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param nextState
      *            the new next state
      */
-    public void setNextState( final StateModel nextState ) {
+    public void setNextState(final StateModel nextState) {
+
         this.nextState = nextState;
     }
 
@@ -228,7 +246,8 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param recoveryTime
      *            the new recovery time
      */
-    public void setRecoveryTime( final int recoveryTime ) {
+    public void setRecoveryTime(final int recoveryTime) {
+
         this.recoveryTime = recoveryTime;
     }
 }

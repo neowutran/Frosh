@@ -1,5 +1,5 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.states;
@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class RecoveringModel.
  */
@@ -20,8 +19,9 @@ public class RecoveringModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public RecoveringModel( final LifeformModel lifeform ) {
-        super( lifeform );
+    public RecoveringModel(final LifeformModel lifeform) {
+
+        super(lifeform);
     }
 
     /*
@@ -30,14 +30,26 @@ public class RecoveringModel extends StateModel {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
-        final ArrayList<StateModel> states = new ArrayList<StateModel>( );
-        states.add( new HealtyModel( this.getLifeform( ) ) );
-        this.getLifeform( ).getDisease( )
-                .setNextState( new HealtyModel( this.getLifeform( ) ) );
-        this.getLifeform( )
-                .getDisease( )
+    public void apply() {
+
+        final ArrayList<StateModel> states = new ArrayList<StateModel>();
+        states.add(new HealtyModel(this.getLifeform()));
+        this.getLifeform().getDisease()
+                .setNextState(new HealtyModel(this.getLifeform()));
+        this.getLifeform()
+                .getDisease()
                 .setDayBeforeNextState(
-                        this.getLifeform( ).getDisease( ).getRecoveryTime( ) );
+                        this.getLifeform().getDisease().getRecoveryTime());
+    }
+
+    /**
+     * Gets the state name.
+     * 
+     * @return the state name
+     */
+    @Override
+    public String getStateName() {
+
+        return "Recovering";
     }
 }

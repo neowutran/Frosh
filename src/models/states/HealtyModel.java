@@ -1,12 +1,14 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.states;
 
-import models.LifeformModel;
+import java.util.List;
 
-// TODO: Auto-generated Javadoc
+import models.LifeformModel;
+import models.disease.DiseaseModel;
+
 /**
  * The Class HealtyModel.
  */
@@ -18,8 +20,9 @@ public class HealtyModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public HealtyModel( final LifeformModel lifeform ) {
-        super( lifeform );
+    public HealtyModel(final LifeformModel lifeform) {
+
+        super(lifeform);
     }
 
     /*
@@ -28,11 +31,25 @@ public class HealtyModel extends StateModel {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
+    public void apply() {
 
-        this.getLifeform( ).getDisease( ).setNextState( null );
-        this.getLifeform( ).getDisease( ).setDayBeforeNextState( null );
-        this.getLifeform( ).setImmune( true );
+        this.getLifeform().getDisease().setNextState(null);
+        this.getLifeform().getDisease().setDayBeforeNextState(null);
+        final List<DiseaseModel> immune = this.getLifeform().getImmune();
+        immune.add(this.getLifeform().getDisease());
+        this.getLifeform().setImmune(immune);
+        this.getLifeform().setDisease(null);
 
+    }
+
+    /**
+     * Gets the state name.
+     * 
+     * @return the state name
+     */
+    @Override
+    public String getStateName() {
+
+        return "Healty";
     }
 }

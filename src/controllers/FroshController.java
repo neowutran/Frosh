@@ -1,5 +1,5 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package controllers;
@@ -17,7 +17,6 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class FroshController.
  */
@@ -30,63 +29,63 @@ public class FroshController {
     private final Grid         grid;
 
     /** The Constant LOGGER. */
-    public static final Logger LOGGER = Logger.getLogger( "Frosh" );
+    public static final Logger LOGGER = Logger.getLogger("Frosh");
 
     /**
      * Instantiates a new frosh controller.
      */
-    public FroshController( ) {
+    public FroshController() {
 
-        this.loggingConfig( );
-        this.gridModel = new GridModel( );
-        this.grid = new Grid( );
+        this.loggingConfig();
+        this.gridModel = new GridModel();
+        this.grid = new Grid();
 
-        FroshController.LOGGER.info( "finish" );
+    }
 
+    /**
+     * Next day of the game.
+     */
+    public void nextDay() {
+
+        GridModel.nextDay();
+        this.grid.show();
+    }
+
+    /**
+     * Run the game.
+     */
+    public void run() {
+
+        this.grid.show();
+        while (!this.gridModel.hasEnded()) {
+            try {
+                Thread.sleep(((Double) ((LinkedTreeMap<?, ?>) Config
+                        .getConfiguration().get("controller"))
+                        .get("msBeforeNextDay")).intValue());
+            } catch (final InterruptedException e) {
+                FroshController.LOGGER.severe(e.getStackTrace().toString());
+            }
+            this.nextDay();
+
+        }
     }
 
     /**
      * Logging config.
      */
-    private void loggingConfig( ) {
+    private void loggingConfig() {
 
-        FroshController.LOGGER.setLevel( Level.INFO );
-        final XMLFormatter xmlFormatter = new XMLFormatter( );
+        FroshController.LOGGER.setLevel(Level.INFO);
+        final XMLFormatter xmlFormatter = new XMLFormatter();
         FileHandler logFile = null;
         try {
-            logFile = new FileHandler( "log.xml" );
-        } catch( SecurityException | IOException e ) {
+            logFile = new FileHandler("log.xml");
+        } catch (SecurityException | IOException e) {
 
-            FroshController.LOGGER.severe( e.getStackTrace( ).toString( ) );
+            FroshController.LOGGER.severe(e.getStackTrace().toString());
         }
-        logFile.setFormatter( xmlFormatter );
-        FroshController.LOGGER.addHandler( logFile );
+        logFile.setFormatter(xmlFormatter);
+        FroshController.LOGGER.addHandler(logFile);
 
-    }
-
-    /**
-     * Next day.
-     */
-    public void nextDay( ) {
-        GridModel.nextDay( );
-        this.grid.show( );
-    }
-
-    /**
-     * Run.
-     */
-    public void run( ) {
-        this.grid.show( );
-        while( !this.gridModel.hasEnded( ) ) {
-            try {
-                Thread.sleep( ( ( Double ) ( ( LinkedTreeMap<?, ?> ) Config
-                        .getConfiguration( ).get( "controller" ) )
-                        .get( "msBeforeNextDay" ) ).intValue( ) );
-            } catch( final InterruptedException e ) {
-                FroshController.LOGGER.severe( e.getStackTrace( ).toString( ) );
-            }
-            this.nextDay( );
-
-        }
     }
 }

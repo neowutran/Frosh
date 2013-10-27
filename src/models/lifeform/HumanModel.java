@@ -6,7 +6,6 @@ package models.lifeform;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class HumanModel.
  */
@@ -20,8 +19,9 @@ public class HumanModel extends LifeformModel {
      * @param line
      *            the line
      */
-    public HumanModel( final int column, final int line ) {
-        super( column, line );
+    public HumanModel(final int column, final int line) {
+
+        super(column, line);
     }
 
     /*
@@ -30,7 +30,8 @@ public class HumanModel extends LifeformModel {
      * @see models.ILifeformType#getLifeformType()
      */
     @Override
-    public String getLifeformType( ) {
+    public String getLifeformType() {
+
         return "Human";
     }
 }

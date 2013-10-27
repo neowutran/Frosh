@@ -1,12 +1,11 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models.states;
 
 import models.LifeformModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ContagiousModel.
  */
@@ -18,8 +17,9 @@ public class ContagiousModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public ContagiousModel( final LifeformModel lifeform ) {
-        super( lifeform );
+    public ContagiousModel(final LifeformModel lifeform) {
+
+        super(lifeform);
     }
 
     /*
@@ -28,13 +28,24 @@ public class ContagiousModel extends StateModel {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
+    public void apply() {
 
-        this.getLifeform( ).getDisease( )
-                .setNextState( new RecoveringModel( this.getLifeform( ) ) );
-        this.getLifeform( )
-                .getDisease( )
+        this.getLifeform().getDisease()
+                .setNextState(new RecoveringModel(this.getLifeform()));
+        this.getLifeform()
+                .getDisease()
                 .setDayBeforeNextState(
-                        this.getLifeform( ).getDisease( ).getContagiousTime( ) );
+                        this.getLifeform().getDisease().getContagiousTime());
+    }
+
+    /**
+     * Gets the state name.
+     * 
+     * @return the state name
+     */
+    @Override
+    public String getStateName() {
+
+        return "Contagious";
     }
 }

@@ -1,17 +1,16 @@
 /*
- * 
+ * @author Martini Didier
  */
 
 package models;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Enum Cardinal.
  */
 public enum Cardinal {
 
-    /** The nort. */
-    NORT,
+    /** The north. */
+    NORTH,
 
     /** The south. */
     SOUTH,
@@ -23,10 +22,10 @@ public enum Cardinal {
     WEST,
 
     /** The norteast. */
-    NORTEAST,
+    NORTHEAST,
 
     /** The nortwest. */
-    NORTWEST,
+    NORTHWEST,
 
     /** The southeast. */
     SOUTHEAST,
