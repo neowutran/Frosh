@@ -5,11 +5,10 @@
 package models.disease;
 
 import lib.Rand;
-import models.LifeformModel;
-import models.states.ContagiousModel;
-import models.states.DeadModel;
-import models.states.SickModel;
-import models.states.StateModel;
+import models.Lifeform;
+import models.states.Dead;
+import models.states.Sick;
+import models.states.State;
 
 import com.google.gson.internal.LinkedTreeMap;
 
@@ -18,13 +17,13 @@ import config.Config;
 /**
  * The Class DiseaseModel.
  */
-public abstract class DiseaseModel implements IDiseaseType {
+public abstract class Disease implements IDiseaseType {
 
     /** The infection rate. */
     private LinkedTreeMap<?, ?> infectionRate;
 
     /** The carrier. */
-    private LifeformModel       carrier            = null;
+    private Lifeform       carrier            = null;
 
     /** The incubation time. */
     private int                 incubationTime;
@@ -39,7 +38,7 @@ public abstract class DiseaseModel implements IDiseaseType {
     private int                 contagiousTime;
 
     /** The next state. */
-    private StateModel          nextState          = null;
+    private State          nextState          = null;
 
     /** The day before next state. */
     private Integer             dayBeforeNextState = null;
@@ -50,7 +49,7 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param carrier
      *            the carrier
      */
-    public DiseaseModel(final LifeformModel carrier) {
+    public Disease(final Lifeform carrier) {
 
         this.carrier = carrier;
         final LinkedTreeMap<?, ?> config = (LinkedTreeMap<?, ?>) Config
@@ -75,7 +74,7 @@ public abstract class DiseaseModel implements IDiseaseType {
                 .get(this.carrier.getLifeformType())).get("contagiousTime"))
                 .intValue();
         this.dayBeforeNextState = 0;
-        this.nextState = new SickModel(this.carrier);
+        this.nextState = new Sick(this.carrier);
     }
 
     /**
@@ -133,7 +132,7 @@ public abstract class DiseaseModel implements IDiseaseType {
      * 
      * @return the next state
      */
-    public StateModel getNextState() {
+    public State getNextState() {
 
         return this.nextState;
     }
@@ -153,16 +152,17 @@ public abstract class DiseaseModel implements IDiseaseType {
      */
     public void nextDay() {
 
-        if ((this.carrier.getStates() instanceof DeadModel)
+        if ((this.carrier.getStates().getStateName().equals("Dead"))
                 || (this.nextState == null)) {
             return;
         }
         if (this.dayBeforeNextState == 0) {
-            if ((this.carrier.getStates() instanceof SickModel)
-                    || (this.carrier.getStates() instanceof ContagiousModel)) {
+            if ((this.carrier.getStates().getStateName().equals("Sick"))
+                    || (this.carrier.getStates().getStateName()
+                            .equals("Contagious"))) {
                 final int result = Rand.randInt(0, 100);
                 if (result <= this.mortality) {
-                    this.carrier.setStates(new DeadModel(this.carrier));
+                    this.carrier.setStates(new Dead(this.carrier));
                     this.carrier.getStates().apply();
                     return;
                 }
@@ -235,7 +235,7 @@ public abstract class DiseaseModel implements IDiseaseType {
      * @param nextState
      *            the new next state
      */
-    public void setNextState(final StateModel nextState) {
+    public void setNextState(final State nextState) {
 
         this.nextState = nextState;
     }

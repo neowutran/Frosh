@@ -6,12 +6,12 @@ package models.states;
 
 import java.util.ArrayList;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class RecoveringModel.
  */
-public class RecoveringModel extends StateModel {
+public class Recovering extends State {
 
     /**
      * Instantiates a new recovering model.
@@ -19,7 +19,7 @@ public class RecoveringModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public RecoveringModel(final LifeformModel lifeform) {
+    public Recovering(final Lifeform lifeform) {
 
         super(lifeform);
     }
@@ -32,10 +32,10 @@ public class RecoveringModel extends StateModel {
     @Override
     public void apply() {
 
-        final ArrayList<StateModel> states = new ArrayList<StateModel>();
-        states.add(new HealtyModel(this.getLifeform()));
+        final ArrayList<State> states = new ArrayList<State>();
+        states.add(new Healty(this.getLifeform()));
         this.getLifeform().getDisease()
-                .setNextState(new HealtyModel(this.getLifeform()));
+                .setNextState(new Healty(this.getLifeform()));
         this.getLifeform()
                 .getDisease()
                 .setDayBeforeNextState(

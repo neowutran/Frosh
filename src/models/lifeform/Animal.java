@@ -4,12 +4,12 @@
 
 package models.lifeform;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class AnimalModel.
  */
-public abstract class AnimalModel extends LifeformModel {
+public abstract class Animal extends Lifeform {
 
     /**
      * Instantiates a new animal model.
@@ -19,7 +19,7 @@ public abstract class AnimalModel extends LifeformModel {
      * @param line
      *            the line
      */
-    public AnimalModel(final int column, final int line) {
+    public Animal(final int column, final int line) {
 
         super(column, line);
     }

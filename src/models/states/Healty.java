@@ -6,13 +6,13 @@ package models.states;
 
 import java.util.List;
 
-import models.LifeformModel;
-import models.disease.DiseaseModel;
+import models.Lifeform;
+import models.disease.Disease;
 
 /**
  * The Class HealtyModel.
  */
-public class HealtyModel extends StateModel {
+public class Healty extends State {
 
     /**
      * Instantiates a new healty model.
@@ -20,7 +20,7 @@ public class HealtyModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public HealtyModel(final LifeformModel lifeform) {
+    public Healty(final Lifeform lifeform) {
 
         super(lifeform);
     }
@@ -35,7 +35,7 @@ public class HealtyModel extends StateModel {
 
         this.getLifeform().getDisease().setNextState(null);
         this.getLifeform().getDisease().setDayBeforeNextState(null);
-        final List<DiseaseModel> immune = this.getLifeform().getImmune();
+        final List<Disease> immune = this.getLifeform().getImmune();
         immune.add(this.getLifeform().getDisease());
         this.getLifeform().setImmune(immune);
         this.getLifeform().setDisease(null);

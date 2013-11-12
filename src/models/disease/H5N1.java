@@ -4,12 +4,12 @@
 
 package models.disease;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class H5N1Model.
  */
-public class H5N1Model extends DiseaseModel {
+public class H5N1 extends Disease {
 
     /**
      * Instantiates a new h5 n1 model.
@@ -17,7 +17,7 @@ public class H5N1Model extends DiseaseModel {
      * @param carrier
      *            the carrier
      */
-    public H5N1Model(final LifeformModel carrier) {
+    public H5N1(final Lifeform carrier) {
 
         super(carrier);
     }

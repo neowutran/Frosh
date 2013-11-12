@@ -4,12 +4,12 @@
 
 package models.states;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class ContagiousModel.
  */
-public class ContagiousModel extends StateModel {
+public class Contagious extends State {
 
     /**
      * Instantiates a new contagious model.
@@ -17,7 +17,7 @@ public class ContagiousModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public ContagiousModel(final LifeformModel lifeform) {
+    public Contagious(final Lifeform lifeform) {
 
         super(lifeform);
     }
@@ -31,7 +31,7 @@ public class ContagiousModel extends StateModel {
     public void apply() {
 
         this.getLifeform().getDisease()
-                .setNextState(new RecoveringModel(this.getLifeform()));
+                .setNextState(new Recovering(this.getLifeform()));
         this.getLifeform()
                 .getDisease()
                 .setDayBeforeNextState(

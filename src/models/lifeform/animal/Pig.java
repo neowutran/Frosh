@@ -4,12 +4,13 @@
 
 package models.lifeform.animal;
 
-import models.lifeform.AnimalModel;
+import models.disease.H1N1;
+import models.lifeform.Animal;
 
 /**
  * The Class PigModel.
  */
-public class PigModel extends AnimalModel {
+public class Pig extends Animal {
 
     /**
      * Instantiates a new pig model.
@@ -19,9 +20,17 @@ public class PigModel extends AnimalModel {
      * @param line
      *            the line
      */
-    public PigModel(final int column, final int line) {
+    public Pig(final int column, final int line) {
 
         super(column, line);
+    }
+
+    public Pig(final int column, final int line, final boolean sick) {
+
+        super(column, line);
+        if (sick) {
+            this.setDisease(new H1N1(this));
+        }
     }
 
     /*

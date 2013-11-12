@@ -4,14 +4,14 @@
 
 package models.states;
 
-import models.GridModel;
-import models.LifeformModel;
+import models.Grid;
+import models.Lifeform;
 import models.Stats;
 
 /**
  * The Class DeadModel.
  */
-public class DeadModel extends StateModel {
+public class Dead extends State {
 
     /**
      * Instantiates a new dead model.
@@ -19,7 +19,7 @@ public class DeadModel extends StateModel {
      * @param lifeform
      *            the lifeform
      */
-    public DeadModel(final LifeformModel lifeform) {
+    public Dead(final Lifeform lifeform) {
 
         super(lifeform);
     }
@@ -35,7 +35,7 @@ public class DeadModel extends StateModel {
         Stats.setDead(Stats.getDead() + 1);
         this.getLifeform().getDisease().setNextState(null);
         this.getLifeform().getDisease().setDayBeforeNextState(null);
-        final LifeformModel[][] grid = GridModel.getGrid();
+        final Lifeform[][] grid = Grid.getGrid();
         grid[this.getLifeform().getColumn()][this.getLifeform().getLine()] = null;
         this.setLifeform(null);
     }

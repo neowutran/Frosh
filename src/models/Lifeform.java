@@ -9,10 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lib.Rand;
-import models.disease.DiseaseModel;
-import models.states.ContagiousModel;
-import models.states.HealtyModel;
-import models.states.StateModel;
+import models.disease.Disease;
+import models.states.Healty;
+import models.states.State;
 
 import com.google.gson.internal.LinkedTreeMap;
 
@@ -22,16 +21,16 @@ import controllers.FroshController;
 /**
  * The Class LifeformModel.
  */
-public abstract class LifeformModel implements ILifeformType {
+public abstract class Lifeform implements ILifeformType {
 
     /** The state. */
-    private StateModel         state   = new HealtyModel(this);
+    private State         state   = new Healty(this);
 
     /** The immune. */
-    private List<DiseaseModel> immune  = new ArrayList<DiseaseModel>();
+    private List<Disease> immune  = new ArrayList<Disease>();
 
     /** The disease. */
-    private DiseaseModel       disease = null;
+    private Disease       disease = null;
 
     /** The column. */
     private int                column;
@@ -47,7 +46,7 @@ public abstract class LifeformModel implements ILifeformType {
      * @param line
      *            the line
      */
-    public LifeformModel(final int column, final int line) {
+    public Lifeform(final int column, final int line) {
 
         this.column = column;
         this.line = line;
@@ -69,7 +68,7 @@ public abstract class LifeformModel implements ILifeformType {
      * 
      * @return the disease
      */
-    public DiseaseModel getDisease() {
+    public Disease getDisease() {
 
         return this.disease;
     }
@@ -79,7 +78,7 @@ public abstract class LifeformModel implements ILifeformType {
      * 
      * @return the immune
      */
-    public List<DiseaseModel> getImmune() {
+    public List<Disease> getImmune() {
 
         return this.immune;
     }
@@ -99,7 +98,7 @@ public abstract class LifeformModel implements ILifeformType {
      * 
      * @return the states
      */
-    public StateModel getStates() {
+    public State getStates() {
 
         return this.state;
     }
@@ -111,7 +110,7 @@ public abstract class LifeformModel implements ILifeformType {
      *            the disease
      * @return true, if is immune
      */
-    public boolean isImmune(final DiseaseModel disease) {
+    public boolean isImmune(final Disease disease) {
 
         if (this.immune.isEmpty()) {
             return false;
@@ -136,12 +135,12 @@ public abstract class LifeformModel implements ILifeformType {
      * @param freeSpace
      *            the free space
      */
-    public void nextDay(final List<LifeformModel> neighbors,
+    public void nextDay(final List<Lifeform> neighbors,
             final List<Cardinal> freeSpace) {
 
         if (this.move() && (freeSpace.size() > 0)) {
             final int cardinal = Rand.randInt(0, freeSpace.size() - 1);
-            GridModel.move(freeSpace.get(cardinal), this.column, this.line);
+            Grid.move(freeSpace.get(cardinal), this.column, this.line);
         }
         if ((this.disease == null)) {
             for (int i = 0; i < neighbors.size(); i++) {
@@ -150,7 +149,8 @@ public abstract class LifeformModel implements ILifeformType {
                     return;
                 }
 
-                if (!(neighbors.get(i).state instanceof ContagiousModel)) {
+                if (!(neighbors.get(i).state.getStateName()
+                        .equals("Contagious"))) {
                     return;
                 }
                 final int infectionRate = ((Double) neighbors.get(i).disease
@@ -162,7 +162,7 @@ public abstract class LifeformModel implements ILifeformType {
 
                     try {
                         this.disease = neighbors.get(i).disease.getClass()
-                                .getConstructor(LifeformModel.class)
+                                .getConstructor(Lifeform.class)
                                 .newInstance(this);
                     } catch (InstantiationException | IllegalAccessException
                             | IllegalArgumentException
@@ -199,7 +199,7 @@ public abstract class LifeformModel implements ILifeformType {
      * @param disease
      *            the new disease
      */
-    public void setDisease(final DiseaseModel disease) {
+    public void setDisease(final Disease disease) {
 
         this.disease = disease;
     }
@@ -210,7 +210,7 @@ public abstract class LifeformModel implements ILifeformType {
      * @param immune
      *            the new immune
      */
-    public void setImmune(final List<DiseaseModel> immune) {
+    public void setImmune(final List<Disease> immune) {
 
         this.immune = immune;
     }
@@ -232,7 +232,7 @@ public abstract class LifeformModel implements ILifeformType {
      * @param states
      *            the new states
      */
-    public void setStates(final StateModel states) {
+    public void setStates(final State states) {
 
         this.state = states;
     }
@@ -261,7 +261,7 @@ public abstract class LifeformModel implements ILifeformType {
      *            the lifeform
      * @return true, if successful
      */
-    private boolean contact(final LifeformModel lifeform) {
+    private boolean contact(final Lifeform lifeform) {
 
         final int contactRate = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) Config
                 .getConfiguration().get("contactRate")).get(this

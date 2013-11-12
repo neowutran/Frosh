@@ -4,12 +4,10 @@
 
 package models.lifeform.animal;
 
-import models.lifeform.AnimalModel;
-
 /**
  * The Class DuckModel.
  */
-public class DuckModel extends AnimalModel {
+public class Duck extends Bird {
 
     /**
      * Instantiates a new duck model.
@@ -19,9 +17,15 @@ public class DuckModel extends AnimalModel {
      * @param line
      *            the line
      */
-    public DuckModel(final int column, final int line) {
+    public Duck(final int column, final int line) {
 
         super(column, line);
+    }
+
+    public Duck(final int column, final int line, final boolean sick) {
+
+        super(column, line, sick);
+
     }
 
     /*

@@ -4,12 +4,11 @@
 
 package models.lifeform.animal;
 
-import models.lifeform.AnimalModel;
 
 /**
  * The Class ChickenModel.
  */
-public class ChickenModel extends AnimalModel {
+public class Chicken extends Bird {
 
     /**
      * Instantiates a new chicken model.
@@ -19,16 +18,24 @@ public class ChickenModel extends AnimalModel {
      * @param line
      *            the line
      */
-    public ChickenModel(final int column, final int line) {
+    public Chicken(final int column, final int line) {
 
         super(column, line);
     }
 
+    public Chicken(final int column, final int line, final boolean sick) {
+
+        super(column, line, sick);
+
+    }
+
     /*
+     * 
      * (non-Javadoc)
      * 
      * @see models.ILifeformType#getLifeformType()
      */
+
     @Override
     public String getLifeformType() {
 

@@ -4,12 +4,12 @@
 
 package models.lifeform;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class HumanModel.
  */
-public class HumanModel extends LifeformModel {
+public class Human extends Lifeform {
 
     /**
      * Instantiates a new human model.
@@ -19,7 +19,7 @@ public class HumanModel extends LifeformModel {
      * @param line
      *            the line
      */
-    public HumanModel(final int column, final int line) {
+    public Human(final int column, final int line) {
 
         super(column, line);
     }

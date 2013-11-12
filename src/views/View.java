@@ -4,8 +4,8 @@
 
 package views;
 
-import models.GridModel;
-import models.LifeformModel;
+import models.Grid;
+import models.Lifeform;
 import models.Stats;
 
 import com.google.gson.internal.LinkedTreeMap;
@@ -13,9 +13,9 @@ import com.google.gson.internal.LinkedTreeMap;
 import config.Config;
 
 /**
- * The Class Grid.
+ * The Class View.
  */
-public class Grid {
+public class View {
 
     /** The day. */
     private int day = 0;
@@ -40,9 +40,9 @@ public class Grid {
         resultat += "day:" + this.day + "\n";
         resultat += "dead:" + Stats.getDead() + "\n";
         this.day++;
-        final LifeformModel[][] grid = GridModel.getGrid();
-        for (final LifeformModel[] element : grid) {
-            for (final LifeformModel element2 : element) {
+        final Lifeform[][] grid = Grid.getGrid();
+        for (final Lifeform[] element : grid) {
+            for (final Lifeform element2 : element) {
                 if (element2 == null) {
                     resultat += "--";
                     resultat += "\t|\t";

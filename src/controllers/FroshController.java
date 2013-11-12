@@ -10,8 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
-import models.GridModel;
-import views.Grid;
+import models.Grid;
+import views.View;
 
 import com.google.gson.internal.LinkedTreeMap;
 
@@ -23,10 +23,10 @@ import config.Config;
 public class FroshController {
 
     /** The grid model. */
-    private final GridModel    gridModel;
+    private final Grid         gridModel;
 
     /** The grid. */
-    private final Grid         grid;
+    private final View         grid;
 
     /** The Constant LOGGER. */
     public static final Logger LOGGER = Logger.getLogger("Frosh");
@@ -37,8 +37,8 @@ public class FroshController {
     public FroshController() {
 
         this.loggingConfig();
-        this.gridModel = new GridModel();
-        this.grid = new Grid();
+        this.gridModel = new Grid();
+        this.grid = new View();
 
     }
 
@@ -47,7 +47,7 @@ public class FroshController {
      */
     public void nextDay() {
 
-        GridModel.nextDay();
+        Grid.nextDay();
         this.grid.show();
     }
 

@@ -4,15 +4,15 @@
 
 package models.states;
 
-import models.LifeformModel;
+import models.Lifeform;
 
 /**
  * The Class StateModel.
  */
-public abstract class StateModel implements IState {
+public abstract class State implements IState {
 
     /** The lifeform. */
-    private LifeformModel lifeform;
+    private Lifeform lifeform;
 
     /**
      * Instantiates a new state model.
@@ -20,7 +20,7 @@ public abstract class StateModel implements IState {
      * @param lifeform
      *            the lifeform
      */
-    public StateModel(final LifeformModel lifeform) {
+    public State(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }
@@ -30,7 +30,7 @@ public abstract class StateModel implements IState {
      * 
      * @return the lifeform
      */
-    public LifeformModel getLifeform() {
+    public Lifeform getLifeform() {
 
         return this.lifeform;
     }
@@ -41,7 +41,7 @@ public abstract class StateModel implements IState {
      * @param lifeform
      *            the new lifeform
      */
-    public void setLifeform(final LifeformModel lifeform) {
+    public void setLifeform(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }
