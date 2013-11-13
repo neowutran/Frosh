@@ -13,9 +13,8 @@ public class Contagious extends State {
 
     /**
      * Instantiates a new contagious model.
-     * 
-     * @param lifeform
-     *            the lifeform
+     *
+     * @param lifeform the lifeform
      */
     public Contagious(final Lifeform lifeform) {
 
@@ -24,7 +23,7 @@ public class Contagious extends State {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.States.IState#apply()
      */
     @Override
@@ -40,7 +39,7 @@ public class Contagious extends State {
 
     /**
      * Gets the state name.
-     * 
+     *
      * @return the state name
      */
     @Override

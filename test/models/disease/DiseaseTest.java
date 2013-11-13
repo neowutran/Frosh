@@ -2,7 +2,6 @@
 package models.disease;
 
 import models.Lifeform;
-
 import org.junit.Test;
 
 public class DiseaseTest {

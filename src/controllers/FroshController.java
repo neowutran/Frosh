@@ -4,31 +4,35 @@
 
 package controllers;
 
+import com.google.gson.internal.LinkedTreeMap;
+import config.Config;
+import models.Grid;
+import views.View;
+
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
-import models.Grid;
-import views.View;
-
-import com.google.gson.internal.LinkedTreeMap;
-
-import config.Config;
-
 /**
  * The Class FroshController.
  */
 public class FroshController {
 
-    /** The grid model. */
-    private final Grid         gridModel;
+    /**
+     * The grid model.
+     */
+    private final Grid gridModel;
 
-    /** The grid. */
-    private final View         grid;
+    /**
+     * The grid.
+     */
+    private final View grid;
 
-    /** The Constant LOGGER. */
+    /**
+     * The Constant LOGGER.
+     */
     public static final Logger LOGGER = Logger.getLogger("Frosh");
 
     /**
@@ -63,7 +67,7 @@ public class FroshController {
                         .getConfiguration().get("controller"))
                         .get("msBeforeNextDay")).intValue());
             } catch (final InterruptedException e) {
-                FroshController.LOGGER.severe(e.getStackTrace().toString());
+                FroshController.LOGGER.severe(java.util.Arrays.toString(e.getStackTrace()));
             }
             this.nextDay();
 
@@ -82,9 +86,12 @@ public class FroshController {
             logFile = new FileHandler("log.xml");
         } catch (SecurityException | IOException e) {
 
-            FroshController.LOGGER.severe(e.getStackTrace().toString());
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e.getStackTrace()));
         }
-        logFile.setFormatter(xmlFormatter);
+
+        if (logFile != null) {
+            logFile.setFormatter(xmlFormatter);
+        }
         FroshController.LOGGER.addHandler(logFile);
 
     }

@@ -4,49 +4,61 @@
 
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.google.gson.internal.LinkedTreeMap;
+import config.Config;
+import controllers.FroshController;
 import lib.Rand;
 import models.lifeform.Human;
 import models.lifeform.animal.Chicken;
 import models.lifeform.animal.Duck;
 import models.lifeform.animal.Pig;
 
-import com.google.gson.internal.LinkedTreeMap;
-
-import config.Config;
-import controllers.FroshController;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The Class GridModel.
  */
 public class Grid {
 
-    /** The grid. */
-    private static Lifeform[][]        grid;
+    /**
+     * The grid.
+     */
+    private static Lifeform[][] grid;
 
-    /** The height. */
-    private static int                 height;
+    /**
+     * The height.
+     */
+    private static int height;
 
-    /** The width. */
-    private static int                 width;
+    /**
+     * The width.
+     */
+    private static int width;
 
-    /** The chance of human populate. */
-    private static int                 chanceOfHumanPopulate;
+    /**
+     * The chance of human populate.
+     */
+    private static int chanceOfHumanPopulate;
 
-    /** The change of animal populate. */
-    private static int                 changeOfAnimalPopulate;
+    /**
+     * The change of animal populate.
+     */
+    private static int changeOfAnimalPopulate;
 
-    /** The chance of infected animal. */
-    private static int                 chanceOfInfectedAnimal;
+    /**
+     * The chance of infected animal.
+     */
+    private static int chanceOfInfectedAnimal;
 
-    /** The config. */
+    /**
+     * The config.
+     */
     private static LinkedTreeMap<?, ?> config;
 
     /**
      * Gets the grid.
-     * 
+     *
      * @return the grid
      */
     public static Lifeform[][] getGrid() {
@@ -56,48 +68,45 @@ public class Grid {
 
     /**
      * Move a lifeform.
-     * 
-     * @param cardinal
-     *            the cardinal
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param cardinal the cardinal
+     * @param column   the column
+     * @param line     the line
      */
     public static void move(final Cardinal cardinal, final int column,
-            final int line) {
+                            final int line) {
 
         int addColumn = 0;
         int addLine = 0;
         switch (cardinal) {
-        case NORTH:
-            addLine++;
-            break;
-        case EAST:
-            addColumn++;
-            break;
-        case WEST:
-            addColumn--;
-            break;
-        case SOUTH:
-            addLine--;
-            break;
-        case NORTHEAST:
-            addLine++;
-            addColumn++;
-            break;
-        case NORTHWEST:
-            addLine++;
-            addColumn--;
-            break;
-        case SOUTHEAST:
-            addLine--;
-            addColumn++;
-            break;
-        case SOUTHWEST:
-            addLine--;
-            addColumn--;
-            break;
+            case NORTH:
+                addLine++;
+                break;
+            case EAST:
+                addColumn++;
+                break;
+            case WEST:
+                addColumn--;
+                break;
+            case SOUTH:
+                addLine--;
+                break;
+            case NORTHEAST:
+                addLine++;
+                addColumn++;
+                break;
+            case NORTHWEST:
+                addLine++;
+                addColumn--;
+                break;
+            case SOUTHEAST:
+                addLine--;
+                addColumn++;
+                break;
+            case SOUTHWEST:
+                addLine--;
+                addColumn--;
+                break;
         }
         Grid.grid[column][line].setColumn(column + addColumn);
         Grid.grid[column][line].setLine(line + addLine);
@@ -122,16 +131,15 @@ public class Grid {
 
     /**
      * Find free space in the grid.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Cardinal> findFreeSpace(final int column, final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<Cardinal>();
+        final List<Cardinal> freeSpace = new ArrayList<>();
 
         final int gridUse = ((Double) Grid.config.get("gridUse")).intValue();
 
@@ -146,17 +154,16 @@ public class Grid {
 
     /**
      * Find free space diagonal in the grid.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Cardinal> findFreeSpaceDiagonal(final int column,
-            final int line) {
+                                                        final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<Cardinal>();
+        final List<Cardinal> freeSpace = new ArrayList<>();
 
         if (Grid.grid.length > (column + 1)) {
             if ((Grid.grid[column].length > (line + 1))
@@ -189,17 +196,16 @@ public class Grid {
 
     /**
      * Find free space without diagonal in the grid.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Cardinal> findFreeSpaceNoDiagonal(final int column,
-            final int line) {
+                                                          final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<Cardinal>();
+        final List<Cardinal> freeSpace = new ArrayList<>();
         if ((Grid.grid[column].length > (line + 1))
                 && (Grid.grid[column][line + 1] == null)) {
             freeSpace.add(Cardinal.NORTH);
@@ -224,16 +230,15 @@ public class Grid {
 
     /**
      * Find neighbor.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Lifeform> findNeighbor(final int column, final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<Lifeform>();
+        final List<Lifeform> neightbors = new ArrayList<>();
 
         final int gridUse = ((Double) Grid.config.get("gridUse")).intValue();
 
@@ -249,17 +254,16 @@ public class Grid {
 
     /**
      * Find neighbor diagonal.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Lifeform> findNeighborDiagonal(final int column,
-            final int line) {
+                                                       final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<Lifeform>();
+        final List<Lifeform> neightbors = new ArrayList<>();
 
         if (Grid.grid.length > (column + 1)) {
             if ((Grid.grid[column].length > (line + 1))
@@ -289,17 +293,16 @@ public class Grid {
 
     /**
      * Find neighbor no diagonal.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
+     *
      * @return the list
      */
     private static List<Lifeform> findNeighborNoDiagonal(final int column,
-            final int line) {
+                                                         final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<Lifeform>();
+        final List<Lifeform> neightbors = new ArrayList<>();
         if ((Grid.grid[column].length > (line + 1))
                 && (Grid.grid[column][line + 1] != null)) {
             neightbors.add(Grid.grid[column][line + 1]);
@@ -340,14 +343,14 @@ public class Grid {
         try {
             this.checkParams();
         } catch (final Exception e) {
-            FroshController.LOGGER.severe(e.getStackTrace().toString());
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e.getStackTrace()));
         }
         this.populate();
     }
 
     /**
      * Checks for ended.
-     * 
+     *
      * @return true, if successful
      */
     public boolean hasEnded() {
@@ -367,14 +370,13 @@ public class Grid {
 
     /**
      * Check params.
-     * 
      */
     private void checkParams() {
 
         if ((Grid.chanceOfHumanPopulate < 0)
                 || (Grid.changeOfAnimalPopulate < 0)
                 || ((Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate) > Config
-                        .getMax())) {
+                .getMax())) {
             FroshController.LOGGER
                     .severe("Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 ");
             throw new IllegalArgumentException(
@@ -402,15 +404,15 @@ public class Grid {
                         isSick = true;
                     }
                     switch (animal) {
-                    case 0:
-                        lifeform = new Chicken(i, j, isSick);
-                        break;
-                    case 1:
-                        lifeform = new Pig(i, j, isSick);
-                        break;
-                    case 2:
-                        lifeform = new Duck(i, j, isSick);
-                        break;
+                        case 0:
+                            lifeform = new Chicken(i, j, isSick);
+                            break;
+                        case 1:
+                            lifeform = new Pig(i, j, isSick);
+                            break;
+                        case 2:
+                            lifeform = new Duck(i, j, isSick);
+                            break;
                     }
 
                 }

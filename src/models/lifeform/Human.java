@@ -1,5 +1,5 @@
 /*
- * 
+ *
  */
 
 package models.lifeform;
@@ -13,11 +13,9 @@ public class Human extends Lifeform {
 
     /**
      * Instantiates a new human model.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
      */
     public Human(final int column, final int line) {
 
@@ -26,7 +24,7 @@ public class Human extends Lifeform {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.ILifeformType#getLifeformType()
      */
     @Override

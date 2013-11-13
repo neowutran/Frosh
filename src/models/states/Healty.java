@@ -4,10 +4,10 @@
 
 package models.states;
 
-import java.util.List;
-
 import models.Lifeform;
 import models.disease.Disease;
+
+import java.util.List;
 
 /**
  * The Class HealtyModel.
@@ -16,9 +16,8 @@ public class Healty extends State {
 
     /**
      * Instantiates a new healty model.
-     * 
-     * @param lifeform
-     *            the lifeform
+     *
+     * @param lifeform the lifeform
      */
     public Healty(final Lifeform lifeform) {
 
@@ -27,7 +26,7 @@ public class Healty extends State {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.States.IState#apply()
      */
     @Override
@@ -44,7 +43,7 @@ public class Healty extends State {
 
     /**
      * Gets the state name.
-     * 
+     *
      * @return the state name
      */
     @Override

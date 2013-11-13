@@ -4,37 +4,37 @@
 
 package lib;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 import controllers.FroshController;
+
+import java.io.*;
 
 /**
  * The Class CopyFile.
  */
 public class CopyFile {
 
-    /** The destination. */
-    private String            destination;
+    /**
+     * The destination.
+     */
+    private String destination;
 
-    /** The sources. */
-    private final InputStream sources      = this.getClass()
-                                                   .getClassLoader()
-                                                   .getResourceAsStream(
-                                                           "config.json");
+    /**
+     * The sources.
+     */
+    private final InputStream sources = this.getClass()
+            .getClassLoader()
+            .getResourceAsStream(
+                    "config.json");
 
-    /** The Constant TAILLEBUFFER. */
-    private static final int  TAILLEBUFFER = 1024;
+    /**
+     * The Constant TAILLEBUFFER.
+     */
+    private static final int TAILLEBUFFER = 1024;
 
     /**
      * Copyfile.
-     * 
-     * @param destination
-     *            the destination
+     *
+     * @param destination the destination
      */
     public void copyfile(final String destination) {
 
@@ -50,16 +50,16 @@ public class CopyFile {
             this.sources.close();
             out.close();
         } catch (final FileNotFoundException ex) {
-            FroshController.LOGGER.severe(ex.getStackTrace().toString());
+            FroshController.LOGGER.severe(java.util.Arrays.toString(ex.getStackTrace()));
             System.exit(0);
         } catch (final IOException e) {
-            FroshController.LOGGER.severe(e.getStackTrace().toString());
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e.getStackTrace()));
         }
     }
 
     /**
      * Gets the destination.
-     * 
+     *
      * @return the destination
      */
     public String getDestination() {
@@ -69,9 +69,8 @@ public class CopyFile {
 
     /**
      * Sets the destination.
-     * 
-     * @param destination
-     *            the new destination
+     *
+     * @param destination the new destination
      */
     public void setDestination(final String destination) {
 

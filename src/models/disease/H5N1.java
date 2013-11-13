@@ -13,9 +13,8 @@ public class H5N1 extends Disease {
 
     /**
      * Instantiates a new h5 n1 model.
-     * 
-     * @param carrier
-     *            the carrier
+     *
+     * @param carrier the carrier
      */
     public H5N1(final Lifeform carrier) {
 

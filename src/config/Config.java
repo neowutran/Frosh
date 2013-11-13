@@ -11,14 +11,16 @@ import java.util.Map;
  */
 public final class Config {
 
-    /** The configuration. */
+    /**
+     * The configuration.
+     */
     private static Map<String, Object> configuration;
 
-    private static final Integer       MAX = 100;
+    private static final Integer MAX = 100;
 
     /**
      * Gets the configuration.
-     * 
+     *
      * @return the configuration
      */
     public static Map<String, Object> getConfiguration() {
@@ -34,9 +36,8 @@ public final class Config {
 
     /**
      * Sets the configuration.
-     * 
-     * @param configuration
-     *            the configuration
+     *
+     * @param configuration the configuration
      */
     public static void setConfiguration(final Map<String, Object> configuration) {
 

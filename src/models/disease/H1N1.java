@@ -13,9 +13,8 @@ public class H1N1 extends Disease {
 
     /**
      * Instantiates a new h1 n1 model.
-     * 
-     * @param carrier
-     *            the carrier
+     *
+     * @param carrier the carrier
      */
     public H1N1(final Lifeform carrier) {
 

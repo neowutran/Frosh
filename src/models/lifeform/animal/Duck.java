@@ -1,5 +1,5 @@
 /*
- * 
+ *
  */
 
 package models.lifeform.animal;
@@ -9,19 +9,6 @@ package models.lifeform.animal;
  */
 public class Duck extends Bird {
 
-    /**
-     * Instantiates a new duck model.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
-     */
-    public Duck(final int column, final int line) {
-
-        super(column, line);
-    }
-
     public Duck(final int column, final int line, final boolean sick) {
 
         super(column, line, sick);
@@ -30,7 +17,7 @@ public class Duck extends Bird {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.ILifeformType#getLifeformType()
      */
     @Override

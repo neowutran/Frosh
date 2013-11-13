@@ -16,7 +16,7 @@ public interface IState {
 
     /**
      * Gets the state name.
-     * 
+     *
      * @return the state name
      */
     String getStateName();

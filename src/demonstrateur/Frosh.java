@@ -4,6 +4,11 @@
 
 package demonstrateur;
 
+import com.google.gson.Gson;
+import config.Config;
+import controllers.FroshController;
+import lib.CopyFile;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -13,29 +18,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import lib.CopyFile;
-
-import com.google.gson.Gson;
-
-import config.Config;
-import controllers.FroshController;
-
 /**
  * The Class Frosh.
  */
 public class Frosh {
 
-    /** The Constant FOLDER. Config folder of the game */
+    /**
+     * The Constant FOLDER. Config folder of the game
+     */
     public static final String FOLDER = "Frosh" + File.separator;
 
-    /** The Constant CONFIG. Config file of the game */
+    /**
+     * The Constant CONFIG. Config file of the game
+     */
     public static final String CONFIG = "config.json";
 
     /**
      * The main method.
-     * 
-     * @param args
-     *            not used
+     *
+     * @param args not used
      */
     public static void main(final String[] args) {
 
@@ -71,9 +72,8 @@ public class Frosh {
 
     /**
      * Load config file.
-     * 
-     * @param configFile
-     *            the config file
+     *
+     * @param configFile the config file
      */
     private void loadConfigFile(final Path configFile) {
 
@@ -81,7 +81,7 @@ public class Frosh {
         final Charset charset = Charset.forName("UTF-8");
         try (BufferedReader reader = Files.newBufferedReader(configFile,
                 charset)) {
-            String line = null;
+            String line;
             String text = "";
             while ((line = reader.readLine()) != null) {
                 text += line;

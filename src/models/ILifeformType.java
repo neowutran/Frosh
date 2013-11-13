@@ -11,7 +11,7 @@ public interface ILifeformType {
 
     /**
      * Gets the lifeform type.
-     * 
+     *
      * @return the lifeform type
      */
     String getLifeformType();

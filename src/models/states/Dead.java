@@ -15,9 +15,8 @@ public class Dead extends State {
 
     /**
      * Instantiates a new dead model.
-     * 
-     * @param lifeform
-     *            the lifeform
+     *
+     * @param lifeform the lifeform
      */
     public Dead(final Lifeform lifeform) {
 
@@ -26,7 +25,7 @@ public class Dead extends State {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.States.IState#apply()
      */
     @Override
@@ -42,7 +41,7 @@ public class Dead extends State {
 
     /**
      * Gets the state name.
-     * 
+     *
      * @return the state name
      */
     @Override

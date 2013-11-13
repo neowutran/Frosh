@@ -4,9 +4,9 @@
 
 package models.states;
 
-import java.util.ArrayList;
-
 import models.Lifeform;
+
+import java.util.ArrayList;
 
 /**
  * The Class RecoveringModel.
@@ -15,9 +15,8 @@ public class Recovering extends State {
 
     /**
      * Instantiates a new recovering model.
-     * 
-     * @param lifeform
-     *            the lifeform
+     *
+     * @param lifeform the lifeform
      */
     public Recovering(final Lifeform lifeform) {
 
@@ -26,13 +25,13 @@ public class Recovering extends State {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see models.States.IState#apply()
      */
     @Override
     public void apply() {
 
-        final ArrayList<State> states = new ArrayList<State>();
+        final ArrayList<State> states = new ArrayList<>();
         states.add(new Healty(this.getLifeform()));
         this.getLifeform().getDisease()
                 .setNextState(new Healty(this.getLifeform()));
@@ -44,7 +43,7 @@ public class Recovering extends State {
 
     /**
      * Gets the state name.
-     * 
+     *
      * @return the state name
      */
     @Override

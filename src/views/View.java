@@ -4,20 +4,20 @@
 
 package views;
 
+import com.google.gson.internal.LinkedTreeMap;
+import config.Config;
 import models.Grid;
 import models.Lifeform;
 import models.Stats;
-
-import com.google.gson.internal.LinkedTreeMap;
-
-import config.Config;
 
 /**
  * The Class View.
  */
 public class View {
 
-    /** The day. */
+    /**
+     * The day.
+     */
     private int day = 0;
 
     /**
@@ -30,7 +30,7 @@ public class View {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Object#toString()
      */
     @Override

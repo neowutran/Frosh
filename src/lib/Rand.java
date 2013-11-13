@@ -12,16 +12,14 @@ import java.util.Random;
 public final class Rand {
 
     /**
-     * 
      * Rand int.
-     * 
-     * @param min
-     *            the min
-     * @param max
-     *            the max
+     *
+     * @param min the min
+     * @param max the max
+     *
      * @return the int
-     * 
-     *         Comment: Not my method, I found this on stackoverflow
+     * <p/>
+     * Comment: Not my method, I found this on stackoverflow
      */
     public static int randInt(final int min, final int max) {
 

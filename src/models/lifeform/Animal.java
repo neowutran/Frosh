@@ -1,5 +1,5 @@
 /*
- * 
+ *
  */
 
 package models.lifeform;
@@ -13,11 +13,9 @@ public abstract class Animal extends Lifeform {
 
     /**
      * Instantiates a new animal model.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
      */
     public Animal(final int column, final int line) {
 

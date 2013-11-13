@@ -4,50 +4,56 @@
 
 package models.disease;
 
+import com.google.gson.internal.LinkedTreeMap;
+import config.Config;
 import lib.Rand;
 import models.Lifeform;
 import models.states.Dead;
 import models.states.Sick;
 import models.states.State;
 
-import com.google.gson.internal.LinkedTreeMap;
-
-import config.Config;
-
 /**
  * The Class DiseaseModel.
  */
 public abstract class Disease implements IDiseaseType {
 
-    /** The infection rate. */
+    /**
+     * The infection rate.
+     */
     private LinkedTreeMap<?, ?> infectionRate;
-
-    /** The carrier. */
-    private Lifeform       carrier            = null;
-
-    /** The incubation time. */
-    private int                 incubationTime;
-
-    /** The mortality. */
-    private int                 mortality;
-
-    /** The recovery time. */
-    private int                 recoveryTime;
-
-    /** The contagious time. */
-    private int                 contagiousTime;
-
-    /** The next state. */
-    private State          nextState          = null;
-
-    /** The day before next state. */
-    private Integer             dayBeforeNextState = null;
+    /**
+     * The carrier.
+     */
+    private Lifeform carrier = null;
+    /**
+     * The incubation time.
+     */
+    private int incubationTime;
+    /**
+     * The mortality.
+     */
+    private int mortality;
+    /**
+     * The recovery time.
+     */
+    private int recoveryTime;
+    /**
+     * The contagious time.
+     */
+    private int contagiousTime;
+    /**
+     * The next state.
+     */
+    private State nextState = null;
+    /**
+     * The day before next state.
+     */
+    private Integer dayBeforeNextState = null;
 
     /**
      * Instantiates a new disease model.
-     * 
-     * @param carrier
-     *            the carrier
+     *
+     * @param carrier the carrier
      */
     public Disease(final Lifeform carrier) {
 
@@ -79,7 +85,7 @@ public abstract class Disease implements IDiseaseType {
 
     /**
      * Gets the contagious time.
-     * 
+     *
      * @return the contagious time
      */
     public int getContagiousTime() {
@@ -88,8 +94,18 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the contagious time.
+     *
+     * @param contagiousTime the new contagious time
+     */
+    public void setContagiousTime(final int contagiousTime) {
+
+        this.contagiousTime = contagiousTime;
+    }
+
+    /**
      * Gets the day before next state.
-     * 
+     *
      * @return the day before next state
      */
     public Integer getDayBeforeNextState() {
@@ -98,8 +114,18 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the day before next state.
+     *
+     * @param dayBeforeNextState the new day before next state
+     */
+    public void setDayBeforeNextState(final Integer dayBeforeNextState) {
+
+        this.dayBeforeNextState = dayBeforeNextState;
+    }
+
+    /**
      * Gets the incubation time.
-     * 
+     *
      * @return the incubation time
      */
     public int getIncubationTime() {
@@ -108,8 +134,18 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the incubation time.
+     *
+     * @param incubationTime the new incubation time
+     */
+    public void setIncubationTime(final int incubationTime) {
+
+        this.incubationTime = incubationTime;
+    }
+
+    /**
      * Gets the infection rate.
-     * 
+     *
      * @return the infection rate
      */
     public LinkedTreeMap<?, ?> getInfectionRate() {
@@ -118,8 +154,18 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the infection rate.
+     *
+     * @param infectionRate the infection rate
+     */
+    public void setInfectionRate(final LinkedTreeMap<?, ?> infectionRate) {
+
+        this.infectionRate = infectionRate;
+    }
+
+    /**
      * Gets the mortality.
-     * 
+     *
      * @return the mortality
      */
     public int getMortality() {
@@ -128,8 +174,18 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the mortality.
+     *
+     * @param mortality the new mortality
+     */
+    public void setMortality(final int mortality) {
+
+        this.mortality = mortality;
+    }
+
+    /**
      * Gets the next state.
-     * 
+     *
      * @return the next state
      */
     public State getNextState() {
@@ -138,13 +194,33 @@ public abstract class Disease implements IDiseaseType {
     }
 
     /**
+     * Sets the next state.
+     *
+     * @param nextState the new next state
+     */
+    public void setNextState(final State nextState) {
+
+        this.nextState = nextState;
+    }
+
+    /**
      * Gets the recovery time.
-     * 
+     *
      * @return the recovery time
      */
     public int getRecoveryTime() {
 
         return this.recoveryTime;
+    }
+
+    /**
+     * Sets the recovery time.
+     *
+     * @param recoveryTime the new recovery time
+     */
+    public void setRecoveryTime(final int recoveryTime) {
+
+        this.recoveryTime = recoveryTime;
     }
 
     /**
@@ -159,7 +235,7 @@ public abstract class Disease implements IDiseaseType {
         if (this.dayBeforeNextState == 0) {
             if ((this.carrier.getStates().getStateName().equals("Sick"))
                     || (this.carrier.getStates().getStateName()
-                            .equals("Contagious"))) {
+                    .equals("Contagious"))) {
                 final int result = Rand.randInt(0, 100);
                 if (result <= this.mortality) {
                     this.carrier.setStates(new Dead(this.carrier));
@@ -174,80 +250,36 @@ public abstract class Disease implements IDiseaseType {
         this.dayBeforeNextState--;
     }
 
-    /**
-     * Sets the contagious time.
-     * 
-     * @param contagiousTime
-     *            the new contagious time
-     */
-    public void setContagiousTime(final int contagiousTime) {
+    @Override
+    public int hashCode() {
 
-        this.contagiousTime = contagiousTime;
+        int result = infectionRate.hashCode();
+        result = 31 * result + carrier.hashCode();
+        result = 31 * result + this.incubationTime;
+        result = 31 * result + mortality;
+        result = 31 * result + recoveryTime;
+        result = 31 * result + contagiousTime;
+        result = 31 * result + nextState.hashCode();
+        result = 31 * result + dayBeforeNextState.hashCode();
+        return result;
     }
 
-    /**
-     * Sets the day before next state.
-     * 
-     * @param dayBeforeNextState
-     *            the new day before next state
-     */
-    public void setDayBeforeNextState(final Integer dayBeforeNextState) {
+    @Override
+    public boolean equals(Object o) {
 
-        this.dayBeforeNextState = dayBeforeNextState;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Disease disease = (Disease) o;
+
+        return contagiousTime == disease.contagiousTime && incubationTime == disease.incubationTime && mortality == disease.mortality && recoveryTime == disease.recoveryTime && carrier.equals(disease.carrier) && dayBeforeNextState.equals(disease.dayBeforeNextState) && infectionRate.equals(disease.infectionRate) && nextState.equals(disease.nextState);
+
     }
 
-    /**
-     * Sets the incubation time.
-     * 
-     * @param incubationTime
-     *            the new incubation time
-     */
-    public void setIncubationTime(final int incubationTime) {
+    @Override
+    public Object clone() throws CloneNotSupportedException {
 
-        this.incubationTime = incubationTime;
-    }
-
-    /**
-     * Sets the infection rate.
-     * 
-     * @param infectionRate
-     *            the infection rate
-     */
-    public void setInfectionRate(final LinkedTreeMap<?, ?> infectionRate) {
-
-        this.infectionRate = infectionRate;
-    }
-
-    /**
-     * Sets the mortality.
-     * 
-     * @param mortality
-     *            the new mortality
-     */
-    public void setMortality(final int mortality) {
-
-        this.mortality = mortality;
-    }
-
-    /**
-     * Sets the next state.
-     * 
-     * @param nextState
-     *            the new next state
-     */
-    public void setNextState(final State nextState) {
-
-        this.nextState = nextState;
-    }
-
-    /**
-     * Sets the recovery time.
-     * 
-     * @param recoveryTime
-     *            the new recovery time
-     */
-    public void setRecoveryTime(final int recoveryTime) {
-
-        this.recoveryTime = recoveryTime;
+        //TODO
+        return super.clone();
     }
 }

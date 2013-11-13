@@ -11,7 +11,7 @@ public interface IDiseaseType {
 
     /**
      * Gets the disease type.
-     * 
+     *
      * @return the disease type
      */
     String getDiseaseType();
