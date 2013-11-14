@@ -20,9 +20,33 @@ public class Chicken extends Bird {
      * @param sick
      *            the sick
      */
-    public Chicken( final int column, final int line, final boolean sick ) {
+    public Chicken( final Integer column, final Integer line, final boolean sick ) {
 
         super( column, line, sick );
+
+    }
+
+    /**
+     * Instantiates a new chicken.
+     * 
+     * @param column
+     *            the column
+     * @param line
+     *            the line
+     */
+    public Chicken( final Integer column, final Integer line ) {
+        this( column, line, false );
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( Chicken.class );
 
     }
 

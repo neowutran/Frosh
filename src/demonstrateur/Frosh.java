@@ -44,6 +44,8 @@ public class Frosh {
     public static void main( final String[ ] args ) {
 
         new Frosh( );
+
+        new FroshController( ).run( );
     }
 
     /**
@@ -61,8 +63,9 @@ public class Frosh {
             final CopyFile lib = new CopyFile( );
             lib.copyfile( Frosh.FOLDER + Frosh.CONFIG );
         }
-        this.loadConfigFile( Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
-        new FroshController( ).run( );
+        Frosh.loadConfigFile( Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
+        // new FroshController( ).run( );
+
     }
 
     /**
@@ -79,7 +82,7 @@ public class Frosh {
      * @param configFile
      *            the config file
      */
-    private void loadConfigFile( final Path configFile ) {
+    private static void loadConfigFile( final Path configFile ) {
 
         // Read the file
         final Charset charset = Charset.forName( "UTF-8" );

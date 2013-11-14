@@ -20,9 +20,21 @@ public class Human extends Lifeform {
      * @param line
      *            the line
      */
-    public Human( final int column, final int line ) {
+    public Human( final Integer column, final Integer line ) {
 
         super( column, line );
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( Human.class );
+
     }
 
     /*

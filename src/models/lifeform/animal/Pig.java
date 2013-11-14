@@ -23,12 +23,36 @@ public class Pig extends Animal {
      * @param sick
      *            the sick
      */
-    public Pig( final int column, final int line, final boolean sick ) {
+    public Pig( final Integer column, final Integer line, final boolean sick ) {
 
         super( column, line );
         if( sick ) {
             this.setDisease( new H1N1( this ) );
         }
+    }
+
+    /**
+     * Instantiates a new pig.
+     * 
+     * @param column
+     *            the column
+     * @param line
+     *            the line
+     */
+    public Pig( final Integer column, final Integer line ) {
+        this( column, line, false );
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( Pig.class );
+
     }
 
     /*

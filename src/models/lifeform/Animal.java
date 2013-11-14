@@ -20,7 +20,7 @@ public abstract class Animal extends Lifeform {
      * @param line
      *            the line
      */
-    public Animal( final int column, final int line ) {
+    public Animal( final Integer column, final Integer line ) {
 
         super( column, line );
     }

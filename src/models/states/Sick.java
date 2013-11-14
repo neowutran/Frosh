@@ -26,6 +26,18 @@ public class Sick extends State {
     /*
      * (non-Javadoc)
      * 
+     * @see models.states.State#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( Sick.class );
+
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
      * @see models.States.IState#apply()
      */
     @Override

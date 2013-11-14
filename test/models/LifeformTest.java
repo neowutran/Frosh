@@ -1,7 +1,20 @@
 
 package models;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import models.lifeform.Human;
+import models.lifeform.animal.Pig;
+
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
+import org.junit.Before;
 import org.junit.Test;
+
+import demonstrateur.Frosh;
 
 public class LifeformTest {
 
@@ -16,6 +29,61 @@ public class LifeformTest {
          * 
          * CoreMatchers.is(CoreMatchers.equalTo(expected)));
          */
+    }
+
+    @Before
+    public void initialisation( ) {
+        try {
+            Method m = Frosh.class.getDeclaredMethod( "loadConfigFile",
+                    Path.class );
+            m.setAccessible( true );
+            m.invoke( null, Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
+
+        } catch( IllegalAccessException | IllegalArgumentException
+                | InvocationTargetException | NoSuchMethodException
+                | SecurityException e ) {
+            // TODO Auto-generated catch block
+            e.printStackTrace( );
+        }
+        // System.out.println( "Bite" );
+    }
+
+    @Test
+    public void equals( ) throws Exception {
+
+        Human human1 = new Human( 0, 0 );
+        Human human2 = new Human( 0, 0 );
+        Human human3 = new Human( 1, 0 );
+        Pig pig1 = new Pig( 0, 0, false );
+        Pig pig2 = new Pig( 1, 1, false );
+        Pig pig3 = new Pig( 0, 0, true );
+
+        MatcherAssert.assertThat( human2, CoreMatchers.equalTo( human1 ) );
+        MatcherAssert.assertThat( human2,
+                CoreMatchers.not( CoreMatchers.equalTo( human3 ) ) );
+        MatcherAssert.assertThat( human2,
+                CoreMatchers.not( CoreMatchers.equalTo( ( Lifeform ) pig1 ) ) );
+        MatcherAssert.assertThat( pig1,
+                CoreMatchers.not( CoreMatchers.equalTo( pig2 ) ) );
+        MatcherAssert.assertThat( pig3,
+                CoreMatchers.not( CoreMatchers.equalTo( pig2 ) ) );
+        MatcherAssert.assertThat( pig3,
+                CoreMatchers.not( CoreMatchers.equalTo( pig1 ) ) );
+
+    }
+
+    @Test
+    public void TestClone( ) throws Exception {
+
+        Human human1 = new Human( 0, 0 );
+        Human human2 = ( Human ) human1.clone( );
+
+        human1.setColumn( 5 );
+
+        MatcherAssert
+                .assertThat( human1.getColumn( ), CoreMatchers
+                        .not( CoreMatchers.equalTo( human2.getColumn( ) ) ) );
+
     }
 
     @Test

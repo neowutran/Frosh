@@ -4,6 +4,8 @@
 
 package models;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +35,10 @@ public abstract class Lifeform implements ILifeformType, Cloneable {
     private Disease       disease = null;
 
     /** The column. */
-    private int           column;
+    private Integer       column;
 
     /** The line. */
-    private int           line;
+    private Integer       line;
 
     /**
      * Instantiates a new lifeform.
@@ -46,36 +48,54 @@ public abstract class Lifeform implements ILifeformType, Cloneable {
      * @param line
      *            the line
      */
-    public Lifeform( final int column, final int line ) {
+    public Lifeform( final Integer column, final Integer line ) {
 
         this.column = column;
         this.line = line;
 
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Clone.
      * 
-     * @see java.lang.Object#clone()
+     * @param <T>
+     *            the generic type
+     * @param subclass
+     *            the subclass
+     * @return the object
+     * @throws CloneNotSupportedException
+     *             the clone not supported exception
      */
-    @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    protected <T extends Lifeform> Object clone( Class subclass )
+            throws CloneNotSupportedException {
 
-        Lifeform lifeform = null;
+        T lifeform = null;
         try {
-            lifeform = this.getClass( ).getConstructor( Lifeform.class )
-                    .newInstance( this.column, this.line );
+
+            Constructor c = subclass.getConstructor( Integer.class,
+                    Integer.class );
+            lifeform = ( T ) c.newInstance( this.column, this.line );
+
             lifeform.setImmune( new ArrayList<>( this.getImmune( ) ) );
-            lifeform.setDisease( ( Disease ) this.getDisease( ).clone( ) );
+
+            if( this.getDisease( ) != null ) {
+                lifeform.setDisease( ( Disease ) this.getDisease( ).clone( ) );
+            }
+
             lifeform.setStates( ( State ) this.getStates( ).clone( ) );
-        } catch( InstantiationException | NoSuchMethodException
-                | java.lang.reflect.InvocationTargetException
-                | IllegalAccessException e ) {
+
+        } catch( NoSuchMethodException | InstantiationException
+                | IllegalAccessException | IllegalArgumentException
+                | InvocationTargetException e ) {
             FroshController.LOGGER.severe( java.util.Arrays.toString( e
                     .getStackTrace( ) ) );
+
         }
 
-        lifeform.getDisease( ).setCarrier( lifeform );
+        if( lifeform.getDisease( ) != null ) {
+            lifeform.getDisease( ).setCarrier( lifeform );
+        }
+        lifeform.getStates( ).setLifeform( lifeform );
 
         return lifeform;
     }

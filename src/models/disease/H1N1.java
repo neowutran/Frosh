@@ -26,6 +26,18 @@ public class H1N1 extends Disease {
     /*
      * (non-Javadoc)
      * 
+     * @see models.disease.Disease#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( H1N1.class );
+
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
      * @see models.disease.IDiseaseType#getDiseaseType()
      */
     @Override

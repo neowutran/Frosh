@@ -1,9 +1,17 @@
 
 package models;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import demonstrateur.Frosh;
 
 public class GridTest {
 
@@ -11,6 +19,23 @@ public class GridTest {
     // TODO methode equals
     // TODO methode random avec parametre pour que ce ne soit pas random (pour
     // les tests)
+
+    @Before
+    public void initialisation( ) {
+        try {
+            Method m = Frosh.class.getDeclaredMethod( "loadConfigFile",
+                    Path.class );
+            m.setAccessible( true );
+            m.invoke( null, Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
+
+        } catch( IllegalAccessException | IllegalArgumentException
+                | InvocationTargetException | NoSuchMethodException
+                | SecurityException e ) {
+            // TODO Auto-generated catch block
+            e.printStackTrace( );
+        }
+    }
+
     @Test
     public void move_A$Cardinal$int$int( ) throws Exception {
 

@@ -36,10 +36,27 @@ public abstract class State implements IState, Cloneable {
      */
     @Override
     public Object clone( ) throws CloneNotSupportedException {
+        throw new CloneNotSupportedException( "A clone method is missing" );
+    }
 
-        State state = null;
+    /**
+     * Clone.
+     * 
+     * @param <T>
+     *            the generic type
+     * @param subclass
+     *            the subclass
+     * @return the object
+     * @throws CloneNotSupportedException
+     *             the clone not supported exception
+     */
+    protected <T extends State> Object clone( Class subclass )
+            throws CloneNotSupportedException {
+
+        T state = null;
         try {
-            state = this.getClass( ).getConstructor( State.class )
+
+            state = ( T ) subclass.getConstructor( Lifeform.class )
                     .newInstance( this.lifeform );
 
         } catch( InstantiationException | IllegalAccessException
@@ -66,9 +83,7 @@ public abstract class State implements IState, Cloneable {
             return false;
         }
 
-        final models.states.State state = ( models.states.State ) o;
-
-        return this.lifeform.equals( state.lifeform );
+        return true;
 
     }
 

@@ -18,7 +18,7 @@ public abstract class Bird extends Animal {
      * @param line
      *            the line
      */
-    public Bird( final int column, final int line ) {
+    public Bird( final Integer column, final Integer line ) {
 
         super( column, line );
     }
@@ -33,7 +33,7 @@ public abstract class Bird extends Animal {
      * @param sick
      *            the sick
      */
-    public Bird( final int column, final int line, final boolean sick ) {
+    public Bird( final Integer column, final Integer line, final boolean sick ) {
 
         super( column, line );
         if( sick ) {

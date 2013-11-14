@@ -29,10 +29,21 @@ public abstract class Disease implements IDiseaseType, Cloneable {
     /** The carrier. */
     private Lifeform            carrier = null;
 
+    /**
+     * Gets the carrier.
+     * 
+     * @return the carrier
+     */
     public Lifeform getCarrier( ) {
         return this.carrier;
     }
 
+    /**
+     * Sets the carrier.
+     * 
+     * @param carrier
+     *            the new carrier
+     */
     public void setCarrier( Lifeform carrier ) {
         this.carrier = carrier;
         this.nextState.setLifeform( carrier );
@@ -93,13 +104,32 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      */
     @Override
     public Object clone( ) throws CloneNotSupportedException {
-        Disease disease = null;
+
+        throw new CloneNotSupportedException( "A clone method is missing" );
+
+    }
+
+    /**
+     * Clone.
+     * 
+     * @param <T>
+     *            the generic type
+     * @param subclass
+     *            the subclass
+     * @return the object
+     * @throws CloneNotSupportedException
+     *             the clone not supported exception
+     */
+    protected <T extends Disease> Object clone( Class subclass )
+            throws CloneNotSupportedException {
+        T disease = null;
         try {
-            disease = this.getClass( ).getConstructor( Disease.class )
+
+            disease = ( T ) subclass.getConstructor( Lifeform.class )
                     .newInstance( this.carrier );
 
-            disease.dayBeforeNextState = this.dayBeforeNextState;
-            disease.nextState = ( State ) this.nextState.clone( );
+            disease.setDayBeforeNextState( this.dayBeforeNextState );
+            disease.setNextState( ( State ) this.nextState.clone( ) );
 
         } catch( InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
