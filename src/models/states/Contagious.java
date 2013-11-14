@@ -6,44 +6,46 @@ package models.states;
 
 import models.Lifeform;
 
+// TODO: Auto-generated Javadoc
 /**
- * The Class ContagiousModel.
+ * The Class Contagious.
  */
 public class Contagious extends State {
 
     /**
-     * Instantiates a new contagious model.
-     *
-     * @param lifeform the lifeform
+     * Instantiates a new contagious.
+     * 
+     * @param lifeform
+     *            the lifeform
      */
-    public Contagious(final Lifeform lifeform) {
+    public Contagious( final Lifeform lifeform ) {
 
-        super(lifeform);
+        super( lifeform );
     }
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply() {
+    public void apply( ) {
 
-        this.getLifeform().getDisease()
-                .setNextState(new Recovering(this.getLifeform()));
-        this.getLifeform()
-                .getDisease()
+        this.getLifeform( ).getDisease( )
+                .setNextState( new Recovering( this.getLifeform( ) ) );
+        this.getLifeform( )
+                .getDisease( )
                 .setDayBeforeNextState(
-                        this.getLifeform().getDisease().getContagiousTime());
+                        this.getLifeform( ).getDisease( ).getContagiousTime( ) );
     }
 
-    /**
-     * Gets the state name.
-     *
-     * @return the state name
+    /*
+     * (non-Javadoc)
+     * 
+     * @see models.states.IState#getStateName()
      */
     @Override
-    public String getStateName() {
+    public String getStateName( ) {
 
         return "Contagious";
     }

@@ -4,48 +4,33 @@
 
 package models;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Enum Cardinal.
  */
 public enum Cardinal {
 
-    /**
-     * The north.
-     */
+    /** The north. */
     NORTH,
 
-    /**
-     * The south.
-     */
+    /** The south. */
     SOUTH,
 
-    /**
-     * The east.
-     */
+    /** The east. */
     EAST,
 
-    /**
-     * The west.
-     */
+    /** The west. */
     WEST,
 
-    /**
-     * The norteast.
-     */
+    /** The northeast. */
     NORTHEAST,
 
-    /**
-     * The nortwest.
-     */
+    /** The northwest. */
     NORTHWEST,
 
-    /**
-     * The southeast.
-     */
+    /** The southeast. */
     SOUTHEAST,
 
-    /**
-     * The southwest.
-     */
+    /** The southwest. */
     SOUTHWEST
 }

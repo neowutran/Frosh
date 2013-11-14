@@ -8,44 +8,46 @@ import models.Grid;
 import models.Lifeform;
 import models.Stats;
 
+// TODO: Auto-generated Javadoc
 /**
- * The Class DeadModel.
+ * The Class Dead.
  */
 public class Dead extends State {
 
     /**
-     * Instantiates a new dead model.
-     *
-     * @param lifeform the lifeform
+     * Instantiates a new dead.
+     * 
+     * @param lifeform
+     *            the lifeform
      */
-    public Dead(final Lifeform lifeform) {
+    public Dead( final Lifeform lifeform ) {
 
-        super(lifeform);
+        super( lifeform );
     }
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply() {
+    public void apply( ) {
 
-        Stats.setDead(Stats.getDead() + 1);
-        this.getLifeform().getDisease().setNextState(null);
-        this.getLifeform().getDisease().setDayBeforeNextState(null);
-        final Lifeform[][] grid = Grid.getGrid();
-        grid[this.getLifeform().getColumn()][this.getLifeform().getLine()] = null;
-        this.setLifeform(null);
+        Stats.setDead( Stats.getDead( ) + 1 );
+        this.getLifeform( ).getDisease( ).setNextState( null );
+        this.getLifeform( ).getDisease( ).setDayBeforeNextState( null );
+        final Lifeform[ ][ ] grid = Grid.getGrid( );
+        grid[ this.getLifeform( ).getColumn( ) ][ this.getLifeform( ).getLine( ) ] = null;
+        this.setLifeform( null );
     }
 
-    /**
-     * Gets the state name.
-     *
-     * @return the state name
+    /*
+     * (non-Javadoc)
+     * 
+     * @see models.states.IState#getStateName()
      */
     @Override
-    public String getStateName() {
+    public String getStateName( ) {
 
         return "Dead";
     }

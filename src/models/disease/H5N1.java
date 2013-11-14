@@ -6,19 +6,21 @@ package models.disease;
 
 import models.Lifeform;
 
+// TODO: Auto-generated Javadoc
 /**
- * The Class H5N1Model.
+ * The Class H5N1.
  */
 public class H5N1 extends Disease {
 
     /**
-     * Instantiates a new h5 n1 model.
-     *
-     * @param carrier the carrier
+     * Instantiates a new h5 n1.
+     * 
+     * @param carrier
+     *            the carrier
      */
-    public H5N1(final Lifeform carrier) {
+    public H5N1( final Lifeform carrier ) {
 
-        super(carrier);
+        super( carrier );
     }
 
     /*
@@ -27,7 +29,7 @@ public class H5N1 extends Disease {
      * @see models.disease.IDiseaseType#getDiseaseType()
      */
     @Override
-    public String getDiseaseType() {
+    public String getDiseaseType( ) {
 
         return "H5N1";
     }

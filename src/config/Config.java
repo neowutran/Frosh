@@ -16,30 +16,31 @@ public final class Config {
      */
     private static Map<String, Object> configuration;
 
-    private static final Integer MAX = 100;
+    private static final Integer       MAX = 100;
 
     /**
      * Gets the configuration.
-     *
+     * 
      * @return the configuration
      */
-    public static Map<String, Object> getConfiguration() {
+    public static Map<String, Object> getConfiguration( ) {
 
         return Config.configuration;
     }
 
     // SonarHQ complience
-    public static Integer getMax() {
+    public static Integer getMax( ) {
 
         return Config.MAX;
     }
 
     /**
      * Sets the configuration.
-     *
-     * @param configuration the configuration
+     * 
+     * @param configuration
+     *            the configuration
      */
-    public static void setConfiguration(final Map<String, Object> configuration) {
+    public static void setConfiguration( final Map<String, Object> configuration ) {
 
         Config.configuration = configuration;
     }
@@ -47,7 +48,7 @@ public final class Config {
     /**
      * Instantiates a new config.
      */
-    private Config() {
+    private Config( ) {
 
     }
 }
