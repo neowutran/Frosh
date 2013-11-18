@@ -1,0 +1,163 @@
+{
+	"moveRate":{
+		"Human":50,
+		"Duck":50,
+		"Pig":50,
+		"Chicken":50
+	},
+	"contactRate":{
+		"Human":{
+			"Human":50,
+			"Duck": 50,
+			"Pig": 50,
+			"Chicken": 50
+		},
+		"Duck":{
+			"Human":50,
+			"Duck": 50,
+			"Pig": 10,
+			"Chicken": 10
+		},
+		"Pig":{
+			"Human":50,
+			"Duck": 10,
+			"Pig": 50,
+			"Chicken": 10
+		},
+		"Chicken":{
+			"Human":50,
+			"Duck": 10,
+			"Pig": 10,
+			"Chicken": 50
+		}
+	},
+	"disease":{
+		"H1N1":{
+			"Human":{
+				"incubationTime":3,
+				"mortality": 100,
+				"infectionRate":{
+					"Human":30,
+					"Pig": 50,
+					"Duck":0,
+					"Chicken":0
+				
+				},
+				"recoveryTime": 4,
+				"contagiousTime": 10
+			},
+			"Pig":{
+				"incubationTime":3,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":5,
+					"Pig": 50,
+					"Duck":0,
+					"Chicken":0
+				},
+				"recoveryTime": 4,
+				"contagiousTime": 100
+			},
+			"Duck":{
+				"incubationTime":0,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":0,
+					"Pig": 0,
+					"Duck":0,
+					"Chicken":0
+				},
+				"recoveryTime": 0,
+				"contagiousTime": 0
+			},
+			"Chicken":{
+				"incubationTime":0,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":0,
+					"Pig": 0,
+					"Duck":0,
+					"Chicken":0
+				},
+				"recoveryTime": 0,
+				"contagiousTime": 0
+			}
+		},
+		"H5N1":{
+			"Human":{
+				"incubationTime":3,
+				"mortality": 100,
+				"infectionRate":{
+					"Human":30,
+					"Pig": 0,
+					"Duck":50,
+					"Chicken":50
+				
+				},
+				"recoveryTime": 4,
+				"contagiousTime": 10
+			},
+			"Pig":{
+				"incubationTime":0,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":0,
+					"Pig": 0,
+					"Duck":0,
+					"Chicken":0
+				},
+				"recoveryTime": 0,
+				"contagiousTime": 0
+			},
+			"Duck":{
+				"incubationTime":3,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":20,
+					"Pig": 0,
+					"Duck":100,
+					"Chicken":100
+				},
+				"recoveryTime": 3,
+				"contagiousTime": 100
+			},
+			"Chicken":{
+				"incubationTime":3,
+				"mortality": 0,
+				"infectionRate":{
+					"Human":20,
+					"Pig": 0,
+					"Duck":100,
+					"Chicken":100
+				},
+				"recoveryTime": 3,
+				"contagiousTime": 100
+			}
+		}
+	},
+	"grid":{
+		"gridUse":0,
+		"width":10,
+		"height": 20,
+		"chanceOfHumanPopulate": 50,
+		"chanceOfAnimalPopulate": 30,
+		"chanceOfInfectedAnimal": 100
+	},
+	"controller":{
+		"msBeforeNextDay": 100
+	},
+	"view":{
+		"lifeform":{
+			"Pig": "P",
+			"Chicken": "C",
+			"Human": "H",
+			"Duck": "D"
+		},
+		"diseaseState":{
+			"Healty":0,
+			"Sick":1,
+			"Contagious":2,
+			"Recovering":3
+		}
+	}
+}

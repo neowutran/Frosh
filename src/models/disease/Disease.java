@@ -248,12 +248,10 @@ public abstract class Disease implements IDiseaseType, Cloneable {
     public int hashCode( ) {
 
         int result = this.infectionRate.hashCode( );
-        result = ( 31 * result ) + this.carrier.hashCode( );
         result = ( 31 * result ) + this.incubationTime;
         result = ( 31 * result ) + this.mortality;
         result = ( 31 * result ) + this.recoveryTime;
         result = ( 31 * result ) + this.contagiousTime;
-        result = ( 31 * result ) + this.nextState.hashCode( );
         result = ( 31 * result ) + this.dayBeforeNextState.hashCode( );
         return result;
     }

@@ -4,10 +4,10 @@
 
 package models.states;
 
-import java.lang.reflect.InvocationTargetException;
+import controllers.*;
+import models.*;
 
-import models.Lifeform;
-import controllers.FroshController;
+import java.lang.reflect.*;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -20,7 +20,7 @@ public abstract class State implements IState, Cloneable {
 
     /**
      * Instantiates a new state.
-     * 
+     *
      * @param lifeform
      *            the lifeform
      */
@@ -31,7 +31,7 @@ public abstract class State implements IState, Cloneable {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Object#clone()
      */
     @Override
@@ -41,7 +41,7 @@ public abstract class State implements IState, Cloneable {
 
     /**
      * Clone.
-     * 
+     *
      * @param <T>
      *            the generic type
      * @param subclass
@@ -70,7 +70,7 @@ public abstract class State implements IState, Cloneable {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
@@ -89,7 +89,7 @@ public abstract class State implements IState, Cloneable {
 
     /**
      * Gets the lifeform.
-     * 
+     *
      * @return the lifeform
      */
     public Lifeform getLifeform( ) {
@@ -99,7 +99,7 @@ public abstract class State implements IState, Cloneable {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Object#hashCode()
      */
     @Override
@@ -110,7 +110,7 @@ public abstract class State implements IState, Cloneable {
 
     /**
      * Sets the lifeform.
-     * 
+     *
      * @param lifeform
      *            the new lifeform
      */

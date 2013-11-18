@@ -25,10 +25,18 @@ import controllers.FroshController;
 public class Grid {
 
     /** The grid. */
-    private static Lifeform[ ][ ]      grid;
+    private static Lifeform[ ][ ] grid;
 
     /** The height. */
-    private static int                 height;
+    private static int            height;
+
+    public static int getHeight( ) {
+        return Grid.height;
+    }
+
+    public static int getWidth( ) {
+        return Grid.width;
+    }
 
     /** The width. */
     private static int                 width;
@@ -265,6 +273,10 @@ public class Grid {
         return Grid.grid;
     }
 
+    public static void setGrid( Lifeform[ ][ ] newGrid ) {
+        Grid.grid = newGrid;
+    }
+
     /**
      * Move.
      * 
@@ -310,6 +322,7 @@ public class Grid {
             addColumn--;
             break;
         }
+
         Grid.grid[ column ][ line ].setColumn( column + addColumn );
         Grid.grid[ column ][ line ].setLine( line + addLine );
         Grid.grid[ column + addColumn ][ line + addLine ] = Grid.grid[ column ][ line ];
