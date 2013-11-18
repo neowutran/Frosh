@@ -1,7 +1,9 @@
+/**
+ * @author Martini Didier
+ */
 
 package lib;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ArrayUtils.
  */

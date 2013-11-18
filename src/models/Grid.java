@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -18,8 +18,6 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
 import controllers.FroshController;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Grid.
@@ -87,27 +85,29 @@ public class Grid {
 
         final List<Cardinal> freeSpace = new ArrayList<>( );
 
-        if( Grid.grid.length > column + 1 ) {
-            if( Grid.grid[ column ].length > line + 1
-                    && Grid.grid[ column + 1 ][ line + 1 ] == null ) {
+        if( Grid.grid.length > ( column + 1 ) ) {
+            if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                    && ( Grid.grid[ column + 1 ][ line + 1 ] == null ) ) {
 
                 freeSpace.add( Cardinal.NORTHEAST );
 
             }
-            if( line - 1 >= 0 && Grid.grid[ column + 1 ][ line - 1 ] == null ) {
+            if( ( ( line - 1 ) >= 0 )
+                    && ( Grid.grid[ column + 1 ][ line - 1 ] == null ) ) {
 
                 freeSpace.add( Cardinal.SOUTHEAST );
 
             }
         }
-        if( column - 1 >= 0 ) {
-            if( Grid.grid[ column ].length > line + 1
-                    && Grid.grid[ column - 1 ][ line + 1 ] == null ) {
+        if( ( column - 1 ) >= 0 ) {
+            if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                    && ( Grid.grid[ column - 1 ][ line + 1 ] == null ) ) {
 
                 freeSpace.add( Cardinal.NORTHWEST );
 
             }
-            if( line - 1 >= 0 && Grid.grid[ column - 1 ][ line - 1 ] == null ) {
+            if( ( ( line - 1 ) >= 0 )
+                    && ( Grid.grid[ column - 1 ][ line - 1 ] == null ) ) {
 
                 freeSpace.add( Cardinal.SOUTHWEST );
 
@@ -129,21 +129,22 @@ public class Grid {
             final int line ) {
 
         final List<Cardinal> freeSpace = new ArrayList<>( );
-        if( Grid.grid[ column ].length > line + 1
-                && Grid.grid[ column ][ line + 1 ] == null ) {
+        if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                && ( Grid.grid[ column ][ line + 1 ] == null ) ) {
             freeSpace.add( Cardinal.NORTH );
 
         }
-        if( line - 1 >= 0 && Grid.grid[ column ][ line - 1 ] == null ) {
+        if( ( ( line - 1 ) >= 0 ) && ( Grid.grid[ column ][ line - 1 ] == null ) ) {
             freeSpace.add( Cardinal.SOUTH );
 
         }
-        if( Grid.grid.length > column + 1
-                && Grid.grid[ column + 1 ][ line ] == null ) {
+        if( ( Grid.grid.length > ( column + 1 ) )
+                && ( Grid.grid[ column + 1 ][ line ] == null ) ) {
             freeSpace.add( Cardinal.EAST );
 
         }
-        if( column - 1 >= 0 && Grid.grid[ column - 1 ][ line ] == null ) {
+        if( ( ( column - 1 ) >= 0 )
+                && ( Grid.grid[ column - 1 ][ line ] == null ) ) {
 
             freeSpace.add( Cardinal.WEST );
 
@@ -191,24 +192,26 @@ public class Grid {
 
         final List<Lifeform> neightbors = new ArrayList<>( );
 
-        if( Grid.grid.length > column + 1 ) {
-            if( Grid.grid[ column ].length > line + 1
-                    && Grid.grid[ column + 1 ][ line + 1 ] != null ) {
+        if( Grid.grid.length > ( column + 1 ) ) {
+            if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                    && ( Grid.grid[ column + 1 ][ line + 1 ] != null ) ) {
                 neightbors.add( Grid.grid[ column + 1 ][ line + 1 ] );
 
             }
-            if( line - 1 >= 0 && Grid.grid[ column + 1 ][ line - 1 ] != null ) {
+            if( ( ( line - 1 ) >= 0 )
+                    && ( Grid.grid[ column + 1 ][ line - 1 ] != null ) ) {
                 neightbors.add( Grid.grid[ column + 1 ][ line - 1 ] );
 
             }
         }
-        if( column - 1 >= 0 ) {
-            if( Grid.grid[ column ].length > line + 1
-                    && Grid.grid[ column - 1 ][ line + 1 ] != null ) {
+        if( ( column - 1 ) >= 0 ) {
+            if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                    && ( Grid.grid[ column - 1 ][ line + 1 ] != null ) ) {
                 neightbors.add( Grid.grid[ column - 1 ][ line + 1 ] );
 
             }
-            if( line - 1 >= 0 && Grid.grid[ column - 1 ][ line - 1 ] != null ) {
+            if( ( ( line - 1 ) >= 0 )
+                    && ( Grid.grid[ column - 1 ][ line - 1 ] != null ) ) {
                 neightbors.add( Grid.grid[ column - 1 ][ line - 1 ] );
 
             }
@@ -230,21 +233,22 @@ public class Grid {
             final int line ) {
 
         final List<Lifeform> neightbors = new ArrayList<>( );
-        if( Grid.grid[ column ].length > line + 1
-                && Grid.grid[ column ][ line + 1 ] != null ) {
+        if( ( Grid.grid[ column ].length > ( line + 1 ) )
+                && ( Grid.grid[ column ][ line + 1 ] != null ) ) {
             neightbors.add( Grid.grid[ column ][ line + 1 ] );
 
         }
-        if( line - 1 >= 0 && Grid.grid[ column ][ line - 1 ] != null ) {
+        if( ( ( line - 1 ) >= 0 ) && ( Grid.grid[ column ][ line - 1 ] != null ) ) {
             neightbors.add( Grid.grid[ column ][ line - 1 ] );
 
         }
-        if( Grid.grid.length > column + 1
-                && Grid.grid[ column + 1 ][ line ] != null ) {
+        if( ( Grid.grid.length > ( column + 1 ) )
+                && ( Grid.grid[ column + 1 ][ line ] != null ) ) {
             neightbors.add( Grid.grid[ column + 1 ][ line ] );
 
         }
-        if( column - 1 >= 0 && Grid.grid[ column - 1 ][ line ] != null ) {
+        if( ( ( column - 1 ) >= 0 )
+                && ( Grid.grid[ column - 1 ][ line ] != null ) ) {
             neightbors.add( Grid.grid[ column - 1 ][ line ] );
 
         }
@@ -389,10 +393,10 @@ public class Grid {
      */
     private void checkParams( ) {
 
-        if( Grid.chanceOfHumanPopulate < 0
-                || Grid.changeOfAnimalPopulate < 0
-                || Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate > Config
-                        .getMax( ) ) {
+        if( ( Grid.chanceOfHumanPopulate < 0 )
+                || ( Grid.changeOfAnimalPopulate < 0 )
+                || ( ( Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate ) > Config
+                        .getMax( ) ) ) {
             FroshController.LOGGER
                     .severe( "Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 " );
             throw new IllegalArgumentException(
@@ -410,7 +414,7 @@ public class Grid {
 
         for( final Lifeform[ ] element : Grid.grid ) {
             for( final Lifeform element2 : element ) {
-                if( element2 != null && element2.willChangeGridState( ) ) {
+                if( ( element2 != null ) && element2.willChangeGridState( ) ) {
                     return false;
 
                 }
@@ -432,8 +436,7 @@ public class Grid {
                 Lifeform lifeform = null;
                 if( result <= Grid.chanceOfHumanPopulate ) {
                     lifeform = new Human( i, j );
-                } else if( result <= Grid.chanceOfHumanPopulate
-                        + Grid.changeOfAnimalPopulate ) {
+                } else if( result <= ( Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate ) ) {
                     final int animal = Rand.randInt( 0, 2 );
                     final int sick = Rand.randInt( 0, 100 );
                     boolean isSick = false;

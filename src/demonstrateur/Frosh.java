@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -20,7 +20,6 @@ import com.google.gson.Gson;
 import config.Config;
 import controllers.FroshController;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Frosh.
  */

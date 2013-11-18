@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -7,8 +7,6 @@ package models.states;
 import models.Grid;
 import models.Lifeform;
 import models.Stats;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Dead.

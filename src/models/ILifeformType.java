@@ -1,10 +1,8 @@
-/*
+/**
  * @author Martini Didier
  */
 
 package models;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Interface ILifeformType.

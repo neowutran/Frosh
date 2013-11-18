@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -13,7 +13,6 @@ import java.io.OutputStream;
 
 import controllers.FroshController;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CopyFile.
  */

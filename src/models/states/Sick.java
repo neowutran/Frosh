@@ -1,12 +1,10 @@
-/*
+/**
  * @author Martini Didier
  */
 
 package models.states;
 
 import models.Lifeform;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Sick.

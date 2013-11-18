@@ -1,3 +1,6 @@
+/**
+ * @author Martini Didier
+ */
 
 package models.lifeform.animal;
 

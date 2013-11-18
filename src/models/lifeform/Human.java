@@ -1,12 +1,10 @@
-/*
- *
+/**
+ * @author Martini Didier
  */
 
 package models.lifeform;
 
 import models.Lifeform;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Human.

@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -6,7 +6,6 @@ package lib;
 
 import java.util.Random;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Rand.
  */
@@ -27,7 +26,7 @@ public final class Rand {
         final Random rand = new Random( );
         // nextInt is normally exclusive of the top value,
         // so add 1 to make it inclusive
-        return rand.nextInt( max - min + 1 ) + min;
+        return rand.nextInt( ( max - min ) + 1 ) + min;
     }
 
     /**

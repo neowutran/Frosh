@@ -1,12 +1,10 @@
-/*
+/**
  * @author Martini Didier
  */
 
 package models.disease;
 
 import models.Lifeform;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class H1N1.
@@ -32,7 +30,7 @@ public class H1N1 extends Disease {
     @Override
     public Object clone( ) throws CloneNotSupportedException {
 
-        return super.clone( H1N1.class );
+        return super.clone( this.getClass( ) );
 
     }
 

@@ -1,3 +1,6 @@
+/**
+ * @author Marongiu Anais
+ */
 
 package models.disease;
 
@@ -15,12 +18,18 @@ import org.junit.Test;
 
 import demonstrateur.Frosh;
 
+/**
+ * The Class DiseaseTest.
+ */
 public class DiseaseTest {
 
+    /**
+     * Initialisation.
+     */
     @Before
     public void initialisation( ) {
         try {
-            Method m = Frosh.class.getDeclaredMethod( "loadConfigFile",
+            final Method m = Frosh.class.getDeclaredMethod( "loadConfigFile",
                     Path.class );
             m.setAccessible( true );
             m.invoke( null, Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
@@ -34,14 +43,20 @@ public class DiseaseTest {
         // System.out.println( "Bite" );
     }
 
+    /**
+     * Next day_ a$.
+     * 
+     * @throws Exception
+     *             the exception
+     */
     @Test
     public void nextDay_A$( ) throws Exception {
         new Frosh( );
 
-        Human hum = new Human( 2, 2 );
+        final Human hum = new Human( 2, 2 );
         hum.setStates( new Sick( hum ) );
 
-        H1N1 h = new H1N1( hum );
+        final H1N1 h = new H1N1( hum );
         h.setDayBeforeNextState( 3 );
         hum.setDisease( h );
 
@@ -67,10 +82,10 @@ public class DiseaseTest {
 
         // --------------------------
 
-        Human hum2 = new Human( 2, 2 );
+        final Human hum2 = new Human( 2, 2 );
         hum2.setStates( new Sick( hum2 ) );
 
-        H5N1 h5 = new H5N1( hum2 );
+        final H5N1 h5 = new H5N1( hum2 );
         h5.setDayBeforeNextState( 5 );
         hum2.setDisease( h );
 

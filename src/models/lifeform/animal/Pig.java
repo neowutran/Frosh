@@ -1,13 +1,11 @@
-/*
- *
+/**
+ * @author Martini Didier
  */
 
 package models.lifeform.animal;
 
 import models.disease.H1N1;
 import models.lifeform.Animal;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Pig.

@@ -1,10 +1,8 @@
-/*
- *
+/**
+ * @author Martini Didier
  */
 
 package models.lifeform.animal;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Duck.

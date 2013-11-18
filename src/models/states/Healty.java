@@ -1,4 +1,4 @@
-/*
+/**
  * @author Martini Didier
  */
 
@@ -8,8 +8,6 @@ import java.util.List;
 
 import models.Lifeform;
 import models.disease.Disease;
-
-// TODO: Auto-generated Javadoc
 
 /**
  * The Class Healty.
