@@ -7,6 +7,7 @@ package models.states;
 import models.Lifeform;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Contagious.
  */
@@ -26,18 +27,6 @@ public class Contagious extends State {
     /*
      * (non-Javadoc)
      * 
-     * @see models.states.State#clone()
-     */
-    @Override
-    public Object clone( ) throws CloneNotSupportedException {
-
-        return super.clone( Contagious.class );
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
      * @see models.States.IState#apply()
      */
     @Override
@@ -49,6 +38,17 @@ public class Contagious extends State {
                 .getDisease( )
                 .setDayBeforeNextState(
                         this.getLifeform( ).getDisease( ).getContagiousTime( ) );
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see models.states.State#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( this.getClass( ) );
     }
 
     /*

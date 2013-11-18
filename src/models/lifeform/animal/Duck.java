@@ -5,10 +5,24 @@
 package models.lifeform.animal;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Duck.
  */
 public class Duck extends Bird {
+
+    /**
+     * Instantiates a new duck.
+     * 
+     * @param column
+     *            the column
+     * @param line
+     *            the line
+     */
+    public Duck( final Integer column, final Integer line ) {
+
+        this( column, line, false );
+    }
 
     /**
      * Instantiates a new duck.
@@ -26,18 +40,6 @@ public class Duck extends Bird {
 
     }
 
-    /**
-     * Instantiates a new duck.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
-     */
-    public Duck( final Integer column, final Integer line ) {
-        this( column, line, false );
-    }
-
     /*
      * (non-Javadoc)
      * 
@@ -46,8 +48,7 @@ public class Duck extends Bird {
     @Override
     public Object clone( ) throws CloneNotSupportedException {
 
-        return super.clone( Duck.class );
-
+        return super.clone( this.getClass( ) );
     }
 
     /*

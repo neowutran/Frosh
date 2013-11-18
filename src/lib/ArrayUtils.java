@@ -1,39 +1,36 @@
 
 package lib;
 
-import models.Lifeform;
-
+// TODO: Auto-generated Javadoc
 /**
- * Created by draragar on 17/11/13.
+ * The Class ArrayUtils.
  */
-public class ArrayUtils {
+public final class ArrayUtils {
 
-    public static <T> T[ ][ ] clone2DArray( T[ ][ ] array ) {
-        int rows = array.length;
-        T[ ][ ] newArray = array.clone( );
+    /**
+     * Clone2 d array.
+     * 
+     * @param <T>
+     *            the generic type
+     * @param array
+     *            the array
+     * @return the t[][]
+     */
+    public static <T> T[ ][ ] clone2DArray( final T[ ][ ] array ) {
+
+        final int rows = array.length;
+        final T[ ][ ] newArray = array.clone( );
         for( int row = 0; row < rows; row++ ) {
             newArray[ row ] = array[ row ].clone( );
         }
 
         return newArray;
     }
-    
-    private ArrayUtils(){
-        
-    }
 
-    /*
-     * public static void printLifeform( Lifeform[ ][ ] toPrint ) {
-     * 
-     * System.out.println( "==== START ARRAY PRINT ====" ); for( int i = 0; i <
-     * toPrint.length; i++ ) { for( int j = 0; j < toPrint.length; j++ ) {
-     * 
-     * System.out.println( "======START PRINT=====" ); System.out.println(
-     * "column: " + i + "; line:" + j ); System.out.println( toPrint[ i ][ j ]
-     * ); System.out.println( "======END PRINT=====" );
-     * 
-     * } } System.out.println( "==== END ARRAY PRINT ====" );
-     * 
-     * }
+    /**
+     * Instantiates a new array utils.
      */
+    private ArrayUtils( ) {
+
+    }
 }

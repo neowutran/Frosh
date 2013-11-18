@@ -10,6 +10,7 @@ import models.Lifeform;
 import models.disease.Disease;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Healty.
  */
@@ -29,18 +30,6 @@ public class Healty extends State {
     /*
      * (non-Javadoc)
      * 
-     * @see models.states.State#clone()
-     */
-    @Override
-    public Object clone( ) throws CloneNotSupportedException {
-
-        return super.clone( Healty.class );
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
      * @see models.States.IState#apply()
      */
     @Override
@@ -53,6 +42,17 @@ public class Healty extends State {
         this.getLifeform( ).setImmune( immune );
         this.getLifeform( ).setDisease( null );
 
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see models.states.State#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( this.getClass( ) );
     }
 
     /*

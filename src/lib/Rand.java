@@ -6,6 +6,7 @@ package lib;
 
 import java.util.Random;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Rand.
  */
@@ -18,10 +19,7 @@ public final class Rand {
      *            the min
      * @param max
      *            the max
-     * 
      * @return the int
-     *         <p/>
-     *         Comment: Not my method, I found this on stackoverflow
      */
     public static int randInt( final int min, final int max ) {
 

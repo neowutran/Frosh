@@ -2,12 +2,203 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01066c29-8a2c-4c17-bc83-eb87a9e99f93" name="Default" comment="u">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/DeepArrayClone.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/JUnit.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/Config.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/class-use/Config.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/config/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/FroshController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/class-use/FroshController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/controllers/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/Frosh.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/class-use/Frosh.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/demonstrateur/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-14.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-15.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-16.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-17.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-18.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/CopyFile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/Lib.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/Rand.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/class-use/CopyFile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/class-use/Lib.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/class-use/Rand.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/lib/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/Cardinal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/Grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/GridModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/ILifeformType.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/Lifeform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/LifeformModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/Stats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/Cardinal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/Grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/GridModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/ILifeformType.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/Lifeform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/LifeformModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/class-use/Stats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/Disease.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/DiseaseModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/H1N1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/H1N1Model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/H5N1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/H5N1Model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/IDiseaseType.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/Disease.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/DiseaseModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/H1N1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/H1N1Model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/H5N1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/H5N1Model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/class-use/IDiseaseType.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/disease/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/Animal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/AnimalModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/Human.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/HumanModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/Bird.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/Chicken.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/ChickenModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/Duck.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/DuckModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/Pig.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/PigModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/Bird.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/Chicken.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/ChickenModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/Duck.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/DuckModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/Pig.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/class-use/PigModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/animal/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/class-use/Animal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/class-use/AnimalModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/class-use/Human.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/class-use/HumanModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/lifeform/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/Contagious.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/ContagiousModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/Dead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/DeadModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/Healty.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/HealtyModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/IState.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/Recovering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/RecoveringModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/Sick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/SickModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/State.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/StateModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/Contagious.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/ContagiousModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/Dead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/DeadModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/Healty.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/HealtyModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/IState.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/Recovering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/RecoveringModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/Sick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/SickModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/State.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/class-use/StateModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/models/states/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/package-list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/resources/background.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/resources/tab.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/resources/titlebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/resources/titlebar_end.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/stylesheet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/Grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/View.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/class-use/Grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/class-use/View.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/views/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/disease/DiseaseTest2.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/Animal.java" afterPath="$PROJECT_DIR$/src/models/lifeform/Animal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/ArrayUtils.java" afterPath="$PROJECT_DIR$/src/lib/ArrayUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Bird.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Bird.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Cardinal.java" afterPath="$PROJECT_DIR$/src/models/Cardinal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Chicken.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Chicken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Config.java" afterPath="$PROJECT_DIR$/src/config/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Contagious.java" afterPath="$PROJECT_DIR$/src/models/states/Contagious.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/CopyFile.java" afterPath="$PROJECT_DIR$/src/lib/CopyFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Dead.java" afterPath="$PROJECT_DIR$/src/models/states/Dead.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/Disease.java" afterPath="$PROJECT_DIR$/src/models/disease/Disease.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/disease/DiseaseTest.java" afterPath="$PROJECT_DIR$/test/models/disease/DiseaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Duck.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Duck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/demonstrateur/Frosh.java" afterPath="$PROJECT_DIR$/src/demonstrateur/Frosh.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/FroshController.java" afterPath="$PROJECT_DIR$/src/controllers/FroshController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Grid.java" afterPath="$PROJECT_DIR$/src/models/Grid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/GridTest.java" afterPath="$PROJECT_DIR$/test/models/GridTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/H1N1.java" afterPath="$PROJECT_DIR$/src/models/disease/H1N1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/H5N1.java" afterPath="$PROJECT_DIR$/src/models/disease/H5N1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Healty.java" afterPath="$PROJECT_DIR$/src/models/states/Healty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/Human.java" afterPath="$PROJECT_DIR$/src/models/lifeform/Human.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/IDiseaseType.java" afterPath="$PROJECT_DIR$/src/models/disease/IDiseaseType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/ILifeformType.java" afterPath="$PROJECT_DIR$/src/models/ILifeformType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/IState.java" afterPath="$PROJECT_DIR$/src/models/states/IState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Lifeform.java" afterPath="$PROJECT_DIR$/src/models/Lifeform.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Pig.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Pig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/Rand.java" afterPath="$PROJECT_DIR$/src/lib/Rand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Recovering.java" afterPath="$PROJECT_DIR$/src/models/states/Recovering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Sick.java" afterPath="$PROJECT_DIR$/src/models/states/Sick.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/State.java" afterPath="$PROJECT_DIR$/src/models/states/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Stats.java" afterPath="$PROJECT_DIR$/src/models/Stats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/View.java" afterPath="$PROJECT_DIR$/src/views/View.java" />
     </list>
     <ignored path="Frosh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +265,7 @@
       <file leaf-file-name="GridTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/models/GridTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.33268481" vertical-offset="621" max-vertical-offset="1512">
+            <state line="21" column="20" selection-start="412" selection-end="412" vertical-scroll-proportion="0.4528302" vertical-offset="0" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
@@ -83,16 +274,7 @@
       <file leaf-file-name="Stats.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/Stats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="756">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeepArrayClone.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/DeepArrayClone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="41" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1152">
+            <state line="10" column="3" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="954">
               <folding />
             </state>
           </provider>
@@ -101,7 +283,7 @@
       <file leaf-file-name="Grid.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="315" column="0" selection-start="8280" selection-end="8280" vertical-scroll-proportion="0.0" vertical-offset="5211" max-vertical-offset="7668">
+            <state line="329" column="0" selection-start="8191" selection-end="8191" vertical-scroll-proportion="0.0" vertical-offset="5850" max-vertical-offset="8172">
               <folding />
             </state>
           </provider>
@@ -110,39 +292,25 @@
       <file leaf-file-name="Lifeform.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/Lifeform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="7" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="6984">
-              <folding>
-                <element signature="e#0#9042#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#3855#3856#0" expanded="true" />
-                <element signature="e#3890#3891#0" expanded="true" />
-                <element signature="e#4000#4001#0" expanded="true" />
-                <element signature="e#4036#4037#0" expanded="true" />
-                <element signature="e#4149#4150#0" expanded="true" />
-                <element signature="e#4184#4185#0" expanded="true" />
-                <element signature="e#4281#4282#0" expanded="true" />
-                <element signature="e#4314#4315#0" expanded="true" />
-                <element signature="e#4419#4420#0" expanded="true" />
-                <element signature="e#4453#4454#0" expanded="true" />
-                <element signature="e#8088#8089#0" expanded="true" />
-                <element signature="e#8125#8126#0" expanded="true" />
-                <element signature="e#8264#8265#0" expanded="true" />
-                <element signature="e#8303#8304#0" expanded="true" />
-                <element signature="e#8443#8444#0" expanded="true" />
-                <element signature="e#8480#8481#0" expanded="true" />
-                <element signature="e#8600#8601#0" expanded="true" />
-                <element signature="e#8633#8634#0" expanded="true" />
-                <element signature="e#8765#8766#0" expanded="true" />
-                <element signature="e#8801#8802#0" expanded="true" />
-              </folding>
+            <state line="108" column="9" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0" vertical-offset="1415" max-vertical-offset="6318">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Human.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/lifeform/Human.java">
+      <file leaf-file-name="Bird.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/lifeform/animal/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="972">
+            <state line="19" column="11" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Disease.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/disease/Disease.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="22" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0" vertical-offset="2153" max-vertical-offset="5760">
               <folding />
             </state>
           </provider>
@@ -151,25 +319,16 @@
       <file leaf-file-name="Frosh.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demonstrateur/Frosh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="36" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1692">
+            <state line="74" column="40" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1656">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/states/IState.java">
+      <file leaf-file-name="Human.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/lifeform/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recovering.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/states/Recovering.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="26" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1332">
+            <state line="35" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -178,7 +337,16 @@
       <file leaf-file-name="State.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/states/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="6" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1574" max-vertical-offset="2088">
+            <state line="56" column="23" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0" vertical-offset="777" max-vertical-offset="1962">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/ArrayUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
               <folding />
             </state>
           </provider>
@@ -200,7 +368,6 @@
         <option value="$PROJECT_DIR$/src/models/disease/Disease.java" />
         <option value="$PROJECT_DIR$/src/lib/CopyFile.java" />
         <option value="$PROJECT_DIR$/src/models/states/Dead.java" />
-        <option value="$PROJECT_DIR$/src/models/states/Recovering.java" />
         <option value="$PROJECT_DIR$/src/lib/Rand.java" />
         <option value="$PROJECT_DIR$/src/models/Grid.java" />
         <option value="$PROJECT_DIR$/src/models/lifeform/animal/Duck.java" />
@@ -209,10 +376,12 @@
         <option value="$PROJECT_DIR$/src/demonstrateur/Frosh.java" />
         <option value="$PROJECT_DIR$/src/controllers/FroshController.java" />
         <option value="$PROJECT_DIR$/test/models/disease/DiseaseTest.java" />
-        <option value="$PROJECT_DIR$/src/models/states/State.java" />
-        <option value="$PROJECT_DIR$/src/models/Lifeform.java" />
-        <option value="$PROJECT_DIR$/test/models/GridTest.java" />
         <option value="$PROJECT_DIR$/src/lib/DeepArrayClone.java" />
+        <option value="$PROJECT_DIR$/src/models/states/State.java" />
+        <option value="$PROJECT_DIR$/src/lib/ArrayUtils.java" />
+        <option value="$PROJECT_DIR$/src/models/Lifeform.java" />
+        <option value="$PROJECT_DIR$/src/models/states/Recovering.java" />
+        <option value="$PROJECT_DIR$/test/models/GridTest.java" />
       </list>
     </option>
   </component>
@@ -271,6 +440,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,179 +463,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="disease" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="states" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lifeform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demonstrateur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frosh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,6 +489,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="LayoutCode.rearrangeEntries" value="false" />
   </component>
   <component name="RunManager" selected="JUnit.GridTest">
     <configuration default="false" name="GridTest.move_A$Cardinal$int$int" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -582,19 +582,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -621,6 +608,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -704,6 +704,7 @@
       <workItem from="1384377757803" duration="3403000" />
       <workItem from="1384697026424" duration="235000" />
       <workItem from="1384721190137" duration="7067000" />
+      <workItem from="1384791536949" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1384381046613</created>
@@ -713,7 +714,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10920000" />
+    <option name="totallyTimeSpent" value="11439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-13" width="1700" height="971" extended-state="6" />
@@ -733,17 +734,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39928487" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -771,13 +772,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/models/GridTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/FroshController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="1" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0" vertical-offset="1818" max-vertical-offset="1944">
@@ -940,11 +934,6 @@
         <state line="47" column="65" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1278" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/disease/Disease.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="4446" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/disease/H1N1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702" />
@@ -995,16 +984,9 @@
         <state line="31" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/states/Recovering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="26" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/states/IState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="540">
+        <state line="11" column="17" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
@@ -1039,23 +1021,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/demonstrateur/Frosh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="36" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Stats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/states/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="6" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1574" max-vertical-offset="2088">
+        <state line="10" column="3" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="954">
           <folding />
         </state>
       </provider>
@@ -1069,58 +1037,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/lifeform/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="972">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Lifeform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="7" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="6984">
-          <folding>
-            <element signature="e#0#9042#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#4000#4001#0" expanded="true" />
-            <element signature="e#4036#4037#0" expanded="true" />
-            <element signature="e#4149#4150#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4281#4282#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-            <element signature="e#4419#4420#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
-            <element signature="e#8088#8089#0" expanded="true" />
-            <element signature="e#8125#8126#0" expanded="true" />
-            <element signature="e#8264#8265#0" expanded="true" />
-            <element signature="e#8303#8304#0" expanded="true" />
-            <element signature="e#8443#8444#0" expanded="true" />
-            <element signature="e#8480#8481#0" expanded="true" />
-            <element signature="e#8600#8601#0" expanded="true" />
-            <element signature="e#8633#8634#0" expanded="true" />
-            <element signature="e#8765#8766#0" expanded="true" />
-            <element signature="e#8801#8802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/DeepArrayClone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1152">
+        <state line="35" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="315" column="0" selection-start="8280" selection-end="8280" vertical-scroll-proportion="0.0" vertical-offset="5204" max-vertical-offset="7668">
+        <state line="329" column="0" selection-start="8191" selection-end="8191" vertical-scroll-proportion="0.0" vertical-offset="5850" max-vertical-offset="8172">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/lifeform/animal/Bird.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="11" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/states/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="23" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0" vertical-offset="777" max-vertical-offset="1962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/ArrayUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/disease/Disease.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="22" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0" vertical-offset="2153" max-vertical-offset="5760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Lifeform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="9" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0" vertical-offset="1415" max-vertical-offset="6318">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/states/Recovering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0945055" vertical-offset="713" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/demonstrateur/Frosh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="40" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1656">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/models/GridTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.33268481" vertical-offset="621" max-vertical-offset="1512">
+        <state line="21" column="20" selection-start="412" selection-end="412" vertical-scroll-proportion="0.4528302" vertical-offset="0" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>

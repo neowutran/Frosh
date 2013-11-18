@@ -5,6 +5,7 @@
 package models.states;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Interface IState.
  */

@@ -60,7 +60,8 @@ public abstract class Lifeform implements ILifeformType, Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
+
         throw new CloneNotSupportedException("A clone method is missing");
     }
 
@@ -103,7 +104,9 @@ public abstract class Lifeform implements ILifeformType, Cloneable {
         if ((lifeform != null ? lifeform.getDisease() : null) != null) {
             lifeform.getDisease().setCarrier(lifeform);
         }
-        lifeform.getStates().setLifeform(lifeform);
+        if (lifeform != null) {
+            lifeform.getStates().setLifeform(lifeform);
+        }
 
         return lifeform;
     }

@@ -7,6 +7,7 @@ package models.disease;
 import models.Lifeform;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class H5N1.
  */

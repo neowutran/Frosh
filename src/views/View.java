@@ -12,18 +12,17 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class View.
  */
 public class View {
 
-    /**
-     * The day.
-     */
+    /** The day. */
     private int day = 0;
 
     /**
-     * Show the grid.
+     * Show.
      */
     public void show( ) {
 

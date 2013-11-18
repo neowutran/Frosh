@@ -4,11 +4,10 @@
 
 package models.states;
 
-import java.util.ArrayList;
-
 import models.Lifeform;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Recovering.
  */
@@ -45,8 +44,6 @@ public class Recovering extends State {
     @Override
     public void apply( ) {
 
-        final ArrayList<State> states = new ArrayList<>( );
-        states.add( new Healty( this.getLifeform( ) ) );
         this.getLifeform( ).getDisease( )
                 .setNextState( new Healty( this.getLifeform( ) ) );
         this.getLifeform( )

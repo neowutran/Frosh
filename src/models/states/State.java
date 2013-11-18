@@ -10,21 +10,23 @@ import models.*;
 import java.lang.reflect.*;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class State.
  */
 public abstract class State implements IState, Cloneable {
 
-    /** The lifeform. */
+    /**
+     * The lifeform.
+     */
     private Lifeform lifeform;
 
     /**
      * Instantiates a new state.
      *
-     * @param lifeform
-     *            the lifeform
+     * @param lifeform the lifeform
      */
-    public State( final Lifeform lifeform ) {
+    public State(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }
@@ -35,35 +37,34 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
-        throw new CloneNotSupportedException( "A clone method is missing" );
+    public Object clone() throws CloneNotSupportedException {
+
+        throw new CloneNotSupportedException("A clone method is missing");
     }
 
     /**
      * Clone.
      *
-     * @param <T>
-     *            the generic type
-     * @param subclass
-     *            the subclass
+     * @param <T>      the generic type
+     * @param subclass the subclass
+     *
      * @return the object
-     * @throws CloneNotSupportedException
-     *             the clone not supported exception
+     *
+     * @throws CloneNotSupportedException the clone not supported exception
      */
-    protected <T extends State> Object clone( Class subclass )
-            throws CloneNotSupportedException {
+    protected <T extends State> Object clone(Class subclass) {
 
         T state = null;
         try {
 
-            state = ( T ) subclass.getConstructor( Lifeform.class )
-                    .newInstance( this.lifeform );
+            state = (T) subclass.getConstructor(Lifeform.class)
+                    .newInstance(this.lifeform);
 
-        } catch( InstantiationException | IllegalAccessException
+        } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
-                | NoSuchMethodException | SecurityException e ) {
-            FroshController.LOGGER.severe( java.util.Arrays.toString( e
-                    .getStackTrace( ) ) );
+                | NoSuchMethodException | SecurityException e) {
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e
+                    .getStackTrace()));
         }
         return state;
     }
@@ -74,16 +75,9 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals( final Object o ) {
+    public boolean equals(final Object o) {
 
-        if( this == o ) {
-            return true;
-        }
-        if( ( o == null ) || ( this.getClass( ) != o.getClass( ) ) ) {
-            return false;
-        }
-
-        return true;
+        return this == o || !((o == null) || (this.getClass() != o.getClass()));
 
     }
 
@@ -92,7 +86,7 @@ public abstract class State implements IState, Cloneable {
      *
      * @return the lifeform
      */
-    public Lifeform getLifeform( ) {
+    public Lifeform getLifeform() {
 
         return this.lifeform;
     }
@@ -103,18 +97,17 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#hashCode()
      */
     @Override
-    public int hashCode( ) {
+    public int hashCode() {
 
-        return this.lifeform.hashCode( );
+        return this.lifeform.hashCode();
     }
 
     /**
      * Sets the lifeform.
      *
-     * @param lifeform
-     *            the new lifeform
+     * @param lifeform the new lifeform
      */
-    public void setLifeform( final Lifeform lifeform ) {
+    public void setLifeform(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }

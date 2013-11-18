@@ -4,11 +4,23 @@
 
 package models.lifeform.animal;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Chicken.
  */
 public class Chicken extends Bird {
+
+    /**
+     * Instantiates a new chicken.
+     * 
+     * @param column
+     *            the column
+     * @param line
+     *            the line
+     */
+    public Chicken( final Integer column, final Integer line ) {
+
+        this( column, line, false );
+    }
 
     /**
      * Instantiates a new chicken.
@@ -26,18 +38,6 @@ public class Chicken extends Bird {
 
     }
 
-    /**
-     * Instantiates a new chicken.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
-     */
-    public Chicken( final Integer column, final Integer line ) {
-        this( column, line, false );
-    }
-
     /*
      * (non-Javadoc)
      * 
@@ -46,8 +46,7 @@ public class Chicken extends Bird {
     @Override
     public Object clone( ) throws CloneNotSupportedException {
 
-        return super.clone( Chicken.class );
-
+        return super.clone( this.getClass( ) );
     }
 
     /*

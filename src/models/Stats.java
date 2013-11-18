@@ -5,6 +5,7 @@
 package models;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Stats.
  */

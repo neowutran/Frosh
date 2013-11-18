@@ -7,6 +7,7 @@ package models.lifeform;
 import models.Lifeform;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Human.
  */
@@ -33,7 +34,7 @@ public class Human extends Lifeform {
     @Override
     public Object clone( ) throws CloneNotSupportedException {
 
-        return super.clone( Human.class );
+        return super.clone( this.getClass( ) );
 
     }
 

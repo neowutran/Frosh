@@ -13,27 +13,22 @@ import java.io.OutputStream;
 
 import controllers.FroshController;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CopyFile.
  */
 public class CopyFile {
 
-    /**
-     * The destination.
-     */
+    /** The destination. */
     private String            destination;
 
-    /**
-     * The sources.
-     */
+    /** The sources. */
     private final InputStream sources      = this.getClass( )
                                                    .getClassLoader( )
                                                    .getResourceAsStream(
                                                            "config.json" );
 
-    /**
-     * The Constant TAILLEBUFFER.
-     */
+    /** The Constant TAILLEBUFFER. */
     private static final int  TAILLEBUFFER = 1024;
 
     /**

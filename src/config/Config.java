@@ -6,16 +6,16 @@ package config;
 
 import java.util.Map;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Config.
  */
 public final class Config {
 
-    /**
-     * The configuration.
-     */
+    /** The configuration. */
     private static Map<String, Object> configuration;
 
+    /** The Constant MAX. */
     private static final Integer       MAX = 100;
 
     /**
@@ -29,6 +29,11 @@ public final class Config {
     }
 
     // SonarHQ complience
+    /**
+     * Gets the max.
+     * 
+     * @return the max
+     */
     public static Integer getMax( ) {
 
         return Config.MAX;

@@ -4,9 +4,10 @@
 
 package models.lifeform;
 
-import models.Lifeform;
+import models.*;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Animal.
  */
@@ -14,14 +15,12 @@ public abstract class Animal extends Lifeform {
 
     /**
      * Instantiates a new animal.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
+     *
+     * @param column the column
+     * @param line   the line
      */
-    public Animal( final Integer column, final Integer line ) {
+    public Animal(final Integer column, final Integer line) {
 
-        super( column, line );
+        super(column, line);
     }
 }

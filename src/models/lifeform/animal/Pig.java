@@ -8,10 +8,24 @@ import models.disease.H1N1;
 import models.lifeform.Animal;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Pig.
  */
 public class Pig extends Animal {
+
+    /**
+     * Instantiates a new pig.
+     * 
+     * @param column
+     *            the column
+     * @param line
+     *            the line
+     */
+    public Pig( final Integer column, final Integer line ) {
+
+        this( column, line, false );
+    }
 
     /**
      * Instantiates a new pig.
@@ -31,18 +45,6 @@ public class Pig extends Animal {
         }
     }
 
-    /**
-     * Instantiates a new pig.
-     * 
-     * @param column
-     *            the column
-     * @param line
-     *            the line
-     */
-    public Pig( final Integer column, final Integer line ) {
-        this( column, line, false );
-    }
-
     /*
      * (non-Javadoc)
      * 
@@ -51,8 +53,7 @@ public class Pig extends Animal {
     @Override
     public Object clone( ) throws CloneNotSupportedException {
 
-        return super.clone( Pig.class );
-
+        return super.clone( this.getClass( ) );
     }
 
     /*

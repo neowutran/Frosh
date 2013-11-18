@@ -9,6 +9,7 @@ import models.Lifeform;
 import models.Stats;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class Dead.
  */
@@ -28,18 +29,6 @@ public class Dead extends State {
     /*
      * (non-Javadoc)
      * 
-     * @see models.states.State#clone()
-     */
-    @Override
-    public Object clone( ) throws CloneNotSupportedException {
-
-        return super.clone( Dead.class );
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
      * @see models.States.IState#apply()
      */
     @Override
@@ -51,6 +40,17 @@ public class Dead extends State {
         final Lifeform[ ][ ] grid = Grid.getGrid( );
         grid[ this.getLifeform( ).getColumn( ) ][ this.getLifeform( ).getLine( ) ] = null;
         this.setLifeform( null );
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see models.states.State#clone()
+     */
+    @Override
+    public Object clone( ) throws CloneNotSupportedException {
+
+        return super.clone( this.getClass( ) );
     }
 
     /*

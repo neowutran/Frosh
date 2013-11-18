@@ -5,6 +5,7 @@
 package models.disease;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Interface IDiseaseType.
  */
