@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
-</log>
+<record>
+  <date>2013-12-18T21:25:31</date>
+  <millis>1387398331967</millis>
+  <sequence>0</sequence>
+  <logger>Frosh</logger>
+  <level>INFO</level>
+  <class>controllers.FroshController</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>finish</message>
+</record>

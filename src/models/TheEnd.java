@@ -13,7 +13,7 @@ public class TheEnd extends Thread{
     @Override
     public void run( ) {
 
-        FroshController.getInstance().getGrid().show();
+       // FroshController.getInstance().getGrid().show();
         while( !FroshController.getInstance().getGridModel().hasEnded()) {
 
             try {
@@ -39,7 +39,7 @@ public class TheEnd extends Thread{
 
                 }
             }
-             
+
             FroshController.getInstance().nextDay();
 
         }

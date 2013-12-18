@@ -14,11 +14,17 @@ import java.util.Set;
 public class Frame extends JDialog {
 
     private JMenuBar menuBar = new MenuBar();
-    private JPanel panelMenu = new JPanel();
+    private JPanel panel = new JPanel();
+    private GridView grid = new GridView();
+
+    public GridView getGrid() {
+        return grid;
+    }
 
     public Frame(){
 
         this.setSize(500,500);
+
 
 
         JFrame.setDefaultLookAndFeelDecorated(true);
@@ -28,14 +34,24 @@ public class Frame extends JDialog {
         this.setTitle("Frosh");
         this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
-        JPanel contentPane = new JPanel();
-        contentPane.setLayout(new BorderLayout());
-        this.setContentPane(contentPane);
-        this.panelMenu.add(menuBar);
-        this.panelMenu.setFocusable(true);
-        this.add(this.panelMenu);
+        panel.setLayout(new BorderLayout());
+        panel.setFocusable(true);
+        this.setContentPane(panel);
+
+
+
+        this.grid = new GridView( );
+        grid.setColor(models.lifeform.animal.Chicken.class, java.awt.Color.ORANGE);
+        grid.setColor(models.lifeform.animal.Duck.class, java.awt.Color.RED);
+        grid.setColor(models.lifeform.animal.Pig.class, java.awt.Color.YELLOW);
+        grid.setColor(models.lifeform.Human.class, java.awt.Color.BLUE);
+
+
+        panel.add(grid, BorderLayout.CENTER);
+        panel.add(menuBar, BorderLayout.NORTH);
+
         this.setVisible(true);
-        this.panelMenu.requestFocus();
+        this.panel.requestFocus();
 
     }
 

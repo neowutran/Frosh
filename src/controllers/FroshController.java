@@ -15,11 +15,14 @@ import models.Grid;
 import models.Stats;
 import models.TheEnd;
 import views.Frame;
+import views.GridView;
 import views.View;
 
 import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
+
+import javax.swing.*;
 
 /**
  * The Class FroshController.
@@ -31,22 +34,20 @@ public class FroshController {
     }
 
     /** The grid model. */
-    private  Grid         gridModel;
-
-    public View getGrid() {
-        return grid;
-    }
+    private  Grid         gridModel = new Grid();
 
     /** The grid. */
-    private  View         grid;
     private  Frame frame = new Frame();
     private Thread theEnd = new TheEnd();
+
+    private int step;
 
     public Boolean getStop() {
         return stop;
     }
 
     private Boolean stop = false;
+
 
     public Boolean getKill() {
         return kill;
@@ -81,8 +82,7 @@ public class FroshController {
     protected FroshController( ) {
         this.loggingConfig( );
         this.frame.setVisible(true);
-        this.gridModel = new Grid( );
-        this.grid = new View( );
+       // this.grid = new View( );
 
     }
 
@@ -92,7 +92,8 @@ public class FroshController {
         kill = false;
         stop = false;
         Stats.setDead(0);
-        grid = new View();
+        //grid = new View();
+        step = 0;
         this.gridModel = new Grid( );
         theEnd.start();
 
@@ -146,8 +147,10 @@ public class FroshController {
      */
     public synchronized void nextDay( ) {
 
+        frame.getGrid().showStatus(step);
+        step++;
         Grid.nextDay( );
-        this.grid.show( );
+      //  this.grid.show( );
     }
 
 }
