@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 
 import config.Config;
 import controllers.FroshController;
+import lib.Json;
 
 /**
  * The Class Frosh.
@@ -26,40 +27,29 @@ import controllers.FroshController;
 public class Frosh {
 
     /** The Constant FOLDER. */
-    public static final String FOLDER = "Frosh" + File.separator;
+    public static final String FOLDER = "Frosh" + java.io.File.separator;
 
     /** The Constant CONFIG. */
     public static final String CONFIG = "config.json";
 
+    /** The Constant DATA. */
+    public static final String DATA   = "data.json";
+
     /**
      * Load config file.
-     * 
+     *
      * @param configFile
      *            the config file
      */
     private static void loadConfigFile( final Path configFile ) {
 
-        // Read the file
-        final Charset charset = Charset.forName( "UTF-8" );
-        try( BufferedReader reader = Files.newBufferedReader( configFile,
-                charset ) ) {
-            String line;
-            String text = "";
-            while( ( line = reader.readLine( ) ) != null ) {
-                text += line;
-            }
-            // Convert the JSON file to an java object
-            final Gson gson = new Gson( );
-            Config.setConfiguration( gson.fromJson( text, Map.class ) );
-        } catch( final IOException x ) {
+        config.Config.setConfiguration( Json.loadFile(configFile) );
 
-            System.err.format( "IOException: %s%n", x );
-        }
     }
 
     /**
      * The main method.
-     * 
+     *
      * @param args
      *            the arguments
      */
@@ -70,22 +60,29 @@ public class Frosh {
     }
 
     /**
-     * Instantiates a new frosh.
+     * Instantiates a new mini project.
      */
     public Frosh( ) {
 
         // Create the config folder
-        if( !new File( Frosh.FOLDER ).isDirectory( ) ) {
+        if( !new java.io.File( Frosh.FOLDER ).isDirectory( ) ) {
             this.createConfigFolder( );
         }
         // Copy the default config file into the folder if no config file was
         // found
-        if( !new File( Frosh.FOLDER + Frosh.CONFIG ).exists( ) ) {
-            final CopyFile lib = new CopyFile( );
-            lib.copyfile( Frosh.FOLDER + Frosh.CONFIG );
+        if( !new java.io.File( Frosh.FOLDER + Frosh.CONFIG )
+                .exists() ) {
+
+            CopyFile.copyFile( this.getClass( ).getClassLoader( )
+                    .getResourceAsStream( Frosh.CONFIG ),
+                    Frosh.FOLDER + Frosh.CONFIG );
+            CopyFile.copyFile(this.getClass().getClassLoader()
+                    .getResourceAsStream(Frosh.DATA),
+                    Frosh.FOLDER + Frosh.DATA);
         }
-        Frosh.loadConfigFile( Paths.get( Frosh.FOLDER, Frosh.CONFIG ) );
-        new FroshController( ).run( );
+        Frosh.loadConfigFile( Paths.get( Frosh.FOLDER,
+                Frosh.CONFIG ) );
+        FroshController.getInstance();
 
     }
 
@@ -94,6 +91,6 @@ public class Frosh {
      */
     private void createConfigFolder( ) {
 
-        new File( Frosh.FOLDER ).mkdirs( );
+        new java.io.File( Frosh.FOLDER ).mkdirs( );
     }
 }

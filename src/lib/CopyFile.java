@@ -1,82 +1,53 @@
-/**
+/*
  * @author Martini Didier
  */
 
 package lib;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 
 import controllers.FroshController;
 
 /**
  * The Class CopyFile.
  */
-public class CopyFile {
+public final class CopyFile {
 
-    /** The destination. */
-    private String            destination;
-
-    /** The sources. */
-    private final InputStream sources      = this.getClass( )
-                                                   .getClassLoader( )
-                                                   .getResourceAsStream(
-                                                           "config.json" );
-
-    /** The Constant TAILLEBUFFER. */
-    private static final int  TAILLEBUFFER = 1024;
+    /** The Constant BUFFER_SIZE. */
+    private static final int BUFFER_SIZE = 1024;
 
     /**
-     * Copyfile.
+     * Copy file.
      * 
+     * @param sources
+     *            the sources
      * @param destination
      *            the destination
      */
-    public void copyfile( final String destination ) {
+    public static void copyFile( final InputStream sources,
+            final String destination ) {
 
-        this.setDestination( destination );
         try {
-            final File f2 = new File( destination );
-            final OutputStream out = new FileOutputStream( f2 );
-            final byte[ ] buf = new byte[ CopyFile.TAILLEBUFFER ];
+            final java.io.File f2 = new java.io.File( destination );
+            final java.io.OutputStream out = new java.io.FileOutputStream( f2 );
+            final byte[ ] buf = new byte[ CopyFile.BUFFER_SIZE ];
             int len;
-            while( ( len = this.sources.read( buf ) ) > 0 ) {
+            while( ( len = sources.read( buf ) ) > 0 ) {
                 out.write( buf, 0, len );
             }
-            this.sources.close( );
+            sources.close( );
             out.close( );
-        } catch( final FileNotFoundException ex ) {
+        } catch( final java.io.IOException ex ) {
             FroshController.LOGGER.severe( java.util.Arrays.toString( ex
                     .getStackTrace( ) ) );
-            System.exit( 0 );
-        } catch( final IOException e ) {
-            FroshController.LOGGER.severe( java.util.Arrays.toString( e
-                    .getStackTrace( ) ) );
+
         }
     }
 
     /**
-     * Gets the destination.
-     * 
-     * @return the destination
+     * Instantiates a new copy file.
      */
-    public String getDestination( ) {
-
-        return this.destination;
+    private CopyFile( ) {
     }
 
-    /**
-     * Sets the destination.
-     * 
-     * @param destination
-     *            the new destination
-     */
-    public void setDestination( final String destination ) {
-
-        this.destination = destination;
-    }
 }

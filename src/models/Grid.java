@@ -340,7 +340,7 @@ public class Grid {
     /**
      * Next day.
      */
-    public static void nextDay( ) {
+    public synchronized static void nextDay( ) {
 
         for( int i = 0; i < Grid.grid.length; i++ ) {
             for( int j = 0; j < Grid.grid[ i ].length; j++ ) {
@@ -410,7 +410,7 @@ public class Grid {
      * 
      * @return true, if successful
      */
-    public boolean hasEnded( ) {
+    public synchronized boolean hasEnded( ) {
 
         for( final Lifeform[ ] element : Grid.grid ) {
             for( final Lifeform element2 : element ) {
@@ -428,7 +428,7 @@ public class Grid {
     /**
      * Populate.
      */
-    private void populate( ) {
+    private synchronized void populate( ) {
 
         for( int i = 0; i < Grid.grid.length; i++ ) {
             for( int j = 0; j < Grid.grid[ i ].length; j++ ) {

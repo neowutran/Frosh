@@ -12,7 +12,6 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import config.Config;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class View.
  */
