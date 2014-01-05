@@ -12,10 +12,13 @@ import java.util.Map;
  */
 public final class Config {
 
-    /** The configuration. */
+    /**
+     * The configuration.
+     */
     private static Map<String, Object> configuration;
-
-    /** The Constant MAX. */
+    /**
+     * The Constant MAX.
+     */
     private static final Integer       MAX = 100;
 
     /**
@@ -23,7 +26,7 @@ public final class Config {
      * 
      * @return the configuration
      */
-    public static Map<String, Object> getConfiguration( ) {
+    public static Map<String, Object> getConfiguration() {
 
         return Config.configuration;
     }
@@ -34,7 +37,7 @@ public final class Config {
      * 
      * @return the max
      */
-    public static Integer getMax( ) {
+    public static Integer getMax() {
 
         return Config.MAX;
     }
@@ -45,7 +48,7 @@ public final class Config {
      * @param configuration
      *            the configuration
      */
-    public static void setConfiguration( final Map<String, Object> configuration ) {
+    public static void setConfiguration(final Map<String, Object> configuration) {
 
         Config.configuration = configuration;
     }
@@ -53,7 +56,7 @@ public final class Config {
     /**
      * Instantiates a new config.
      */
-    private Config( ) {
+    private Config() {
 
     }
 }

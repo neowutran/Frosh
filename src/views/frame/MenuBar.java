@@ -1,60 +1,63 @@
+
 package views.frame;
 
-import controllers.FroshController;
-import models.FroshRuntimeException;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by neowutran on 14/12/13.
- */
+import javax.swing.JDialog;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+import models.FroshRuntimeException;
+import controllers.FroshController;
+
 public class MenuBar extends JMenuBar implements ActionListener {
 
-    private JMenuItem start = new JMenuItem("start");
-    private JMenuItem state = new JMenuItem("pause");
-    private JMenuItem config = new JMenuItem("config");
-    private JDialog configFrame;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    private final JMenuItem   start            = new JMenuItem("start");
+    private final JMenuItem   state            = new JMenuItem("pause");
+    private final JMenuItem   config           = new JMenuItem("config");
+    private JDialog           configFrame;
 
-    public MenuBar(){
+    public MenuBar() {
 
-        start.addActionListener(this);
-        state.addActionListener(this);
-        config.addActionListener(this);
-        state.setVisible(false);
-        this.add(start);
-        this.add(config);
-        this.add(state);
-
-
+        this.start.addActionListener(this);
+        this.state.addActionListener(this);
+        this.config.addActionListener(this);
+        this.state.setVisible(false);
+        this.add(this.start);
+        this.add(this.config);
+        this.add(this.state);
     }
 
     @Override
-    public void actionPerformed(ActionEvent event) {
-        switch (event.getActionCommand()){
+    public void actionPerformed(final ActionEvent event) {
 
+        switch (event.getActionCommand()) {
             case "resume":
-                state.setText("pause");
+                this.state.setText("pause");
                 FroshController.getInstance().resume();
                 break;
             case "pause":
-                state.setText("resume");
+                this.state.setText("resume");
                 FroshController.getInstance().pause();
                 break;
             case "restart":
             case "start":
-                start.setText("restart");
-                state.setText("pause");
-                state.setVisible(true);
+                this.start.setText("restart");
+                this.state.setText("pause");
+                this.state.setVisible(true);
                 FroshController.getInstance().rerun();
                 break;
             case "config":
-                configFrame = new Config();
+                this.configFrame = new Config();
                 break;
             default:
-                throw new FroshRuntimeException("this event doesn't exist:"+event.getActionCommand());
-
+                throw new FroshRuntimeException("this event doesn't exist:"
+                        + event.getActionCommand());
         }
     }
 }

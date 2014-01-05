@@ -22,28 +22,37 @@ import controllers.FroshController;
  */
 public abstract class Disease implements IDiseaseType, Cloneable {
 
-    /** The infection rate. */
+    /**
+     * The infection rate.
+     */
     private LinkedTreeMap<?, ?> infectionRate;
-
-    /** The carrier. */
+    /**
+     * The carrier.
+     */
     private Lifeform            carrier            = null;
-
-    /** The incubation time. */
+    /**
+     * The incubation time.
+     */
     private int                 incubationTime;
-
-    /** The mortality. */
+    /**
+     * The mortality.
+     */
     private int                 mortality;
-
-    /** The recovery time. */
+    /**
+     * The recovery time.
+     */
     private int                 recoveryTime;
-
-    /** The contagious time. */
+    /**
+     * The contagious time.
+     */
     private int                 contagiousTime;
-
-    /** The next state. */
+    /**
+     * The next state.
+     */
     private State               nextState          = null;
-
-    /** The day before next state. */
+    /**
+     * The day before next state.
+     */
     private Integer             dayBeforeNextState = null;
 
     /**
@@ -52,28 +61,32 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param carrier
      *            the carrier
      */
-    public Disease( final Lifeform carrier ) {
+    public Disease(final Lifeform carrier) {
 
         this.carrier = carrier;
-        final LinkedTreeMap<?, ?> config = ( LinkedTreeMap<?, ?> ) Config
-                .getConfiguration( ).get( "disease" );
-        this.incubationTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "incubationTime" ) ).intValue( );
-        this.mortality = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "mortality" ) ).intValue( );
-        this.infectionRate = ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "infectionRate" );
-        this.recoveryTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "recoveryTime" ) ).intValue( );
-        this.contagiousTime = ( ( Double ) ( ( LinkedTreeMap<?, ?> ) ( ( LinkedTreeMap<?, ?> ) config
-                .get( this.getDiseaseType( ) ) ).get( this.carrier
-                .getLifeformType( ) ) ).get( "contagiousTime" ) ).intValue( );
+        final LinkedTreeMap<?, ?> config = (LinkedTreeMap<?, ?>) Config
+                .getConfiguration().get("disease");
+        this.incubationTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("incubationTime"))
+                .intValue();
+        this.mortality = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("mortality"))
+                .intValue();
+        this.infectionRate = (LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("infectionRate");
+        this.recoveryTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("recoveryTime"))
+                .intValue();
+        this.contagiousTime = ((Double) ((LinkedTreeMap<?, ?>) ((LinkedTreeMap<?, ?>) config
+                .get(this.getDiseaseType()))
+                .get(this.carrier.getLifeformType())).get("contagiousTime"))
+                .intValue();
         this.dayBeforeNextState = 0;
-        this.nextState = new Sick( this.carrier );
+        this.nextState = new Sick(this.carrier);
     }
 
     /*
@@ -82,10 +95,9 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        throw new CloneNotSupportedException( "A clone method is missing" );
-
+        throw new CloneNotSupportedException("A clone method is missing");
     }
 
     /**
@@ -99,25 +111,21 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @throws CloneNotSupportedException
      *             the clone not supported exception
      */
-    protected <T extends Disease> Object clone( final Class subclass )
+    protected <T extends Disease> Object clone(final Class subclass)
             throws CloneNotSupportedException {
 
         T disease = null;
         try {
-
-            disease = ( T ) subclass.getConstructor( Lifeform.class )
-                    .newInstance( this.carrier );
-
-            disease.setDayBeforeNextState( this.dayBeforeNextState );
-            disease.setNextState( ( State ) this.nextState.clone( ) );
-
-        } catch( InstantiationException | IllegalAccessException
+            disease = (T) subclass.getConstructor(Lifeform.class).newInstance(
+                    this.carrier);
+            disease.setDayBeforeNextState(this.dayBeforeNextState);
+            disease.setNextState((State) this.nextState.clone());
+        } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
-                | NoSuchMethodException | SecurityException e ) {
-            FroshController.LOGGER.severe( java.util.Arrays.toString( e
-                    .getStackTrace( ) ) );
+                | NoSuchMethodException | SecurityException e) {
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e
+                    .getStackTrace()));
         }
-
         return disease;
     }
 
@@ -127,26 +135,23 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals( final Object o ) {
+    public boolean equals(final Object o) {
 
-        if( this == o ) {
+        if (this == o) {
             return true;
         }
-        if( ( o == null ) || ( this.getClass( ) != o.getClass( ) ) ) {
+        if ((o == null) || (this.getClass() != o.getClass())) {
             return false;
         }
-
-        final Disease disease = ( Disease ) o;
-
-        return ( this.contagiousTime == disease.contagiousTime )
-                && ( this.incubationTime == disease.incubationTime )
-                && ( this.mortality == disease.mortality )
-                && ( this.recoveryTime == disease.recoveryTime )
-                && this.carrier.equals( disease.carrier )
-                && this.dayBeforeNextState.equals( disease.dayBeforeNextState )
-                && this.infectionRate.equals( disease.infectionRate )
-                && this.nextState.equals( disease.nextState );
-
+        final Disease disease = (Disease) o;
+        return (this.contagiousTime == disease.contagiousTime)
+                && (this.incubationTime == disease.incubationTime)
+                && (this.mortality == disease.mortality)
+                && (this.recoveryTime == disease.recoveryTime)
+                && this.carrier.equals(disease.carrier)
+                && this.dayBeforeNextState.equals(disease.dayBeforeNextState)
+                && this.infectionRate.equals(disease.infectionRate)
+                && this.nextState.equals(disease.nextState);
     }
 
     /**
@@ -154,7 +159,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the carrier
      */
-    public Lifeform getCarrier( ) {
+    public Lifeform getCarrier() {
 
         return this.carrier;
     }
@@ -164,7 +169,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the contagious time
      */
-    public int getContagiousTime( ) {
+    public int getContagiousTime() {
 
         return this.contagiousTime;
     }
@@ -174,7 +179,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the day before next state
      */
-    public Integer getDayBeforeNextState( ) {
+    public Integer getDayBeforeNextState() {
 
         return this.dayBeforeNextState;
     }
@@ -184,7 +189,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the incubation time
      */
-    public int getIncubationTime( ) {
+    public int getIncubationTime() {
 
         return this.incubationTime;
     }
@@ -194,7 +199,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the infection rate
      */
-    public LinkedTreeMap<?, ?> getInfectionRate( ) {
+    public LinkedTreeMap<?, ?> getInfectionRate() {
 
         return this.infectionRate;
     }
@@ -204,7 +209,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the mortality
      */
-    public int getMortality( ) {
+    public int getMortality() {
 
         return this.mortality;
     }
@@ -214,7 +219,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the next state
      */
-    public State getNextState( ) {
+    public State getNextState() {
 
         return this.nextState;
     }
@@ -224,7 +229,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * 
      * @return the recovery time
      */
-    public int getRecoveryTime( ) {
+    public int getRecoveryTime() {
 
         return this.recoveryTime;
     }
@@ -235,39 +240,39 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @see java.lang.Object#hashCode()
      */
     @Override
-    public int hashCode( ) {
+    public int hashCode() {
 
-        int result = this.infectionRate.hashCode( );
-        result = ( 31 * result ) + this.incubationTime;
-        result = ( 31 * result ) + this.mortality;
-        result = ( 31 * result ) + this.recoveryTime;
-        result = ( 31 * result ) + this.contagiousTime;
-        result = ( 31 * result ) + this.dayBeforeNextState.hashCode( );
+        int result = this.infectionRate.hashCode();
+        result = (31 * result) + this.incubationTime;
+        result = (31 * result) + this.mortality;
+        result = (31 * result) + this.recoveryTime;
+        result = (31 * result) + this.contagiousTime;
+        result = (31 * result) + this.dayBeforeNextState.hashCode();
         return result;
     }
 
     /**
      * Next day.
      */
-    public void nextDay( ) {
+    public void nextDay() {
 
-        if( this.carrier.getStates( ).getStateName( ).equals( "Dead" )
-                || ( this.nextState == null ) ) {
+        if (this.carrier.getStates().getStateName().equals("Dead")
+                || (this.nextState == null)) {
             return;
         }
-        if( this.dayBeforeNextState == 0 ) {
-            if( this.carrier.getStates( ).getStateName( ).equals( "Sick" )
-                    || this.carrier.getStates( ).getStateName( )
-                            .equals( "Contagious" ) ) {
-                final int result = Rand.randInt( 0, 100 );
-                if( result <= this.mortality ) {
-                    this.carrier.setStates( new Dead( this.carrier ) );
-                    this.carrier.getStates( ).apply( );
+        if (this.dayBeforeNextState == 0) {
+            if (this.carrier.getStates().getStateName().equals("Sick")
+                    || this.carrier.getStates().getStateName()
+                            .equals("Contagious")) {
+                final int result = Rand.randInt(0, 100);
+                if (result <= this.mortality) {
+                    this.carrier.setStates(new Dead(this.carrier));
+                    this.carrier.getStates().apply();
                     return;
                 }
             }
-            this.carrier.setStates( this.nextState );
-            this.carrier.getStates( ).apply( );
+            this.carrier.setStates(this.nextState);
+            this.carrier.getStates().apply();
             return;
         }
         this.dayBeforeNextState--;
@@ -279,10 +284,10 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param carrier
      *            the new carrier
      */
-    public void setCarrier( final Lifeform carrier ) {
+    public void setCarrier(final Lifeform carrier) {
 
         this.carrier = carrier;
-        this.nextState.setLifeform( carrier );
+        this.nextState.setLifeform(carrier);
     }
 
     /**
@@ -291,7 +296,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param contagiousTime
      *            the new contagious time
      */
-    public void setContagiousTime( final int contagiousTime ) {
+    public void setContagiousTime(final int contagiousTime) {
 
         this.contagiousTime = contagiousTime;
     }
@@ -302,7 +307,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param dayBeforeNextState
      *            the new day before next state
      */
-    public void setDayBeforeNextState( final Integer dayBeforeNextState ) {
+    public void setDayBeforeNextState(final Integer dayBeforeNextState) {
 
         this.dayBeforeNextState = dayBeforeNextState;
     }
@@ -313,7 +318,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param incubationTime
      *            the new incubation time
      */
-    public void setIncubationTime( final int incubationTime ) {
+    public void setIncubationTime(final int incubationTime) {
 
         this.incubationTime = incubationTime;
     }
@@ -324,7 +329,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param infectionRate
      *            the infection rate
      */
-    public void setInfectionRate( final LinkedTreeMap<?, ?> infectionRate ) {
+    public void setInfectionRate(final LinkedTreeMap<?, ?> infectionRate) {
 
         this.infectionRate = infectionRate;
     }
@@ -335,7 +340,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param mortality
      *            the new mortality
      */
-    public void setMortality( final int mortality ) {
+    public void setMortality(final int mortality) {
 
         this.mortality = mortality;
     }
@@ -346,7 +351,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param nextState
      *            the new next state
      */
-    public void setNextState( final State nextState ) {
+    public void setNextState(final State nextState) {
 
         this.nextState = nextState;
     }
@@ -357,7 +362,7 @@ public abstract class Disease implements IDiseaseType, Cloneable {
      * @param recoveryTime
      *            the new recovery time
      */
-    public void setRecoveryTime( final int recoveryTime ) {
+    public void setRecoveryTime(final int recoveryTime) {
 
         this.recoveryTime = recoveryTime;
     }

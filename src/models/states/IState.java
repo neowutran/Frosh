@@ -12,12 +12,12 @@ public interface IState {
     /**
      * Apply.
      */
-    void apply( );
+    void apply();
 
     /**
      * Gets the state name.
      * 
      * @return the state name
      */
-    String getStateName( );
+    String getStateName();
 }

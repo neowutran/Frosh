@@ -17,9 +17,9 @@ public class Contagious extends State {
      * @param lifeform
      *            the lifeform
      */
-    public Contagious( final Lifeform lifeform ) {
+    public Contagious(final Lifeform lifeform) {
 
-        super( lifeform );
+        super(lifeform);
     }
 
     /*
@@ -28,14 +28,14 @@ public class Contagious extends State {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
+    public void apply() {
 
-        this.getLifeform( ).getDisease( )
-                .setNextState( new Recovering( this.getLifeform( ) ) );
-        this.getLifeform( )
-                .getDisease( )
+        this.getLifeform().getDisease()
+                .setNextState(new Recovering(this.getLifeform()));
+        this.getLifeform()
+                .getDisease()
                 .setDayBeforeNextState(
-                        this.getLifeform( ).getDisease( ).getContagiousTime( ) );
+                        this.getLifeform().getDisease().getContagiousTime());
     }
 
     /*
@@ -44,9 +44,9 @@ public class Contagious extends State {
      * @see models.states.State#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
 
     /*
@@ -55,7 +55,7 @@ public class Contagious extends State {
      * @see models.states.IState#getStateName()
      */
     @Override
-    public String getStateName( ) {
+    public String getStateName() {
 
         return "Contagious";
     }

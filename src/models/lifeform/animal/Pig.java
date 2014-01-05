@@ -20,9 +20,9 @@ public class Pig extends Animal {
      * @param line
      *            the line
      */
-    public Pig( final Integer column, final Integer line ) {
+    public Pig(final Integer column, final Integer line) {
 
-        this( column, line, false );
+        this(column, line, false);
     }
 
     /**
@@ -35,11 +35,11 @@ public class Pig extends Animal {
      * @param sick
      *            the sick
      */
-    public Pig( final Integer column, final Integer line, final boolean sick ) {
+    public Pig(final Integer column, final Integer line, final boolean sick) {
 
-        super( column, line );
-        if( sick ) {
-            this.setDisease( new H1N1( this ) );
+        super(column, line);
+        if (sick) {
+            this.setDisease(new H1N1(this));
         }
     }
 
@@ -49,9 +49,9 @@ public class Pig extends Animal {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
 
     /*
@@ -60,7 +60,7 @@ public class Pig extends Animal {
      * @see models.ILifeformType#getLifeformType()
      */
     @Override
-    public String getLifeformType( ) {
+    public String getLifeformType() {
 
         return "Pig";
     }

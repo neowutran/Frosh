@@ -6,8 +6,8 @@ import java.nio.file.Path;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import controllers.FroshController;
 
+import controllers.FroshController;
 
 /**
  * The Class Json.
@@ -21,25 +21,24 @@ public final class Json {
      *            the file
      * @return the map
      */
-    public static Map loadFile( final Path file ) {
+    public static Map loadFile(final Path file) {
 
         // Read the file
         final java.nio.charset.Charset charset = java.nio.charset.Charset
-                .forName( "UTF-8" );
-        try( java.io.BufferedReader reader = Files.newBufferedReader( file,
-                charset ) ) {
+                .forName("UTF-8");
+        try (java.io.BufferedReader reader = Files.newBufferedReader(file,
+                charset)) {
             String line;
             String text = "";
-            while( ( line = reader.readLine( ) ) != null ) {
+            while ((line = reader.readLine()) != null) {
                 text += line;
             }
             // Convert the JSON file to an java object
-            final Gson gson = new Gson( );
-            return gson.fromJson( text, Map.class );
-        } catch( final java.io.IOException x ) {
-
-            FroshController.LOGGER.severe( java.util.Arrays.toString( x
-                    .getStackTrace( ) ) );
+            final Gson gson = new Gson();
+            return gson.fromJson(text, Map.class);
+        } catch (final java.io.IOException x) {
+            FroshController.LOGGER.severe(java.util.Arrays.toString(x
+                    .getStackTrace()));
             return null;
         }
     }
@@ -47,7 +46,7 @@ public final class Json {
     /**
      * Instantiates a new json.
      */
-    private Json( ) {
-    }
+    private Json() {
 
+    }
 }

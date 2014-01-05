@@ -14,7 +14,9 @@ import controllers.FroshController;
  */
 public abstract class State implements IState, Cloneable {
 
-    /** The lifeform. */
+    /**
+     * The lifeform.
+     */
     private Lifeform lifeform;
 
     /**
@@ -23,7 +25,7 @@ public abstract class State implements IState, Cloneable {
      * @param lifeform
      *            the lifeform
      */
-    public State( final Lifeform lifeform ) {
+    public State(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }
@@ -34,9 +36,9 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        throw new CloneNotSupportedException( "A clone method is missing" );
+        throw new CloneNotSupportedException("A clone method is missing");
     }
 
     /**
@@ -48,19 +50,17 @@ public abstract class State implements IState, Cloneable {
      *            the subclass
      * @return the object
      */
-    protected <T extends State> Object clone( final Class subclass ) {
+    protected <T extends State> Object clone(final Class subclass) {
 
         T state = null;
         try {
-
-            state = ( T ) subclass.getConstructor( Lifeform.class )
-                    .newInstance( this.lifeform );
-
-        } catch( InstantiationException | IllegalAccessException
+            state = (T) subclass.getConstructor(Lifeform.class).newInstance(
+                    this.lifeform);
+        } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
-                | NoSuchMethodException | SecurityException e ) {
-            FroshController.LOGGER.severe( java.util.Arrays.toString( e
-                    .getStackTrace( ) ) );
+                | NoSuchMethodException | SecurityException e) {
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e
+                    .getStackTrace()));
         }
         return state;
     }
@@ -71,11 +71,10 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals( final Object o ) {
+    public boolean equals(final Object o) {
 
-        return ( this == o )
-                || !( ( o == null ) || ( this.getClass( ) != o.getClass( ) ) );
-
+        return (this == o)
+                || !((o == null) || (this.getClass() != o.getClass()));
     }
 
     /**
@@ -83,7 +82,7 @@ public abstract class State implements IState, Cloneable {
      * 
      * @return the lifeform
      */
-    public Lifeform getLifeform( ) {
+    public Lifeform getLifeform() {
 
         return this.lifeform;
     }
@@ -94,9 +93,9 @@ public abstract class State implements IState, Cloneable {
      * @see java.lang.Object#hashCode()
      */
     @Override
-    public int hashCode( ) {
+    public int hashCode() {
 
-        return this.lifeform.hashCode( );
+        return this.lifeform.hashCode();
     }
 
     /**
@@ -105,7 +104,7 @@ public abstract class State implements IState, Cloneable {
      * @param lifeform
      *            the new lifeform
      */
-    public void setLifeform( final Lifeform lifeform ) {
+    public void setLifeform(final Lifeform lifeform) {
 
         this.lifeform = lifeform;
     }

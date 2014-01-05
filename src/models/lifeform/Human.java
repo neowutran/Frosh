@@ -19,9 +19,9 @@ public class Human extends Lifeform {
      * @param line
      *            the line
      */
-    public Human( final Integer column, final Integer line ) {
+    public Human(final Integer column, final Integer line) {
 
-        super( column, line );
+        super(column, line);
     }
 
     /*
@@ -30,10 +30,9 @@ public class Human extends Lifeform {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
-
+        return super.clone(this.getClass());
     }
 
     /*
@@ -42,7 +41,7 @@ public class Human extends Lifeform {
      * @see models.ILifeformType#getLifeformType()
      */
     @Override
-    public String getLifeformType( ) {
+    public String getLifeformType() {
 
         return "Human";
     }

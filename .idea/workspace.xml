@@ -2,23 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01066c29-8a2c-4c17-bc83-eb87a9e99f93" name="Default" comment="u">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/ContactRate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/Disease.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/Grid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/IDisplay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/frame/config/MoveRate.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log.xml.3.lck" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.xml.3" afterPath="$PROJECT_DIR$/log.xml.3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/Animal.java" afterPath="$PROJECT_DIR$/src/models/lifeform/Animal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/ArrayUtils.java" afterPath="$PROJECT_DIR$/src/lib/ArrayUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Bird.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Bird.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Cardinal.java" afterPath="$PROJECT_DIR$/src/models/Cardinal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Chicken.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Chicken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Config.java" afterPath="$PROJECT_DIR$/src/config/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/Config.java" afterPath="$PROJECT_DIR$/src/views/frame/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/ContactRate.java" afterPath="$PROJECT_DIR$/src/views/frame/config/ContactRate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Contagious.java" afterPath="$PROJECT_DIR$/src/models/states/Contagious.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/Controller.java" afterPath="$PROJECT_DIR$/src/views/frame/config/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/CopyFile.java" afterPath="$PROJECT_DIR$/src/lib/CopyFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Dead.java" afterPath="$PROJECT_DIR$/src/models/states/Dead.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/Disease.java" afterPath="$PROJECT_DIR$/src/models/disease/Disease.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/Disease.java" afterPath="$PROJECT_DIR$/src/views/frame/config/Disease.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Duck.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Duck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Frame.java" afterPath="$PROJECT_DIR$/src/views/Frame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/demonstrateur/Frosh.java" afterPath="$PROJECT_DIR$/src/demonstrateur/Frosh.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/FroshController.java" afterPath="$PROJECT_DIR$/src/controllers/FroshController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/FroshRuntimeException.java" afterPath="$PROJECT_DIR$/src/models/FroshRuntimeException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Grid.java" afterPath="$PROJECT_DIR$/src/models/Grid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/Grid.java" afterPath="$PROJECT_DIR$/src/views/frame/config/Grid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/GridView.java" afterPath="$PROJECT_DIR$/src/views/GridView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/H1N1.java" afterPath="$PROJECT_DIR$/src/models/disease/H1N1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/H5N1.java" afterPath="$PROJECT_DIR$/src/models/disease/H5N1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Healty.java" afterPath="$PROJECT_DIR$/src/models/states/Healty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/Human.java" afterPath="$PROJECT_DIR$/src/models/lifeform/Human.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/disease/IDiseaseType.java" afterPath="$PROJECT_DIR$/src/models/disease/IDiseaseType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/IDisplay.java" afterPath="$PROJECT_DIR$/src/views/frame/config/IDisplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/ILifeformType.java" afterPath="$PROJECT_DIR$/src/models/ILifeformType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/IState.java" afterPath="$PROJECT_DIR$/src/models/states/IState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/Json.java" afterPath="$PROJECT_DIR$/src/lib/Json.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Lifeform.java" afterPath="$PROJECT_DIR$/src/models/Lifeform.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/MenuBar.java" afterPath="$PROJECT_DIR$/src/views/frame/MenuBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/config/MoveRate.java" afterPath="$PROJECT_DIR$/src/views/frame/config/MoveRate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/lifeform/animal/Pig.java" afterPath="$PROJECT_DIR$/src/models/lifeform/animal/Pig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/Rand.java" afterPath="$PROJECT_DIR$/src/lib/Rand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Recovering.java" afterPath="$PROJECT_DIR$/src/models/states/Recovering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/Sick.java" afterPath="$PROJECT_DIR$/src/models/states/Sick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/SimulatorView.java" afterPath="$PROJECT_DIR$/src/views/SimulatorView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/states/State.java" afterPath="$PROJECT_DIR$/src/models/states/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Stats.java" afterPath="$PROJECT_DIR$/src/models/Stats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/TheEnd.java" afterPath="$PROJECT_DIR$/src/models/TheEnd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/frame/TreeConfig.java" afterPath="$PROJECT_DIR$/src/views/frame/TreeConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/View.java" afterPath="$PROJECT_DIR$/src/views/View.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Frosh/config.json" afterPath="$PROJECT_DIR$/Frosh/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config.json" afterPath="$PROJECT_DIR$/src/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.xml.1" afterPath="$PROJECT_DIR$/log.xml.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.xml" afterPath="$PROJECT_DIR$/log.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Frosh.iws" />
@@ -86,7 +114,16 @@
       <file leaf-file-name="FroshController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/FroshController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="23" selection-start="2546" selection-end="2546" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
+            <state line="92" column="37" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="3384">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/GraphView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="41" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.3079848" vertical-offset="666" max-vertical-offset="5508">
               <folding />
             </state>
           </provider>
@@ -95,7 +132,7 @@
       <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+            <state line="11" column="3" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -104,16 +141,25 @@
       <file leaf-file-name="Frosh.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demonstrateur/Frosh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1458">
+            <state line="62" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1494">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulatorView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimulatorView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/SimulatorView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="7" selection-start="823" selection-end="823" vertical-scroll-proportion="1.163498" vertical-offset="0" max-vertical-offset="756">
+            <state line="25" column="7" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grid.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Grid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="307" column="0" selection-start="8512" selection-end="8512" vertical-scroll-proportion="0.0" vertical-offset="4617" max-vertical-offset="8118">
               <folding />
             </state>
           </provider>
@@ -122,7 +168,7 @@
       <file leaf-file-name="CopyFile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/CopyFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="990">
+            <state line="13" column="19" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -131,16 +177,7 @@
       <file leaf-file-name="Json.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/Json.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="52" selection-start="847" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Frame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Frame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="18" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+            <state line="36" column="41" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1044">
               <folding />
             </state>
           </provider>
@@ -149,21 +186,8 @@
       <file leaf-file-name="MoveRate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/frame/config/MoveRate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Disease.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/frame/config/Disease.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="144" selection-start="5994" selection-end="6059" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="2286">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="82" column="0" selection-start="3862" selection-end="3862" vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="1620">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +195,7 @@
       <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="5" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-6.490196" vertical-offset="2315" max-vertical-offset="2790">
+            <state line="147" column="5" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0" vertical-offset="2315" max-vertical-offset="2790">
               <folding />
             </state>
           </provider>
@@ -219,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/views/Panel.java" />
         <option value="$PROJECT_DIR$/src/lib/ArrayUtils.java" />
         <option value="$PROJECT_DIR$/test/models/disease/DiseaseTest.java" />
-        <option value="$PROJECT_DIR$/src/models/Grid.java" />
         <option value="$PROJECT_DIR$/src/views/frame/Config.form" />
         <option value="$PROJECT_DIR$/src/views/SimulatorView.java" />
         <option value="$PROJECT_DIR$/src/views/GridView.java" />
@@ -235,8 +258,10 @@
         <option value="$PROJECT_DIR$/src/views/frame/config/Grid.java" />
         <option value="$PROJECT_DIR$/src/views/frame/config/MoveRate.java" />
         <option value="$PROJECT_DIR$/src/demonstrateur/Frosh.java" />
-        <option value="$PROJECT_DIR$/src/controllers/FroshController.java" />
         <option value="$PROJECT_DIR$/src/config.json" />
+        <option value="$PROJECT_DIR$/src/models/Grid.java" />
+        <option value="$PROJECT_DIR$/src/controllers/FroshController.java" />
+        <option value="$PROJECT_DIR$/src/views/GraphView.java" />
       </list>
     </option>
   </component>
@@ -294,7 +319,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -529,7 +554,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -675,6 +700,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -701,19 +739,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -809,7 +834,8 @@
       <workItem from="1387463294725" duration="2528000" />
       <workItem from="1388745679267" duration="68000" />
       <workItem from="1388848293611" duration="600000" />
-      <workItem from="1388919549484" duration="13659000" />
+      <workItem from="1388919549484" duration="14159000" />
+      <workItem from="1388942386759" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1384381046613</created>
@@ -819,7 +845,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53520000" />
+    <option name="totallyTimeSpent" value="54058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="1684" height="983" extended-state="6" />
@@ -853,13 +879,13 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39928487" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283237" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -906,6 +932,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="5" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0" vertical-offset="2315" max-vertical-offset="2790">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/disease/H5N1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702" />
@@ -1077,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="342" column="23" selection-start="8915" selection-end="8915" vertical-scroll-proportion="0.0" vertical-offset="5385" max-vertical-offset="8010">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/GridView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="189" column="10" selection-start="5922" selection-end="5922" vertical-scroll-proportion="0.0" vertical-offset="2556" max-vertical-offset="3474">
@@ -1116,7 +1145,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="33" selection-start="3233" selection-end="3413" vertical-scroll-proportion="0.0" vertical-offset="981" max-vertical-offset="1548">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1150,30 +1179,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="144" selection-start="5994" selection-end="6059" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="2286">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="18" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1224">
-          <folding />
+        <state line="50" column="18" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/frame/config/MoveRate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="82" column="0" selection-start="3862" selection-end="3862" vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="1620">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/Json.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="52" selection-start="847" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="972">
+        <state line="36" column="41" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>
@@ -1187,28 +1216,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="972">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/FroshController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="23" selection-start="2546" selection-end="2546" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
+        <state line="11" column="3" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demonstrateur/Frosh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+        <state line="62" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1494">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="5" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-6.490196" vertical-offset="2315" max-vertical-offset="2790">
+        <state line="147" column="5" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0" vertical-offset="2315" max-vertical-offset="2790">
           <folding />
         </state>
       </provider>
@@ -1218,7 +1240,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/SimulatorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="7" selection-start="823" selection-end="823" vertical-scroll-proportion="1.163498" vertical-offset="0" max-vertical-offset="756">
+        <state line="25" column="7" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="0" selection-start="8512" selection-end="8512" vertical-scroll-proportion="0.0" vertical-offset="4617" max-vertical-offset="8118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/FroshController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="37" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="3384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/GraphView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="41" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.3079848" vertical-offset="666" max-vertical-offset="5508">
           <folding />
         </state>
       </provider>

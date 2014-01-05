@@ -9,7 +9,9 @@ package models;
  */
 public final class Stats {
 
-    /** The dead. */
+    /**
+     * The dead.
+     */
     private static int dead = 0;
 
     /**
@@ -17,7 +19,7 @@ public final class Stats {
      * 
      * @return the dead
      */
-    public static int getDead( ) {
+    public static int getDead() {
 
         return Stats.dead;
     }
@@ -28,17 +30,15 @@ public final class Stats {
      * @param dead
      *            the new dead
      */
-    public static void setDead( final int dead ) {
+    public static void setDead(final int dead) {
 
         Stats.dead = dead;
-
     }
 
     /**
      * Instantiates a new stats.
      */
-    private Stats( ) {
+    private Stats() {
 
     }
-
 }

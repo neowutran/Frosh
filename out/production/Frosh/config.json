@@ -41,7 +41,7 @@
 					"Pig": 50,
 					"Duck":0,
 					"Chicken":0
-				
+
 				},
 				"recoveryTime": 4,
 				"contagiousTime": 10
@@ -92,7 +92,7 @@
 					"Pig": 0,
 					"Duck":50,
 					"Chicken":50
-				
+
 				},
 				"recoveryTime": 4,
 				"contagiousTime": 10
@@ -145,19 +145,5 @@
 	},
 	"controller":{
 		"msBeforeNextDay": 100
-	},
-	"view":{
-		"lifeform":{
-			"Pig": "P",
-			"Chicken": "C",
-			"Human": "H",
-			"Duck": "D"
-		},
-		"diseaseState":{
-			"Healty":0,
-			"Sick":1,
-			"Contagious":2,
-			"Recovering":3
-		}
 	}
 }

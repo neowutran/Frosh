@@ -20,9 +20,9 @@ public abstract class Bird extends Animal {
      * @param line
      *            the line
      */
-    public Bird( final Integer column, final Integer line ) {
+    public Bird(final Integer column, final Integer line) {
 
-        super( column, line );
+        super(column, line);
     }
 
     /**
@@ -35,11 +35,11 @@ public abstract class Bird extends Animal {
      * @param sick
      *            the sick
      */
-    public Bird( final Integer column, final Integer line, final boolean sick ) {
+    public Bird(final Integer column, final Integer line, final boolean sick) {
 
-        super( column, line );
-        if( sick ) {
-            this.setDisease( new H5N1( this ) );
+        super(column, line);
+        if (sick) {
+            this.setDisease(new H5N1(this));
         }
     }
 
@@ -49,9 +49,8 @@ public abstract class Bird extends Animal {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
-
 }

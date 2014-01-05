@@ -24,25 +24,33 @@ import controllers.FroshController;
  */
 public class Grid {
 
-    /** The grid. */
-    private static Lifeform[ ][ ]      grid;
-
-    /** The height. */
+    /**
+     * The grid.
+     */
+    private static Lifeform[][]        grid;
+    /**
+     * The height.
+     */
     private static int                 height;
-
-    /** The width. */
+    /**
+     * The width.
+     */
     private static int                 width;
-
-    /** The chance of human populate. */
+    /**
+     * The chance of human populate.
+     */
     private static int                 chanceOfHumanPopulate;
-
-    /** The change of animal populate. */
+    /**
+     * The change of animal populate.
+     */
     private static int                 changeOfAnimalPopulate;
-
-    /** The chance of infected animal. */
+    /**
+     * The chance of infected animal.
+     */
     private static int                 chanceOfInfectedAnimal;
-
-    /** The config. */
+    /**
+     * The config.
+     */
     private static LinkedTreeMap<?, ?> config;
 
     /**
@@ -54,19 +62,15 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Cardinal> findFreeSpace( final int column,
-            final int line ) {
+    private static List<Cardinal> findFreeSpace(final int column, final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<>( );
-
-        final int gridUse = ( ( Double ) Grid.config.get( "gridUse" ) )
-                .intValue( );
-
-        if( gridUse != 1 ) {
-            freeSpace.addAll( Grid.findFreeSpaceNoDiagonal( column, line ) );
+        final List<Cardinal> freeSpace = new ArrayList<>();
+        final int gridUse = ((Double) Grid.config.get("gridUse")).intValue();
+        if (gridUse != 1) {
+            freeSpace.addAll(Grid.findFreeSpaceNoDiagonal(column, line));
         }
-        if( gridUse != 2 ) {
-            freeSpace.addAll( Grid.findFreeSpaceDiagonal( column, line ) );
+        if (gridUse != 2) {
+            freeSpace.addAll(Grid.findFreeSpaceDiagonal(column, line));
         }
         return freeSpace;
     }
@@ -80,37 +84,26 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Cardinal> findFreeSpaceDiagonal( final int column,
-            final int line ) {
+    private static List<Cardinal> findFreeSpaceDiagonal(final int column,
+            final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<>( );
-
-        if( Grid.grid.length > ( column + 1 ) ) {
-            if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                    && ( Grid.grid[ column + 1 ][ line + 1 ] == null ) ) {
-
-                freeSpace.add( Cardinal.NORTHEAST );
-
+        final List<Cardinal> freeSpace = new ArrayList<>();
+        if (Grid.grid.length > (column + 1)) {
+            if ((Grid.grid[column].length > (line + 1))
+                    && (Grid.grid[column + 1][line + 1] == null)) {
+                freeSpace.add(Cardinal.NORTHEAST);
             }
-            if( ( ( line - 1 ) >= 0 )
-                    && ( Grid.grid[ column + 1 ][ line - 1 ] == null ) ) {
-
-                freeSpace.add( Cardinal.SOUTHEAST );
-
+            if (((line - 1) >= 0) && (Grid.grid[column + 1][line - 1] == null)) {
+                freeSpace.add(Cardinal.SOUTHEAST);
             }
         }
-        if( ( column - 1 ) >= 0 ) {
-            if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                    && ( Grid.grid[ column - 1 ][ line + 1 ] == null ) ) {
-
-                freeSpace.add( Cardinal.NORTHWEST );
-
+        if ((column - 1) >= 0) {
+            if ((Grid.grid[column].length > (line + 1))
+                    && (Grid.grid[column - 1][line + 1] == null)) {
+                freeSpace.add(Cardinal.NORTHWEST);
             }
-            if( ( ( line - 1 ) >= 0 )
-                    && ( Grid.grid[ column - 1 ][ line - 1 ] == null ) ) {
-
-                freeSpace.add( Cardinal.SOUTHWEST );
-
+            if (((line - 1) >= 0) && (Grid.grid[column - 1][line - 1] == null)) {
+                freeSpace.add(Cardinal.SOUTHWEST);
             }
         }
         return freeSpace;
@@ -125,29 +118,23 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Cardinal> findFreeSpaceNoDiagonal( final int column,
-            final int line ) {
+    private static List<Cardinal> findFreeSpaceNoDiagonal(final int column,
+            final int line) {
 
-        final List<Cardinal> freeSpace = new ArrayList<>( );
-        if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                && ( Grid.grid[ column ][ line + 1 ] == null ) ) {
-            freeSpace.add( Cardinal.NORTH );
-
+        final List<Cardinal> freeSpace = new ArrayList<>();
+        if ((Grid.grid[column].length > (line + 1))
+                && (Grid.grid[column][line + 1] == null)) {
+            freeSpace.add(Cardinal.NORTH);
         }
-        if( ( ( line - 1 ) >= 0 ) && ( Grid.grid[ column ][ line - 1 ] == null ) ) {
-            freeSpace.add( Cardinal.SOUTH );
-
+        if (((line - 1) >= 0) && (Grid.grid[column][line - 1] == null)) {
+            freeSpace.add(Cardinal.SOUTH);
         }
-        if( ( Grid.grid.length > ( column + 1 ) )
-                && ( Grid.grid[ column + 1 ][ line ] == null ) ) {
-            freeSpace.add( Cardinal.EAST );
-
+        if ((Grid.grid.length > (column + 1))
+                && (Grid.grid[column + 1][line] == null)) {
+            freeSpace.add(Cardinal.EAST);
         }
-        if( ( ( column - 1 ) >= 0 )
-                && ( Grid.grid[ column - 1 ][ line ] == null ) ) {
-
-            freeSpace.add( Cardinal.WEST );
-
+        if (((column - 1) >= 0) && (Grid.grid[column - 1][line] == null)) {
+            freeSpace.add(Cardinal.WEST);
         }
         return freeSpace;
     }
@@ -161,20 +148,16 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Lifeform> findNeighbor( final int column, final int line ) {
+    private static List<Lifeform> findNeighbor(final int column, final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<>( );
-
-        final int gridUse = ( ( Double ) Grid.config.get( "gridUse" ) )
-                .intValue( );
-
-        if( gridUse != 1 ) {
-            neightbors.addAll( Grid.findNeighborNoDiagonal( column, line ) );
+        final List<Lifeform> neightbors = new ArrayList<>();
+        final int gridUse = ((Double) Grid.config.get("gridUse")).intValue();
+        if (gridUse != 1) {
+            neightbors.addAll(Grid.findNeighborNoDiagonal(column, line));
         }
-        if( gridUse != 2 ) {
-            neightbors.addAll( Grid.findNeighborDiagonal( column, line ) );
+        if (gridUse != 2) {
+            neightbors.addAll(Grid.findNeighborDiagonal(column, line));
         }
-
         return neightbors;
     }
 
@@ -187,37 +170,29 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Lifeform> findNeighborDiagonal( final int column,
-            final int line ) {
+    private static List<Lifeform> findNeighborDiagonal(final int column,
+            final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<>( );
-
-        if( Grid.grid.length > ( column + 1 ) ) {
-            if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                    && ( Grid.grid[ column + 1 ][ line + 1 ] != null ) ) {
-                neightbors.add( Grid.grid[ column + 1 ][ line + 1 ] );
-
+        final List<Lifeform> neightbors = new ArrayList<>();
+        if (Grid.grid.length > (column + 1)) {
+            if ((Grid.grid[column].length > (line + 1))
+                    && (Grid.grid[column + 1][line + 1] != null)) {
+                neightbors.add(Grid.grid[column + 1][line + 1]);
             }
-            if( ( ( line - 1 ) >= 0 )
-                    && ( Grid.grid[ column + 1 ][ line - 1 ] != null ) ) {
-                neightbors.add( Grid.grid[ column + 1 ][ line - 1 ] );
-
+            if (((line - 1) >= 0) && (Grid.grid[column + 1][line - 1] != null)) {
+                neightbors.add(Grid.grid[column + 1][line - 1]);
             }
         }
-        if( ( column - 1 ) >= 0 ) {
-            if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                    && ( Grid.grid[ column - 1 ][ line + 1 ] != null ) ) {
-                neightbors.add( Grid.grid[ column - 1 ][ line + 1 ] );
-
+        if ((column - 1) >= 0) {
+            if ((Grid.grid[column].length > (line + 1))
+                    && (Grid.grid[column - 1][line + 1] != null)) {
+                neightbors.add(Grid.grid[column - 1][line + 1]);
             }
-            if( ( ( line - 1 ) >= 0 )
-                    && ( Grid.grid[ column - 1 ][ line - 1 ] != null ) ) {
-                neightbors.add( Grid.grid[ column - 1 ][ line - 1 ] );
-
+            if (((line - 1) >= 0) && (Grid.grid[column - 1][line - 1] != null)) {
+                neightbors.add(Grid.grid[column - 1][line - 1]);
             }
         }
         return neightbors;
-
     }
 
     /**
@@ -229,28 +204,23 @@ public class Grid {
      *            the line
      * @return the list
      */
-    private static List<Lifeform> findNeighborNoDiagonal( final int column,
-            final int line ) {
+    private static List<Lifeform> findNeighborNoDiagonal(final int column,
+            final int line) {
 
-        final List<Lifeform> neightbors = new ArrayList<>( );
-        if( ( Grid.grid[ column ].length > ( line + 1 ) )
-                && ( Grid.grid[ column ][ line + 1 ] != null ) ) {
-            neightbors.add( Grid.grid[ column ][ line + 1 ] );
-
+        final List<Lifeform> neightbors = new ArrayList<>();
+        if ((Grid.grid[column].length > (line + 1))
+                && (Grid.grid[column][line + 1] != null)) {
+            neightbors.add(Grid.grid[column][line + 1]);
         }
-        if( ( ( line - 1 ) >= 0 ) && ( Grid.grid[ column ][ line - 1 ] != null ) ) {
-            neightbors.add( Grid.grid[ column ][ line - 1 ] );
-
+        if (((line - 1) >= 0) && (Grid.grid[column][line - 1] != null)) {
+            neightbors.add(Grid.grid[column][line - 1]);
         }
-        if( ( Grid.grid.length > ( column + 1 ) )
-                && ( Grid.grid[ column + 1 ][ line ] != null ) ) {
-            neightbors.add( Grid.grid[ column + 1 ][ line ] );
-
+        if ((Grid.grid.length > (column + 1))
+                && (Grid.grid[column + 1][line] != null)) {
+            neightbors.add(Grid.grid[column + 1][line]);
         }
-        if( ( ( column - 1 ) >= 0 )
-                && ( Grid.grid[ column - 1 ][ line ] != null ) ) {
-            neightbors.add( Grid.grid[ column - 1 ][ line ] );
-
+        if (((column - 1) >= 0) && (Grid.grid[column - 1][line] != null)) {
+            neightbors.add(Grid.grid[column - 1][line]);
         }
         return neightbors;
     }
@@ -260,7 +230,7 @@ public class Grid {
      * 
      * @return the grid
      */
-    public static Lifeform[ ][ ] getGrid( ) {
+    public static Lifeform[][] getGrid() {
 
         return Grid.grid;
     }
@@ -270,7 +240,7 @@ public class Grid {
      * 
      * @return the height
      */
-    public static int getHeight( ) {
+    public static int getHeight() {
 
         return Grid.height;
     }
@@ -280,7 +250,7 @@ public class Grid {
      * 
      * @return the width
      */
-    public static int getWidth( ) {
+    public static int getWidth() {
 
         return Grid.width;
     }
@@ -295,58 +265,57 @@ public class Grid {
      * @param line
      *            the line
      */
-    public static void move( final Cardinal cardinal, final int column,
-            final int line ) {
+    public static void move(final Cardinal cardinal, final int column,
+            final int line) {
 
         int addColumn = 0;
         int addLine = 0;
-        switch( cardinal ) {
-        case NORTH:
-            addLine++;
-            break;
-        case EAST:
-            addColumn++;
-            break;
-        case WEST:
-            addColumn--;
-            break;
-        case SOUTH:
-            addLine--;
-            break;
-        case NORTHEAST:
-            addLine++;
-            addColumn++;
-            break;
-        case NORTHWEST:
-            addLine++;
-            addColumn--;
-            break;
-        case SOUTHEAST:
-            addLine--;
-            addColumn++;
-            break;
-        case SOUTHWEST:
-            addLine--;
-            addColumn--;
-            break;
+        switch (cardinal) {
+            case NORTH:
+                addLine++;
+                break;
+            case EAST:
+                addColumn++;
+                break;
+            case WEST:
+                addColumn--;
+                break;
+            case SOUTH:
+                addLine--;
+                break;
+            case NORTHEAST:
+                addLine++;
+                addColumn++;
+                break;
+            case NORTHWEST:
+                addLine++;
+                addColumn--;
+                break;
+            case SOUTHEAST:
+                addLine--;
+                addColumn++;
+                break;
+            case SOUTHWEST:
+                addLine--;
+                addColumn--;
+                break;
         }
-
-        Grid.grid[ column ][ line ].setColumn( column + addColumn );
-        Grid.grid[ column ][ line ].setLine( line + addLine );
-        Grid.grid[ column + addColumn ][ line + addLine ] = Grid.grid[ column ][ line ];
-        Grid.grid[ column ][ line ] = null;
+        Grid.grid[column][line].setColumn(column + addColumn);
+        Grid.grid[column][line].setLine(line + addLine);
+        Grid.grid[column + addColumn][line + addLine] = Grid.grid[column][line];
+        Grid.grid[column][line] = null;
     }
 
     /**
      * Next day.
      */
-    public synchronized static void nextDay( ) {
+    public synchronized static void nextDay() {
 
-        for( int i = 0; i < Grid.grid.length; i++ ) {
-            for( int j = 0; j < Grid.grid[ i ].length; j++ ) {
-                if( Grid.grid[ i ][ j ] != null ) {
-                    Grid.grid[ i ][ j ].nextDay( Grid.findNeighbor( i, j ),
-                            Grid.findFreeSpace( i, j ) );
+        for (int i = 0; i < Grid.grid.length; i++) {
+            for (int j = 0; j < Grid.grid[i].length; j++) {
+                if (Grid.grid[i][j] != null) {
+                    Grid.grid[i][j].nextDay(Grid.findNeighbor(i, j),
+                            Grid.findFreeSpace(i, j));
                 }
             }
         }
@@ -358,51 +327,68 @@ public class Grid {
      * @param newGrid
      *            the new grid
      */
-    public static void setGrid( final Lifeform[ ][ ] newGrid ) {
+    public static void setGrid(final Lifeform[][] newGrid) {
 
-        Grid.grid = ArrayUtils.clone2DArray( newGrid );
+        Grid.grid = ArrayUtils.clone2DArray(newGrid);
     }
 
     /**
      * Instantiates a new grid.
      */
-    public Grid( ) {
+    public Grid() {
 
-        Grid.config = ( LinkedTreeMap<?, ?> ) Config.getConfiguration( ).get(
-                "grid" );
-        Grid.height = ( ( Double ) Grid.config.get( "height" ) ).intValue( );
-        Grid.width = ( ( Double ) Grid.config.get( "width" ) ).intValue( );
-        Grid.chanceOfHumanPopulate = ( ( Double ) Grid.config
-                .get( "chanceOfHumanPopulate" ) ).intValue( );
-        Grid.changeOfAnimalPopulate = ( ( Double ) Grid.config
-                .get( "chanceOfAnimalPopulate" ) ).intValue( );
-        Grid.chanceOfInfectedAnimal = ( ( Double ) Grid.config
-                .get( "chanceOfInfectedAnimal" ) ).intValue( );
-        Grid.grid = new Lifeform[ Grid.width ][ Grid.height ];
+        Grid.config = (LinkedTreeMap<?, ?>) Config.getConfiguration().get(
+                "grid");
+        Grid.height = ((Double) Grid.config.get("height")).intValue();
+        Grid.width = ((Double) Grid.config.get("width")).intValue();
+        Grid.chanceOfHumanPopulate = ((Double) Grid.config
+                .get("chanceOfHumanPopulate")).intValue();
+        Grid.changeOfAnimalPopulate = ((Double) Grid.config
+                .get("chanceOfAnimalPopulate")).intValue();
+        Grid.chanceOfInfectedAnimal = ((Double) Grid.config
+                .get("chanceOfInfectedAnimal")).intValue();
+        Grid.grid = new Lifeform[Grid.width][Grid.height];
         try {
-            this.checkParams( );
-        } catch( final Exception e ) {
-            FroshController.LOGGER.severe( java.util.Arrays.toString( e
-                    .getStackTrace( ) ) );
+            this.checkParams();
+        } catch (final Exception e) {
+            FroshController.LOGGER.severe(java.util.Arrays.toString(e
+                    .getStackTrace()));
         }
-        this.populate( );
+        this.populate();
     }
 
     /**
      * Check params.
      */
-    private void checkParams( ) {
+    private void checkParams() {
 
-        if( ( Grid.chanceOfHumanPopulate < 0 )
-                || ( Grid.changeOfAnimalPopulate < 0 )
-                || ( ( Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate ) > Config
-                        .getMax( ) ) ) {
+        if ((Grid.chanceOfHumanPopulate < 0)
+                || (Grid.changeOfAnimalPopulate < 0)
+                || ((Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate) > Config
+                        .getMax())) {
             FroshController.LOGGER
-                    .severe( "Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 " );
+                    .severe("Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 ");
             throw new IllegalArgumentException(
-                    "Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 " );
+                    "Invalid config file:\n $ changeOfHumanPopulate and changeOfAnimalPopulate must be > 0.\n $ changeOfHumanPopulate + changeOfAnimallPopulate must be <= 100 ");
         }
+    }
 
+    /**
+     * Count the number of a type of lifeform
+     */
+    public int countPop(final Lifeform l) {
+
+        int count = 0;
+        for (final Lifeform[] element : Grid.grid) {
+            for (final Lifeform element2 : element) {
+                if ((element2 != null) && (l != null)) {
+                    if (element2.getClass().equals(l.getClass())) {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
     }
 
     /**
@@ -410,53 +396,49 @@ public class Grid {
      * 
      * @return true, if successful
      */
-    public synchronized boolean hasEnded( ) {
+    public synchronized boolean hasEnded() {
 
-        for( final Lifeform[ ] element : Grid.grid ) {
-            for( final Lifeform element2 : element ) {
-                if( ( element2 != null ) && element2.willChangeGridState( ) ) {
+        for (final Lifeform[] element : Grid.grid) {
+            for (final Lifeform element2 : element) {
+                if ((element2 != null) && element2.willChangeGridState()) {
                     return false;
-
                 }
             }
         }
-
         return true;
-
     }
 
     /**
      * Populate.
      */
-    private synchronized void populate( ) {
+    private synchronized void populate() {
 
-        for( int i = 0; i < Grid.grid.length; i++ ) {
-            for( int j = 0; j < Grid.grid[ i ].length; j++ ) {
-                final int result = Rand.randInt( 0, 100 );
+        for (int i = 0; i < Grid.grid.length; i++) {
+            for (int j = 0; j < Grid.grid[i].length; j++) {
+                final int result = Rand.randInt(0, 100);
                 Lifeform lifeform = null;
-                if( result <= Grid.chanceOfHumanPopulate ) {
-                    lifeform = new Human( i, j );
-                } else if( result <= ( Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate ) ) {
-                    final int animal = Rand.randInt( 0, 2 );
-                    final int sick = Rand.randInt( 0, 100 );
+                if (result <= Grid.chanceOfHumanPopulate) {
+                    lifeform = new Human(i, j);
+                } else if (result <= (Grid.chanceOfHumanPopulate + Grid.changeOfAnimalPopulate)) {
+                    final int animal = Rand.randInt(0, 2);
+                    final int sick = Rand.randInt(0, 100);
                     boolean isSick = false;
-                    if( sick <= Grid.chanceOfInfectedAnimal ) {
+                    if (sick <= Grid.chanceOfInfectedAnimal) {
                         isSick = true;
                     }
-                    switch( animal ) {
-                    case 0:
-                        lifeform = new Chicken( i, j, isSick );
-                        break;
-                    case 1:
-                        lifeform = new Pig( i, j, isSick );
-                        break;
-                    case 2:
-                        lifeform = new Duck( i, j, isSick );
-                        break;
+                    switch (animal) {
+                        case 0:
+                            lifeform = new Chicken(i, j, isSick);
+                            break;
+                        case 1:
+                            lifeform = new Pig(i, j, isSick);
+                            break;
+                        case 2:
+                            lifeform = new Duck(i, j, isSick);
+                            break;
                     }
-
                 }
-                Grid.grid[ i ][ j ] = lifeform;
+                Grid.grid[i][j] = lifeform;
             }
         }
     }

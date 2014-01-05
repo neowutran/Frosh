@@ -19,9 +19,9 @@ public class Dead extends State {
      * @param lifeform
      *            the lifeform
      */
-    public Dead( final Lifeform lifeform ) {
+    public Dead(final Lifeform lifeform) {
 
-        super( lifeform );
+        super(lifeform);
     }
 
     /*
@@ -30,14 +30,14 @@ public class Dead extends State {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
+    public void apply() {
 
-        Stats.setDead( Stats.getDead( ) + 1 );
-        this.getLifeform( ).getDisease( ).setNextState( null );
-        this.getLifeform( ).getDisease( ).setDayBeforeNextState( null );
-        final Lifeform[ ][ ] grid = Grid.getGrid( );
-        grid[ this.getLifeform( ).getColumn( ) ][ this.getLifeform( ).getLine( ) ] = null;
-        this.setLifeform( null );
+        Stats.setDead(Stats.getDead() + 1);
+        this.getLifeform().getDisease().setNextState(null);
+        this.getLifeform().getDisease().setDayBeforeNextState(null);
+        final Lifeform[][] grid = Grid.getGrid();
+        grid[this.getLifeform().getColumn()][this.getLifeform().getLine()] = null;
+        this.setLifeform(null);
     }
 
     /*
@@ -46,9 +46,9 @@ public class Dead extends State {
      * @see models.states.State#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
 
     /*
@@ -57,7 +57,7 @@ public class Dead extends State {
      * @see models.states.IState#getStateName()
      */
     @Override
-    public String getStateName( ) {
+    public String getStateName() {
 
         return "Dead";
     }

@@ -1,36 +1,41 @@
+
 package views.frame.config;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Map;
 
-/**
- * Created by neowutran on 05/01/14.
- */
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 public class Controller implements IDisplay, ActionListener {
 
-    private JTextField msBeforeNextRoundField = new JTextField();
+    private final JTextField msBeforeNextRoundField = new JTextField();
 
     @Override
-    public void display(JPanel configPanel) {
-        configPanel.removeAll();
-        configPanel.setLayout(new GridLayout(0, 2));
+    public void actionPerformed(final ActionEvent e) {
 
-        JLabel msBeforeNextRound = new JLabel("ms before next round");
-        msBeforeNextRoundField.setText(String.valueOf((((Double) ((Map) config.Config.getConfiguration().get("controller")).get("msBeforeNextDay")).intValue())));
-        msBeforeNextRoundField.addActionListener(this);
-
-        configPanel.add(msBeforeNextRound);
-        configPanel.add(msBeforeNextRoundField);
+        if (e.getSource().equals(this.msBeforeNextRoundField)) {
+            ((Map) config.Config.getConfiguration().get("controller")).put(
+                    "msBeforeNextDay",
+                    Double.valueOf((((JTextField) e.getSource())).getText()));
+        }
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void display(final JPanel configPanel) {
 
-        if(e.getSource().equals(msBeforeNextRoundField)){
-            ((Map) config.Config.getConfiguration().get("controller")).put("msBeforeNextDay", Double.valueOf((String)(((JTextField)e.getSource())).getText()));
-        }
+        configPanel.removeAll();
+        configPanel.setLayout(new GridLayout(0, 2));
+        final JLabel msBeforeNextRound = new JLabel("ms before next round");
+        this.msBeforeNextRoundField
+                .setText(String.valueOf((((Double) ((Map) config.Config
+                        .getConfiguration().get("controller"))
+                        .get("msBeforeNextDay")).intValue())));
+        this.msBeforeNextRoundField.addActionListener(this);
+        configPanel.add(msBeforeNextRound);
+        configPanel.add(this.msBeforeNextRoundField);
     }
 }

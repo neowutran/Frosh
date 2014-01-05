@@ -20,9 +20,9 @@ public class Healty extends State {
      * @param lifeform
      *            the lifeform
      */
-    public Healty( final Lifeform lifeform ) {
+    public Healty(final Lifeform lifeform) {
 
-        super( lifeform );
+        super(lifeform);
     }
 
     /*
@@ -31,15 +31,14 @@ public class Healty extends State {
      * @see models.States.IState#apply()
      */
     @Override
-    public void apply( ) {
+    public void apply() {
 
-        this.getLifeform( ).getDisease( ).setNextState( null );
-        this.getLifeform( ).getDisease( ).setDayBeforeNextState( null );
-        final List<Disease> immune = this.getLifeform( ).getImmune( );
-        immune.add( this.getLifeform( ).getDisease( ) );
-        this.getLifeform( ).setImmune( immune );
-        this.getLifeform( ).setDisease( null );
-
+        this.getLifeform().getDisease().setNextState(null);
+        this.getLifeform().getDisease().setDayBeforeNextState(null);
+        final List<Disease> immune = this.getLifeform().getImmune();
+        immune.add(this.getLifeform().getDisease());
+        this.getLifeform().setImmune(immune);
+        this.getLifeform().setDisease(null);
     }
 
     /*
@@ -48,9 +47,9 @@ public class Healty extends State {
      * @see models.states.State#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
 
     /*
@@ -59,7 +58,7 @@ public class Healty extends State {
      * @see models.states.IState#getStateName()
      */
     @Override
-    public String getStateName( ) {
+    public String getStateName() {
 
         return "Healty";
     }

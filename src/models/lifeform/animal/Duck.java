@@ -17,9 +17,9 @@ public class Duck extends Bird {
      * @param line
      *            the line
      */
-    public Duck( final Integer column, final Integer line ) {
+    public Duck(final Integer column, final Integer line) {
 
-        this( column, line, false );
+        this(column, line, false);
     }
 
     /**
@@ -32,10 +32,9 @@ public class Duck extends Bird {
      * @param sick
      *            the sick
      */
-    public Duck( final Integer column, final Integer line, final boolean sick ) {
+    public Duck(final Integer column, final Integer line, final boolean sick) {
 
-        super( column, line, sick );
-
+        super(column, line, sick);
     }
 
     /*
@@ -44,9 +43,9 @@ public class Duck extends Bird {
      * @see java.lang.Object#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
+        return super.clone(this.getClass());
     }
 
     /*
@@ -55,7 +54,7 @@ public class Duck extends Bird {
      * @see models.ILifeformType#getLifeformType()
      */
     @Override
-    public String getLifeformType( ) {
+    public String getLifeformType() {
 
         return "Duck";
     }

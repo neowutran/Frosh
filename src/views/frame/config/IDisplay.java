@@ -1,12 +1,9 @@
+
 package views.frame.config;
 
-import javax.swing.*;
+import javax.swing.JPanel;
 
-/**
- * Created by neowutran on 05/01/14.
- */
 public interface IDisplay {
 
     public void display(JPanel configPanel);
-
 }

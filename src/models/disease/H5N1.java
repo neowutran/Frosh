@@ -17,9 +17,9 @@ public class H5N1 extends Disease {
      * @param carrier
      *            the carrier
      */
-    public H5N1( final Lifeform carrier ) {
+    public H5N1(final Lifeform carrier) {
 
-        super( carrier );
+        super(carrier);
     }
 
     /*
@@ -28,10 +28,9 @@ public class H5N1 extends Disease {
      * @see models.disease.Disease#clone()
      */
     @Override
-    public Object clone( ) throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
 
-        return super.clone( this.getClass( ) );
-
+        return super.clone(this.getClass());
     }
 
     /*
@@ -40,9 +39,8 @@ public class H5N1 extends Disease {
      * @see models.disease.IDiseaseType#getDiseaseType()
      */
     @Override
-    public String getDiseaseType( ) {
+    public String getDiseaseType() {
 
         return "H5N1";
     }
-
 }

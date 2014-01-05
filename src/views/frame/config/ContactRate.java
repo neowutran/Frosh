@@ -1,80 +1,99 @@
+
 package views.frame.config;
 
-import config.Config;
-
-import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.GridLayout;
 import java.util.Map;
 
-/**
- * Created by neowutran on 05/01/14.
- */
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 public class ContactRate implements IDisplay, ChangeListener {
 
-    private String lifeformType;
-    private SpinnerModel modelHuman = new SpinnerNumberModel(50, 0, 100, 1);
-    private SpinnerModel modelPig = new SpinnerNumberModel(50, 0, 100, 1);
-    private SpinnerModel modelChicken = new SpinnerNumberModel(50, 0, 100, 1);
-    private SpinnerModel modelDuck = new SpinnerNumberModel(50, 0, 100, 1);
+    private final String       lifeformType;
+    private final SpinnerModel modelHuman          = new SpinnerNumberModel(50,
+                                                           0, 100, 1);
+    private final SpinnerModel modelPig            = new SpinnerNumberModel(50,
+                                                           0, 100, 1);
+    private final SpinnerModel modelChicken        = new SpinnerNumberModel(50,
+                                                           0, 100, 1);
+    private final SpinnerModel modelDuck           = new SpinnerNumberModel(50,
+                                                           0, 100, 1);
+    private final JSpinner     humanContactField   = new JSpinner(
+                                                           this.modelHuman);
+    private final JSpinner     pigContactField     = new JSpinner(this.modelPig);
+    private final JSpinner     chickenContactField = new JSpinner(
+                                                           this.modelChicken);
+    private final JSpinner     duckContactField    = new JSpinner(
+                                                           this.modelDuck);
 
-    private JSpinner humanContactField = new JSpinner(modelHuman);
-    private JSpinner pigContactField = new JSpinner(modelPig);
-    private JSpinner chickenContactField = new JSpinner(modelChicken);
-    private JSpinner duckContactField = new JSpinner(modelDuck);
-    public ContactRate(String lifeformType){
+    public ContactRate(final String lifeformType) {
+
         this.lifeformType = lifeformType;
     }
 
     @Override
-    public void display(JPanel configPanel) {
+    public void display(final JPanel configPanel) {
+
         configPanel.removeAll();
         configPanel.setLayout(new GridLayout(0, 2));
-
-        JLabel humanContact = new JLabel("human state");
-        JLabel pigContact = new JLabel("pig contact");
-        JLabel chickenContact = new JLabel("chicken contact");
-        JLabel duckContact = new JLabel("duck contact");
-
-        humanContactField.setValue(((Double)((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).get("Human")).intValue());
-        duckContactField.setValue(((Double)((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).get("Duck")).intValue());
-        pigContactField.setValue(((Double)((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).get("Pig")).intValue());
-        chickenContactField.setValue(((Double)((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).get("Chicken")).intValue());
-
-        humanContactField.addChangeListener(this);
-        pigContactField.addChangeListener(this);
-        chickenContactField.addChangeListener(this);
-        duckContactField.addChangeListener(this);
-
+        final JLabel humanContact = new JLabel("human state");
+        final JLabel pigContact = new JLabel("pig contact");
+        final JLabel chickenContact = new JLabel("chicken contact");
+        final JLabel duckContact = new JLabel("duck contact");
+        this.humanContactField.setValue(((Double) ((Map) ((Map) config.Config
+                .getConfiguration().get("contactRate")).get(this.lifeformType))
+                .get("Human")).intValue());
+        this.duckContactField.setValue(((Double) ((Map) ((Map) config.Config
+                .getConfiguration().get("contactRate")).get(this.lifeformType))
+                .get("Duck")).intValue());
+        this.pigContactField.setValue(((Double) ((Map) ((Map) config.Config
+                .getConfiguration().get("contactRate")).get(this.lifeformType))
+                .get("Pig")).intValue());
+        this.chickenContactField.setValue(((Double) ((Map) ((Map) config.Config
+                .getConfiguration().get("contactRate")).get(this.lifeformType))
+                .get("Chicken")).intValue());
+        this.humanContactField.addChangeListener(this);
+        this.pigContactField.addChangeListener(this);
+        this.chickenContactField.addChangeListener(this);
+        this.duckContactField.addChangeListener(this);
         configPanel.add(humanContact);
-        configPanel.add(humanContactField);
+        configPanel.add(this.humanContactField);
         configPanel.add(pigContact);
-        configPanel.add(pigContactField);
+        configPanel.add(this.pigContactField);
         configPanel.add(chickenContact);
-        configPanel.add(chickenContactField);
+        configPanel.add(this.chickenContactField);
         configPanel.add(duckContact);
-        configPanel.add(duckContactField);
-
+        configPanel.add(this.duckContactField);
     }
 
     @Override
-    public void stateChanged(ChangeEvent e) {
+    public void stateChanged(final ChangeEvent e) {
 
-        if(e.getSource().equals(humanContactField)){
-            ((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).put("Human", ((Integer)(((JSpinner)e.getSource())).getValue()).doubleValue());
-        }else if(e.getSource().equals(pigContactField)){
-            ((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).put("Pig", ((Integer)(((JSpinner)e.getSource())).getValue()).doubleValue());
-
-        }else if(e.getSource().equals(duckContactField)){
-            ((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).put("Duck", ((Integer)(((JSpinner)e.getSource())).getValue()).doubleValue());
-
-        }else if(e.getSource().equals(chickenContactField)){
-            ((Map)((Map) config.Config.getConfiguration().get("contactRate")).get(this.lifeformType)).put("Chicken", ((Integer)(((JSpinner)e.getSource())).getValue()).doubleValue());
-
+        if (e.getSource().equals(this.humanContactField)) {
+            ((Map) ((Map) config.Config.getConfiguration().get("contactRate"))
+                    .get(this.lifeformType)).put("Human",
+                    ((Integer) (((JSpinner) e.getSource())).getValue())
+                            .doubleValue());
+        } else if (e.getSource().equals(this.pigContactField)) {
+            ((Map) ((Map) config.Config.getConfiguration().get("contactRate"))
+                    .get(this.lifeformType)).put("Pig",
+                    ((Integer) (((JSpinner) e.getSource())).getValue())
+                            .doubleValue());
+        } else if (e.getSource().equals(this.duckContactField)) {
+            ((Map) ((Map) config.Config.getConfiguration().get("contactRate"))
+                    .get(this.lifeformType)).put("Duck",
+                    ((Integer) (((JSpinner) e.getSource())).getValue())
+                            .doubleValue());
+        } else if (e.getSource().equals(this.chickenContactField)) {
+            ((Map) ((Map) config.Config.getConfiguration().get("contactRate"))
+                    .get(this.lifeformType)).put("Chicken",
+                    ((Integer) (((JSpinner) e.getSource())).getValue())
+                            .doubleValue());
         }
-
     }
 }
