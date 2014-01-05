@@ -4,13 +4,18 @@
 
 package controllers;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Set;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
+import com.google.gson.Gson;
+import demonstrateur.Frosh;
 import models.Grid;
 import models.Stats;
 import models.TheEnd;
@@ -88,11 +93,17 @@ public class FroshController {
 
     public void rerun(){
         kill = true;
+        while(theEnd.isAlive()){
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         theEnd = new TheEnd();
         kill = false;
         stop = false;
         Stats.setDead(0);
-        //grid = new View();
         step = 0;
         this.gridModel = new Grid( );
         theEnd.start();
@@ -100,9 +111,22 @@ public class FroshController {
     }
 
     public void exit(){
+
         stop = false;
         kill = true;
         frame.dispose();
+        final Gson gson = new Gson( );
+
+        try{
+            // Create file
+            FileWriter fstream = new FileWriter(Frosh.FOLDER + Frosh.CONFIG);
+            BufferedWriter out = new BufferedWriter(fstream);
+            out.write(gson.toJson(Config.getConfiguration()));
+            //Close the output stream
+            out.close();
+        }catch (Exception e){//Catch exception if any
+            FroshController.LOGGER.severe("Error: " + e.getMessage());
+        }
 
         //TODO rechercher pourquoi il y a une frame invisible qui existe
         java.awt.Frame[] frameAWT = java.awt.Frame.getFrames();

@@ -13,24 +13,20 @@ import java.awt.event.ActionListener;
 public class MenuBar extends JMenuBar implements ActionListener {
 
     private JMenuItem start = new JMenuItem("start");
-    private JMenuItem pause = new JMenuItem("pause");
-    private JMenuItem resume = new JMenuItem("resume");
-    private JMenuItem exit = new JMenuItem("exit");
+    private JMenuItem state = new JMenuItem("pause");
     private JMenuItem config = new JMenuItem("config");
     private JDialog configFrame;
 
     public MenuBar(){
 
         start.addActionListener(this);
-        pause.addActionListener(this);
-        resume.addActionListener(this);
-        exit.addActionListener(this);
+        state.addActionListener(this);
         config.addActionListener(this);
+        state.setVisible(false);
         this.add(start);
-        this.add(pause);
-        this.add(resume);
-        this.add(exit);
         this.add(config);
+        this.add(state);
+
 
     }
 
@@ -38,16 +34,19 @@ public class MenuBar extends JMenuBar implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         switch (event.getActionCommand()){
 
-            case "exit":
-                FroshController.getInstance().exit();
-                break;
             case "resume":
+                state.setText("pause");
                 FroshController.getInstance().resume();
                 break;
             case "pause":
+                state.setText("resume");
                 FroshController.getInstance().pause();
                 break;
+            case "restart":
             case "start":
+                start.setText("restart");
+                state.setText("pause");
+                state.setVisible(true);
                 FroshController.getInstance().rerun();
                 break;
             case "config":

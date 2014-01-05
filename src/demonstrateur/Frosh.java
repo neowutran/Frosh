@@ -32,8 +32,6 @@ public class Frosh {
     /** The Constant CONFIG. */
     public static final String CONFIG = "config.json";
 
-    /** The Constant DATA. */
-    public static final String DATA   = "data.json";
 
     /**
      * Load config file.
@@ -76,9 +74,7 @@ public class Frosh {
             CopyFile.copyFile( this.getClass( ).getClassLoader( )
                     .getResourceAsStream( Frosh.CONFIG ),
                     Frosh.FOLDER + Frosh.CONFIG );
-            CopyFile.copyFile(this.getClass().getClassLoader()
-                    .getResourceAsStream(Frosh.DATA),
-                    Frosh.FOLDER + Frosh.DATA);
+
         }
         Frosh.loadConfigFile( Paths.get( Frosh.FOLDER,
                 Frosh.CONFIG ) );
